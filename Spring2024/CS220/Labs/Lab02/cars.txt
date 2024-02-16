@@ -1,0 +1,100 @@
+Ford, F150, 39217
+Volvo, S60, 94251
+Ford, E-Series, 75069
+Mitsubishi, Endeavor, 15098
+BMW, 760, 263624
+Daihatsu, Charade, 226748
+Mercury, Grand Marquis, 287791
+Chevrolet, 3500, 207011
+Hyundai, Accent, 282782
+Lotus, Esprit, 231491
+Bentley, Continental, 122629
+Nissan, Rogue, 231512
+GMC, Yukon XL 1500, 51747
+Dodge, Ram Van 2500, 122200
+Volkswagen, riolet, 19617
+Ford, Explorer, 279368
+Dodge, Viper, 1337
+Dodge, Viper, 76105
+GMC, 2500, 47751
+Chevrolet, Aveo, 222343
+Mitsubishi, Eclipse, 255898
+Volkswagen, Eos, 176121
+Oldsmobile, Cutlass, 72287
+Subaru, SVX, 216915
+Toyota, Camry, 161584
+GMC, Sierra 3500, 115095
+Mitsubishi, Galant, 81882
+Ford, Mustang, 16778
+Infiniti, Q, 158513
+Mitsubishi, Endeavor, 106290
+Infiniti, J, 202949
+Chevrolet, Equinox, 84534
+Nissan, 300ZX, 76068
+Saab, 9-7X, 117033
+Land Rover, LR3, 270542
+Mitsubishi, Truck, 119767
+Mazda, Miata MX-5, 262495
+Chevrolet, Tahoe, 144453
+Ford, F250, 261885
+Volkswagen, Golf, 228999
+Hyundai, Accent, 297333
+Nissan, Xterra, 115001
+Buick, Rendezvous, 267330
+Toyota, FJ Cruiser, 171130
+Ford, Ranger, 277881
+Buick, Roadmaster, 261908
+Chrysler, Voyager, 233932
+Lotus, Exige, 214193
+Nissan, Pathfinder, 252967
+Infiniti, QX56, 101911
+Nissan, Quest, 296378
+GMC, Safari, 273626
+Dodge, Grand Caravan, 138631
+Geo, Prizm, 88992
+Lincoln, Navigator, 130598
+Porsche, 928, 61589
+Cadillac, Fleetwood, 140308
+Dodge, Neon, 208047
+Porsche, Boxster, 51290
+Suzuki, Grand Vitara, 98246
+Buick, Rendezvous, 86144
+Toyota, Celica, 65206
+Chrysler, Crossfire, 278412
+Toyota, 4Runner, 103869
+Chevrolet, Express 1500, 60423
+Lotus, Elan, 209925
+Kia, Sportage, 28441
+Chevrolet, Beretta, 7671
+Dodge, Ram 3500, 299960
+Mercedes-Benz, SLK-Class, 135850
+Toyota, Land Cruiser, 26557
+GMC, Savana, 124502
+Lamborghini, Countach, 18917
+Chevrolet, Camaro, 289790
+Toyota, RAV4, 187399
+Land Rover, Range Rover, 36509
+Bentley, Arnage, 23734
+Ford, Taurus, 90415
+Maserati, Coupe, 107084
+Toyota, Prius, 226723
+Buick, Regal, 110715
+Nissan, Versa, 163945
+Nissan, Frontier, 64384
+Ford, Explorer, 69845
+Bentley, Continental, 65549
+Buick, Enclave, 236340
+Mazda, Miata MX-5, 32333
+Mazda, B-Series, 58961
+Acura, Vigor, 156728
+Nissan, Maxima, 173316
+BMW, X5 M, 275149
+Ford, F450, 236807
+Audi, A4, 225403
+Isuzu, Ascender, 139629
+Audi, Q5, 266088
+Suzuki, Daewoo Lacetti, 201897
+Bentley, Continental GT, 45451
+Suzuki, Swift, 75320
+Dodge, Grand Caravan, 41916
+Pontiac, 1000, 85623
