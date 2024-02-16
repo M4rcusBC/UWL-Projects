@@ -21,7 +21,29 @@ public class Car {
         this.mileage = mileage;
     }
 
-    pu
+    public String getMake() {
+        return this.make;
+    }
+
+    public void setMake(String make) {
+        this.make = make;
+    }
+
+    public String getModel() {
+        return this.model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getMileage() {
+        return this.mileage;
+    }
+
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
+    }
 
     @Override
     public String toString() {

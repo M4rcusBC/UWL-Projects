@@ -36,7 +36,7 @@ public class Program2 {
 
             int carsWrittenToFile = 0;
             for (int i = 0; i < carArray.length; i++) {
-                writeLine = carArray[i].make + ", " + carArray[i].model + ", " + carArray[i].mileage + "\n";
+                writeLine = carArray[i].getMake() + ", " + carArray[i].getModel() + ", " + carArray[i].getMileage() + "\n";
                 writer.write(writeLine);
                 carsWrittenToFile++;
             }
