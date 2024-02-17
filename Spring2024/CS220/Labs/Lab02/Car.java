@@ -1,9 +1,3 @@
-import java.util.IllegalFormatException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-
 public class Car {
 
     private String make, model;

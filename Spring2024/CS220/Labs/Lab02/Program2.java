@@ -10,9 +10,11 @@ public class Program2 {
     public static void main(String[] args) {
 
         try {
+
+            // Initialize BufferedReader, initialize Car array and set size to first line of file
             BufferedReader reader = new BufferedReader(new FileReader("./cars.txt"));
             String line;
-            int carsWrittenToArray = 0;
+            int carsWrittenToArray = 0; // Track cars written to array
             int arraySize = Integer.parseInt(reader.readLine());
             Car[] carArray = new Car[arraySize];
 
@@ -22,18 +24,16 @@ public class Program2 {
                 // Convert miles to km, round up to nearest whole number, then cast to int
                 int kilometers = (int)(Math.ceil((Double.parseDouble(tokens[2])) * 1.61));
 
-                carArray[carsWrittenToArray] = new Car(tokens[0], tokens[1], kilometers);
-                carsWrittenToArray++;
+                carArray[carsWrittenToArray] = new Car(tokens[0], tokens[1], kilometers); // Create new car object and add to array
+                carsWrittenToArray++; // Increment cars written to array
             }
 
-            reader.close();
-
-            String writeLine;            
+            reader.close(); // Close reader            
 
             BufferedWriter writer = new BufferedWriter(new FileWriter("./cars-km.txt"));
             writer.write(Integer.toString(arraySize) + "\n");
 
-
+            String writeLine; // String to write to file
             int carsWrittenToFile = 0;
             for (int i = 0; i < carArray.length; i++) {
                 writeLine = carArray[i].getMake() + ", " + carArray[i].getModel() + ", " + carArray[i].getMileage() + "\n";
@@ -41,8 +41,7 @@ public class Program2 {
                 carsWrittenToFile++;
             }
 
-            writer.close();
-
+            writer.close(); // Close writer
 
             System.out.println("Array size: " + arraySize);
             System.out.println("Car objects written to array: " + carsWrittenToArray);
@@ -50,8 +49,8 @@ public class Program2 {
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException f) {
-            f.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
