@@ -4,48 +4,48 @@ public class Assign02Test {
 	public static void main(String[] args) {
 
 		/* UNCOMMENT THESE VARIABLES AS NEEDED FOR TESTS */
-//		StarTV starTv = new StarTV();
-//		NebulaTV nebulaTv = new NebulaTV();
-//		P8 p8 = new P8();
-//		P10 p10 = new P10();
+		StarTV starTv = new StarTV();
+		NebulaTV nebulaTv = new NebulaTV();
+		// P8 p8 = new P8();
+		// P10 p10 = new P10();
 		
 		/* Test 1: Testing for StarTV */
-//		System.out.println("** TEST 1 **");
-//
-//		starTv.decChannel();
-//		starTv.incChannel();
-//		starTv.changeChannel(100);
-//		starTv.incVolume();
-//		starTv.decVolume();
-//
-//		System.out.println(starTv + "\n\n");
+		System.out.println("** TEST 1 **");
+
+		starTv.decChannel();
+		starTv.incChannel();
+		starTv.changeChannel(100);
+		starTv.incVolume();
+		starTv.decVolume();
+
+		System.out.println(starTv + "\n\n");
 
 		/* Test 2: Testing for NebulaTV */
-//		System.out.println("** TEST 2 **");
-//
-//		nebulaTv.decChannel();
-//		nebulaTv.incChannel();
-//		nebulaTv.changeChannel(100);
-//		nebulaTv.incVolume();
-//		nebulaTv.decVolume();
-//
-//		System.out.println(nebulaTv + "\n\n");
+		System.out.println("** TEST 2 **");
+
+		nebulaTv.decChannel();
+		nebulaTv.incChannel();
+		nebulaTv.changeChannel(100);
+		nebulaTv.incVolume();
+		nebulaTv.decVolume();
+
+		System.out.println(nebulaTv + "\n\n");
 
 		/* Test 3: Testing for NebulaTV voice interface */
-//		System.out.println("** TEST 3 **");
-//		
-//		try {
-//			nebulaTv.processSpeech("increase channel");
-//			nebulaTv.processSpeech("decrease channel");
-//			nebulaTv.processSpeech("increase volume");
-//			nebulaTv.processSpeech("decrease volume");
-//			nebulaTv.processSpeech("change 50");
-//			nebulaTv.processSpeech("hello tv");
-//		} catch (SpeechNotUnderstoodException e) {
-//			System.out.println(e.getMessage());
-//		}
-//
-//		System.out.println(nebulaTv + "\n\n");
+		System.out.println("** TEST 3 **");
+		
+		try {
+			nebulaTv.processSpeech("increase channel");
+			nebulaTv.processSpeech("decrease channel");
+			nebulaTv.processSpeech("increase volume");
+			nebulaTv.processSpeech("decrease volume");
+			nebulaTv.processSpeech("change 50");
+			nebulaTv.processSpeech("hello tv");
+		} catch (SpeechNotUnderstoodException e) {
+			System.out.println(e.getMessage());
+		}
+
+		System.out.println(nebulaTv + "\n\n");
 
 		/* Test 4: Testing for P8 */
 //		System.out.println("** TEST 4 **");
