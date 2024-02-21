@@ -4,8 +4,19 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+/**
+ * This class reads car data from a file and stores it in an array of Car objects.
+ *
+ * @author Marcus Clements
+ * @since 2024-02-15
+ */
 public class Program1 {
 
+    /**
+     * The main method that drives the program.
+     *
+     * @param args Command-line arguments. Not used in this program.
+     */
     public static void main(String[] args) {
 
         try {

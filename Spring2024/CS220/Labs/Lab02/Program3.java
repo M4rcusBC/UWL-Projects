@@ -8,8 +8,20 @@ import java.io.IOException;
 import java.io.EOFException;
 import java.io.FileNotFoundException;
 
+/**
+ * This class reads car data from a text file, writes the data to a binary file, 
+ * then reads the data from the binary file and prints it to the console.
+ *
+ * @author Marcus Clements
+ * @since 2024-02-15
+ */
 public class Program3 {
 
+    /**
+     * The main method that drives the program.
+     *
+     * @param args Command-line arguments. Not used in this program.
+     */
     public static void main(String[] args) {
 
         try {
@@ -42,7 +54,7 @@ public class Program3 {
                 output.flush(); // Flush output stream after each write
             }
 
-            // Close BufferedReader and DataOutputStream, print list size
+            // Close BufferedReader and DataOutputStream, print list size for verification
             br.close();
             output.close();
             System.out.println("List size: " + listSize);
@@ -68,7 +80,7 @@ public class Program3 {
                     System.out.printf("%s, %s, %d\n", readMake, readModel, readMileage);
                 } catch (EOFException e) {
                     System.err.println("List index: " + i);
-                    break;
+                    break; // Break loop if end of file is reached
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
