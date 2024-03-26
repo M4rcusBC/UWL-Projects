@@ -1,0 +1,8 @@
+John Smith, 18
+Thomas Brady, 42
+Mary Jane Johnson, 30
+Alice Swenson, 25
+Louis Martin, 15
+Mary Jane Johnson, 12
+Michelle Lewis, 42
+Thomas Brady, 50

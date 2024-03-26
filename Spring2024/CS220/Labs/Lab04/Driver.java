@@ -1,7 +1,17 @@
 import java.util.Iterator;
 
+/**
+ * A driver class to test the LinkedList class.
+ * 
+ * @author Marcus Clements @M4rcusBC on GitHub
+ * @since 03/26/2024
+ * @version 1.0
+ */
 public class Driver {
 
+    /**
+     * Main method to test the LinkedList class.
+     */
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList<>();
 
