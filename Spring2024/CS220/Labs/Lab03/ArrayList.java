@@ -10,8 +10,13 @@ public class ArrayList<E> {
 		this(DEFAULT_CAPACITY);
 	}
 
+	
 	public ArrayList(int length) {
+		try {
 		data = (E[]) new String[length];
+		}catch(Exception e) {
+			System.out.println("Exception: " + e);
+		}
 	}
 
 	public boolean add(String str) {
@@ -73,6 +78,7 @@ public class ArrayList<E> {
 		return toReturn;
 	}
 
+	// remove the first occurrence of str
 	public boolean remove(String str) {
 		for (int i = 0; i < size; i++) {
 			if (data[i].equals(str)) {
@@ -84,6 +90,7 @@ public class ArrayList<E> {
 		return false;
 	}
 
+	// increase the length of data by 1.5 times
 	private void increaseLength() {
 		String[] newArr = new String[(int) Math.ceil(data.length * 1.5)];
 
@@ -94,6 +101,7 @@ public class ArrayList<E> {
 		data = (E[]) newArr;
 	}
 
+	// increase the length of data to cap
 	public void ensureCapacity(int cap) {
 
 		if (cap > data.length) {
@@ -107,6 +115,7 @@ public class ArrayList<E> {
 		}
 	}
 
+	// trim the length of data to size
 	public void trimToSize() {
 
 		String[] newArr = new String[size];
@@ -119,22 +128,26 @@ public class ArrayList<E> {
 
 	}
 
+	// return the size of data
 	public int size() {
 		return this.size;
 	}
 
+	// return true if data is empty, false otherwise
 	public boolean isEmpty() {
 		if (size == 0)
 			return true;
 		return false;
 	}
 
+	// clear the data - set all elements to null
 	public void clear() {
 		for (int i = 0; i < size; i++) {
 			data[i] = null;
 		}
 	}
 
+	// return the element at index
 	public String get(int index) {
 		if (index < 0 || index > size) {
 			throw new IndexOutOfBoundsException("" + index);
@@ -143,6 +156,7 @@ public class ArrayList<E> {
 		}
 	}
 
+	// set the element at index to s
 	public String set(int index, String s) {
 		if (index < 0 || index > size) {
 			throw new IndexOutOfBoundsException("" + index);
@@ -153,6 +167,7 @@ public class ArrayList<E> {
 		}
 	}
 
+	// return the index of the first occurrence of s
 	public int indexOf(String s) {
 		for (int i = 0; i < size; i++) {
 			if (data[i].equals(s)) {
@@ -162,6 +177,7 @@ public class ArrayList<E> {
 		return -1;
 	}
 
+	// return true if s is in the data, false otherwise
 	public boolean contains(String s) {
 		for (int i = 0; i < size; i++) {
 			if (data[i].equals(s)) {
@@ -171,6 +187,7 @@ public class ArrayList<E> {
 		return false;
 	}
 
+	// print the data and size
 	@Override
 	public String toString() {
 		return "ArrayList [" + "Size=" + this.size + ", Data.length=" + data.length + ", Data=" + Arrays.toString(data)
