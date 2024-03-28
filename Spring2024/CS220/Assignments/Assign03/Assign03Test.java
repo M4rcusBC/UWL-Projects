@@ -1,18 +1,19 @@
 import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.util.Iterator;
 
 public class Assign03Test {
 
     public static void main(String[] args) {
 
-        PersonList p1 = loadData();
+        PersonList pl = loadData();
 
-        // System.out.println("** PRINTING LIST BY NAME **\n");
-        // printListByName(pl);
+        System.out.println("** PRINTING LIST BY NAME **\n");
+        printListByName(pl);
 
-        // System.out.println("\n\n** PRINTING LIST BY AGE **\n");
-        // printListByAge(pl);
+        System.out.println("\n\n** PRINTING LIST BY AGE **\n");
+        printListByAge(pl);
 
     }
 
@@ -27,7 +28,8 @@ public class Assign03Test {
         PersonList toReturn = new PersonList();
 
         try {
-            FileReader fr = new FileReader(new File("/workspaces/UWL-Projects/Spring2024/CS220/Assignments/Assign03/people.txt"));
+            FileReader fr = new FileReader(
+                    new File("/workspaces/UWL-Projects/Spring2024/CS220/Assignments/Assign03/people.txt"));
             BufferedReader br = new BufferedReader(fr);
 
             String line = br.readLine();
@@ -54,17 +56,23 @@ public class Assign03Test {
      * 
      * @param pl PersonList
      */
-    // private static void printListByName(PersonList pl) {
-
-    // }
+    private static void printListByName(PersonList pl) {
+        Iterator<Person> it = pl.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
 
     /**
      * Prints the list in numerical order by age
      * 
      * @param pl
      */
-    // private static void printListByAge(PersonList pl) {
-
-    // }
+    private static void printListByAge(PersonList pl) {
+        Iterator<Person> it = pl.ageIterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
 
 }
