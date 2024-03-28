@@ -23,7 +23,7 @@ public class PersonList {
 
     }
 
-    public void addByName(Person p) {
+    private void addByName(Person p) {
         PersonNode newNode = new PersonNode(p);
         if (headNameNode.data == null) {
             headNameNode = newNode;
