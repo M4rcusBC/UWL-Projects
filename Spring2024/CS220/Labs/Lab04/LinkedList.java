@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.NoSuchElementException; // Common exception with LinkedLists
 
 /**
- * @author Marcus Clements @M4rcusBC on GitHub
+ * @author Marcus Clements
  * @since 03/26/2024
  * @version 1.0
  * @see Spring.CS220.Labs

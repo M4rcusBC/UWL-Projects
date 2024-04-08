@@ -17,6 +17,12 @@ public class Person implements Comparable<Person> {
 
     @Override
     public int compareTo(Person p) {
+        if (this.name == null && p.name != null){
+            return -1;
+        }
+        else if (this.name != null && p.name == null){
+            return 1;
+        }
         int toReturn = this.name.compareTo(p.name);
         if (toReturn == 0) {
             return this.compareToAge(p);

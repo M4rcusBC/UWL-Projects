@@ -35,7 +35,7 @@ public class Assign03Test {
             String line = br.readLine();
 
             while (line != null) {
-                String[] data = line.split(", ");
+                String[] data = line.split(", "); // split on comma and space
                 String name = data[0];
                 int age = Integer.parseInt(data[1]);
                 Person p = new Person(name, age);
@@ -54,7 +54,7 @@ public class Assign03Test {
     /**
      * Prints the list in alphabetical order by name.
      * 
-     * @param pl PersonList
+     * @param pl PersonList to print alphabetically by name
      */
     private static void printListByName(PersonList pl) {
         Iterator<Person> it = pl.iterator();
@@ -66,7 +66,7 @@ public class Assign03Test {
     /**
      * Prints the list in numerical order by age
      * 
-     * @param pl
+     * @param pl PersonList to print numerically by age
      */
     private static void printListByAge(PersonList pl) {
         Iterator<Person> it = pl.ageIterator();
@@ -74,5 +74,4 @@ public class Assign03Test {
             System.out.println(it.next());
         }
     }
-
 }

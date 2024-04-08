@@ -1,7 +1,7 @@
 import java.util.Iterator;
 
 public class PersonList {
-    
+
     PersonNode headNameNode;
     PersonNode tailNameNode;
     PersonNode headAgeNode;
@@ -15,12 +15,7 @@ public class PersonList {
     }
 
     public void add(Person p) {
-        if (headNameNode.data.compareTo(p) == 0) {
-            addByAge(p);
-        } else {
-            addByName(p);
-        }
-
+        addByName(p);
     }
 
     private void addByName(Person p) {
@@ -28,6 +23,8 @@ public class PersonList {
         if (headNameNode.data == null) {
             headNameNode = newNode;
             tailNameNode = newNode;
+        } else if (headNameNode.data.compareTo(p) == 0) {
+            addByAge(p);
         } else {
             PersonNode current = headNameNode;
             while (current.hasNextName() && current.getNextName().data.compareTo(p) < 0) {
@@ -45,21 +42,16 @@ public class PersonList {
 
     private void addByAge(Person p) {
         PersonNode newNode = new PersonNode(p);
-        if (headAgeNode.data == null) {
-            headAgeNode = newNode;
-            tailAgeNode = newNode;
+        PersonNode current = headAgeNode;
+        while (current.hasNextAge() && current.getNextAge().data.compareToAge(p) < 0) {
+            current = current.getNextAge();
+        }
+        if (current.hasNextAge()) {
+            newNode.nextAgeNode = current.getNextAge();
+            current.nextAgeNode = newNode;
         } else {
-            PersonNode current = headAgeNode;
-            while (current.hasNextAge() && current.getNextAge().data.compareToAge(p) < 0) {
-                current = current.getNextAge();
-            }
-            if (current.hasNextAge()) {
-                newNode.nextAgeNode = current.getNextAge();
-                current.nextAgeNode = newNode;
-            } else {
-                current.nextAgeNode = newNode;
-                tailAgeNode = newNode;
-            }
+            current.nextAgeNode = newNode;
+            tailAgeNode = newNode;
         }
     }
 
@@ -143,12 +135,9 @@ public class PersonList {
         }
 
         public int compareToAge(PersonNode p) {
-            return data.compareToAge(p.data);
+            return this.data.compareToAge(p.data);
         }
 
-
     }
-
-
 
 }
