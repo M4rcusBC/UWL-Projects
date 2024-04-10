@@ -1,3 +1,5 @@
+package Spring2024.CS220.Labs.Lab04;
+
 import java.util.Iterator;
 
 /**
@@ -7,7 +9,7 @@ import java.util.Iterator;
  * @since 03/26/2024
  * @version 1.0
  */
-public class Driver {
+public class LinkedListDriver {
 
     /**
      * Main method to test the LinkedList class.

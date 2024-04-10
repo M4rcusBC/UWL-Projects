@@ -1,3 +1,5 @@
+package Spring2024.CS220.Labs.Lab04;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -6,9 +8,6 @@ import java.util.NoSuchElementException; // Common exception with LinkedLists
 /**
  * @author Marcus Clements
  * @since 03/26/2024
- * @version 1.0
- * @see Spring.CS220.Labs
- * @implements Iterable<E>
  */
 public class LinkedList<E> implements Iterable<E> {
     private ListNode firstNode; // ListNode will be a private inner class - defined within the class
