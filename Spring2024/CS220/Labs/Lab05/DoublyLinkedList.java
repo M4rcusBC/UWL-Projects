@@ -73,7 +73,7 @@ public class DoublyLinkedList<E> implements Iterable<E> {
      * @param e     The element to add to the list
      * @param index The index at which to add the element
      */
-    public void add(E e, int index) {
+    public void add(E e, int index) throws IndexOutOfBoundsException {
 
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();

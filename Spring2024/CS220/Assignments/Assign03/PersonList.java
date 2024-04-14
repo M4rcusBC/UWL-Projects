@@ -160,7 +160,7 @@ public class PersonList {
         /**
          * Checks if there is another age in the list
          *
-         * @return boolean
+         * @return boolean True if there is another age in the list, false otherwise
          */
         public boolean hasNext() {
             return current.hasNextAge();
