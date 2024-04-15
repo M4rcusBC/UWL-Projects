@@ -1,3 +1,5 @@
+package Spring2024.CS220.Labs.Lab06;
+
 /**
  * CS 220: Lab 08 Template for Exercise 1
  * DESCRIPTION OF THE PROGRAM HERE
@@ -51,7 +53,17 @@ public class StringPlayground {
      * @return
      */
     public String noX(String str) {
-    		return "";
+    		
+        if (!str.contains("x") || str.isEmpty()) {
+            return str;
+        }
+
+        if (str.charAt(0) == 'x') {
+            return noX(str.substring(1));
+        }
+    
+        return str.charAt(0) + noX(str.substring(1));
+
     }
     
     /**
@@ -77,7 +89,15 @@ public class StringPlayground {
      * @param idx The current index to display
      */
     private void displayReverseHelper(String str, int idx) {
-        // TODO Write me
+        // Base case
+
+        if (idx < 0) {
+            System.out.println();
+            return;
+        }
+        System.out.print(str.charAt(idx--));
+        displayReverseHelper(str, idx);
+
     }
 
 }

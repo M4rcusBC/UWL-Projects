@@ -1,3 +1,5 @@
+package Spring2024.CS220.Labs.Lab06;
+
 /**
  * CS 220: Lab 06 Template for Exercise 2
  * DESCRIPTION OF THE PROGRAM HERE
@@ -92,7 +94,25 @@ public class SpiralPlayground {
      * @param numSegmentsRemaining Number of segments remaining to draw.
      */
     private void drawSegment(int xPos, int yPos, int len, int dir, int numSegmentsRemaining) {
-        // TODO Write me
+        
+        if (numSegmentsRemaining < 0) {
+            return;
+        }
+
+        dir = dir % 4;
+
+        Line myLine = new Line(xPos, len, dir, numSegmentsRemaining);
+
+        if (numSegmentsRemaining % 2 == 0) {
+            myLine.setBackground(evenColor);
+            window.add(myLine);
+            myLine.paint(window.getGraphics());
+            drawSegment(xPos, yPos, len, dir + 1, numSegmentsRemaining--);
+        } else {
+            myLine.setBackground(oddColor);
+            window.add(myLine);
+            drawSegment(xPos, yPos, len, dir + 1, numSegmentsRemaining--);
+        }
     }
 
 }

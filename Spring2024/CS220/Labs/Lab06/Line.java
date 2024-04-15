@@ -1,3 +1,4 @@
+
 /**
  * Creates a simple graphical line.
  *
@@ -21,7 +22,7 @@ public class Line extends JComponent {
         theX2 = x2;
         theY2 = y2;
         setBounds(Math.min(x1, x2) - 1, Math.min(y1, y2) - 1,
-                  Math.max(x1, x2) + 2, Math.max(y1, y2) + 2);
+                Math.max(x1, x2) + 2, Math.max(y1, y2) + 2);
         setBackground(Color.black);
     }
 
@@ -33,14 +34,14 @@ public class Line extends JComponent {
         theX2 = x2;
         theY2 = y2;
         setBounds(Math.min(x1, x2) - t - 1, Math.min(y1, y2) - t - 1,
-                  Math.max(x1, x2) + t + 1, Math.max(y1, y2) + t + 1);
+                Math.max(x1, x2) + t + 1, Math.max(y1, y2) + t + 1);
         setBackground(Color.black);
     }
 
     public void setThickness(int t) {
         thickness = t;
         setBounds(Math.min(theX1, theX2) - t - 1, Math.min(theY1, theY2) - t - 1,
-                  Math.max(theX1, theX2) + t + 1, Math.max(theY1, theY2) + t + 1);
+                Math.max(theX1, theX2) + t + 1, Math.max(theY1, theY2) + t + 1);
     }
 
     /**
@@ -50,12 +51,12 @@ public class Line extends JComponent {
      */
     public void paint(Graphics g) {
         ((Graphics2D) g).setStroke(new BasicStroke(thickness,
-                                                   BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL));
+                BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL));
 
         g.setColor(getBackground());
 
         g.drawLine(theX1 - getX(), theY1 - getY(),
-                   theX2 - getX(), theY2 - getY());
+                theX2 - getX(), theY2 - getY());
 
         ((Graphics2D) g).setStroke(new BasicStroke(1.0f));
     }
