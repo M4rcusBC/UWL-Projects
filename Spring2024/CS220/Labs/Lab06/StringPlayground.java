@@ -2,10 +2,13 @@ package Spring2024.CS220.Labs.Lab06;
 
 /**
  * CS 220: Lab 08 Template for Exercise 1
- * DESCRIPTION OF THE PROGRAM HERE
+ * 
+ * This class includes two recursive methods: noX and displayReverse.
+ * These methods are designed to remove all instances of the character 
+ * 'x' from a string, and display a string in reverse, respectively.
  *
- * @author A. Sauppe, YOUR NAME HERE
- * Last Modified: DATE LAST MODIFIED HERE
+ * @author A. Sauppe, M. Clements
+ * Last Modified: April 17, 2024
  */
 public class StringPlayground {
 
@@ -95,6 +98,7 @@ public class StringPlayground {
             System.out.println();
             return;
         }
+        // Recursive case
         System.out.print(str.charAt(idx--));
         displayReverseHelper(str, idx);
 
