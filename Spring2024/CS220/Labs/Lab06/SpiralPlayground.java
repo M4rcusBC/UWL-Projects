@@ -2,10 +2,14 @@ package Spring2024.CS220.Labs.Lab06;
 
 /**
  * CS 220: Lab 06 Template for Exercise 2
- * DESCRIPTION OF THE PROGRAM HERE
+ * This program demonstrates the use of recursion to draw a spiral pattern.
+ * The drawSpiral() method draws a spiral in the specified direction by
+ * recursively calling the drawSegment() method. The drawSegment() method
+ * draws a line segment in the specified direction and then calls itself
+ * to draw the next line segment until the specified depth is reached.
  *
- * @author J. Hursey, J. Sauppe, YOUR NAME HERE
- * Last Modified: DATE LAST MODIFIED HERE
+ * @author J. Hursey, J. Sauppe, M. Clements
+ * Last Modified: 04-16-2024
  */
 import java.awt.Color;
 import javax.swing.JFrame;
@@ -94,24 +98,42 @@ public class SpiralPlayground {
      * @param numSegmentsRemaining Number of segments remaining to draw.
      */
     private void drawSegment(int xPos, int yPos, int len, int dir, int numSegmentsRemaining) {
-        
-        if (numSegmentsRemaining < 0) {
-            return;
-        }
 
-        dir = dir % 4;
+        int tempX = xPos; // Temporary X position for this segment
+        int tempY = yPos; // Temporary Y position for this segment
+        int direction = dir; // Direction to draw this segment in;
 
-        Line myLine = new Line(xPos, len, dir, numSegmentsRemaining);
+        // Set the color based on the number of segments remaining
+        Color color = (numSegmentsRemaining % 2 == 0) ? evenColor : oddColor;
 
-        if (numSegmentsRemaining % 2 == 0) {
-            myLine.setBackground(evenColor);
-            window.add(myLine);
-            myLine.paint(window.getGraphics());
-            drawSegment(xPos, yPos, len, dir + 1, numSegmentsRemaining--);
-        } else {
-            myLine.setBackground(oddColor);
-            window.add(myLine);
-            drawSegment(xPos, yPos, len, dir + 1, numSegmentsRemaining--);
+        if (numSegmentsRemaining > 0) {
+
+            switch (direction) {
+                case DIR_UP:
+                    tempY -= len; // Move upwards
+                    direction = DIR_RIGHT;
+                    break;
+                case DIR_RIGHT:
+                    tempX += len; // Move to the right
+                    direction = DIR_DOWN;
+                    break;
+                case DIR_DOWN:
+                    tempY += len; // Move downwards
+                    direction = DIR_LEFT;
+                    break;
+                case DIR_LEFT:
+                    tempX -= len; // Move to the left
+                    direction = DIR_UP;
+                    break;
+            } // I realize this could be done with an enhanced switch statement, but we have not covered lambdas yet in this class
+
+            final int THICKNESS = 5;
+
+            Line line = new Line(xPos, yPos, tempX, tempY, THICKNESS);
+            line.setBackground(color);
+            window.add(line);
+            drawSegment(tempX, tempY, len + 10, direction, numSegmentsRemaining - 1);
+
         }
     }
 

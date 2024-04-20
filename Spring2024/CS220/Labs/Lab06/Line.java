@@ -1,4 +1,4 @@
-
+package Spring2024.CS220.Labs.Lab06;
 /**
  * Creates a simple graphical line.
  *

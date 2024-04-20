@@ -1,5 +1,3 @@
-package Spring2024.CS220.Labs.Lab05;
-
 import java.util.Iterator;
 
 /**
