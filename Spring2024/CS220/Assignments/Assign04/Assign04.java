@@ -5,10 +5,27 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * Assign04
+ * 
+ * This class contains the solutions to the problems in Assignment 4,
+ * as well as the main method to test the solutions.
+ * 
+ * The problems are:
+ * 1. Convert a decimal number to octal.
+ * 2. Determine if a string is a word palindrome.
+ * 3. Calculate the weight on a person in a pyramid.
+ * 4. Convert an integer to English.
+ * 
+ * @author Marcus Clements
+ * @since 2024-04-26
+ * 
+ */
 public class Assign04 {
 
     private static int weight = 200;
 
+    // Pyramid to store the calculated weights
     private static double[][] pyramid = {
             {0},
             {0, 0},
@@ -95,7 +112,7 @@ public class Assign04 {
      */
     private static boolean isWordPalindrome(String line) {
         if (line.isEmpty() || line.split(" ").length == 1) {
-            return true; // Base case; if the string is empty or has one character, it is a palindrome
+            return true; // Base case; if the string is empty or has one word, it is a palindrome
         }
 
         line = line.replaceAll("\\p{Punct}", "").toLowerCase().trim(); // Convert the string to lowercase and remove all non-alphabetic characters
@@ -126,17 +143,16 @@ public class Assign04 {
      */
     private static double weightOn(int row, int col) {
         // Base case: If it's the top person, they bear no weight
-        if (row == 0 && col == 0) {
+        if (row == 0) {
             return 0;
         }
-        // If the person is out of bounds of the pyramid, they bear no weight
-        if (col < 0 || col > row) {
-            return -1;
-        }
-
-
-        
-    }
+        // Weight supported by the person diagonally above on the left
+        double weightLeft = (col > 0) ? weightOn(row - 1, col - 1) / 2 : 0;
+        // Weight supported by the person diagonally above on the right
+        double weightRight = (col < row - 1) ? weightOn(row - 1, col) / 2 : 0;
+        // Total weight on the current person
+        return weight + weightLeft + weightRight;
+    } 
 
     /**
      * Calculates the weight being carried by the person at row, col using memoization.
@@ -160,17 +176,49 @@ public class Assign04 {
         return weight;
     }
 
-
+    // Constants for the English conversion method. These arrays are used to convert numbers to English words, where the indexes correspond to the number.
+    private static final String[] ones = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+    private static final String[] teens = {"", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+    private static final String[] tens = {"", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 
     /**
      * Converts the given int into an English sentence.
      * num will always be less than one billion.
      *
      * @param num An int greater or equal to zero and less than one billion.
-     * @return
+     * @return The English sentence representation of the number.
      */
-    private static String convertToEnglish(int num) {
+    public static String convertToEnglish(int num) {
+        if (num == 0) {
+            return "zero";
+        }
+        return convertToEnglishHelper(num).trim();
+    }
 
+    /**
+     * Helper function for convertToEnglish. Recursively converts the given number to English.
+     * 
+     * @param num The number to convert.
+     * @return The English sentence representation of the number.
+     */
+    private static String convertToEnglishHelper(int num) {
+        // Base case: If the number is less than 10, return the corresponding word
+        String result = "";
+        if (num < 10) {
+            result = ones[num];
+        } else if (num < 20) { // If the number is less than 20, return the corresponding word
+            result = teens[num - 10];
+        } else if (num < 100) { // If the number is less than 100, convert the tens place, add a hyphen, then convert the ones place recursively
+            result = tens[num / 10] + "-" + convertToEnglish(num % 10);
+        } else if (num < 1000) { // If the number is less than 1000, convert the hundreds place and the rest recursively
+            result = ones[num / 100] + " hundred " + convertToEnglish(num % 100);
+        } else if (num < 1000000) { // If the number is less than 1000000, convert the thousands place and the rest recursively
+            result = convertToEnglish(num / 1000) + " thousand " + convertToEnglish(num % 1000);
+        } else if (num < 1000000000) { // If the number is less than 1000000000, convert the millions place and the rest recursively
+            result = convertToEnglish(num / 1000000) + " million " + convertToEnglish(num % 1000000);
+        }
+        // Return the result
+        return result;
     }
 
 }

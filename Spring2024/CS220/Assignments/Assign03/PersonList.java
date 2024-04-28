@@ -10,7 +10,7 @@ import java.util.Iterator;
  * @see PersonNode
  * @since 2024-04-08
  */
-public class PersonList {
+public class PersonList implements Iterable<Person> {
 
     // This program DOES use sentinel nodes.
     PersonNode headNameNode;
