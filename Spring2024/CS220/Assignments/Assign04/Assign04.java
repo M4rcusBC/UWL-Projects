@@ -1,9 +1,9 @@
 package Spring2024.CS220.Assignments.Assign04;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.*;
 
 /**
  * Assign04
@@ -75,15 +75,27 @@ public class Assign04 {
         System.out.println();
 
         System.out.println("\n** INT TO ENGLISH **");
-        System.out.println(convertToEnglish(3));
-        System.out.println(convertToEnglish(33));
-        System.out.println(convertToEnglish(333));
-        System.out.println(convertToEnglish(3333));
-        System.out.println(convertToEnglish(33333));
-        System.out.println(convertToEnglish(333333));
-        System.out.println(convertToEnglish(3333333));
-        System.out.println(convertToEnglish(33333333));
-        System.out.println(convertToEnglish(333333333));
+        Scanner scan = new Scanner(System.in);
+        String result = "";NumberFormat formatter = new DecimalFormat("#0.00000");
+        double startTime, duration;
+
+        while (true) {
+            System.out.println("Enter a number to convert to English (any other char to exit): ");
+            try {
+                int num = scan.nextInt();
+                startTime = System.currentTimeMillis();
+                result = convertToEnglish(num);
+                duration = (System.currentTimeMillis() - startTime);
+                System.out.println(result);
+
+                System.out.println("Execution time: " + formatter.format((duration) / 1000d) + " seconds\n");
+            } catch (InputMismatchException e) {
+                return;
+            } catch (Exception e) {
+                e.printStackTrace();
+                return;
+            }
+        }
     }
 
     /**
@@ -188,7 +200,7 @@ public class Assign04 {
      * @param num An int greater or equal to zero and less than one billion.
      * @return The English sentence representation of the number.
      */
-    public static String convertToEnglish(int num) {
+    public static String convertToEnglish(int num) throws NumberFormatException {
         if (num == 0) {
             return "zero";
         }
@@ -204,19 +216,21 @@ public class Assign04 {
     private static String convertToEnglishHelper(int num) {
         // Base case: If the number is less than 10, return the corresponding word
         String result = "";
+        if (num < -999999999) throw new NumberFormatException("Number is too small.");
+        if (num < 0) return "negative " + convertToEnglishHelper(Math.abs(num));
         if (num < 10) {
             result = ones[num];
         } else if (num < 20) { // If the number is less than 20, return the corresponding word
             result = teens[num - 10];
         } else if (num < 100) { // If the number is less than 100, convert the tens place, add a hyphen, then convert the ones place recursively
-            result = tens[num / 10] + "-" + convertToEnglish(num % 10);
+            result = tens[num / 10] + ((num % 10 == 0) ? "" : "-") + convertToEnglishHelper(num % 10);
         } else if (num < 1000) { // If the number is less than 1000, convert the hundreds place and the rest recursively
-            result = ones[num / 100] + " hundred " + convertToEnglish(num % 100);
+            result = ones[num / 100] + " hundred " + convertToEnglishHelper(num % 100);
         } else if (num < 1000000) { // If the number is less than 1000000, convert the thousands place and the rest recursively
-            result = convertToEnglish(num / 1000) + " thousand " + convertToEnglish(num % 1000);
+            result = convertToEnglishHelper(num / 1000) + " thousand " + convertToEnglishHelper(num % 1000);
         } else if (num < 1000000000) { // If the number is less than 1000000000, convert the millions place and the rest recursively
-            result = convertToEnglish(num / 1000000) + " million " + convertToEnglish(num % 1000000);
-        }
+            result = convertToEnglishHelper(num / 1000000) + " million " + convertToEnglishHelper(num % 1000000);
+        } else throw new NumberFormatException("Number is too large.");
         // Return the result
         return result;
     }
