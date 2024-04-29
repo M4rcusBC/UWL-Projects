@@ -1,8 +1,5 @@
 package Spring2024.CS220.Labs.Lab07;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
 public class CircularArrayQueue<T> {
     private int capacity;
     private Object[] array;
@@ -43,6 +40,7 @@ public class CircularArrayQueue<T> {
         if (isEmpty()) {
             throw new IllegalStateException("Queue is empty");
         }
+        @SuppressWarnings("unchecked")
         T item = (T) array[front];
         array[front] = null; // Clearing the dequeued element
         front = (front + 1) % capacity;
