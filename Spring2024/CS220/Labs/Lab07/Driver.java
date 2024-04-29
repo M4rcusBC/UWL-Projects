@@ -49,8 +49,10 @@ public class Driver {
             try {
                 startTime = System.currentTimeMillis();
                 result = RPNCalculator.evaluateRPN(expression);
-                duration = (long) (System.currentTimeMillis() - startTime);
-            } catch (Exception e) {
+                duration = (System.currentTimeMillis() - startTime);
+            }
+            // TODO: Handle exceptions
+            catch (Exception e) {
                 System.out.println(Arrays.toString(e.getStackTrace()));
                 break;
             }
@@ -60,5 +62,6 @@ public class Driver {
             expression = scan.nextLine();
         }
         scan.close();
+        return;
     }
 }

@@ -191,7 +191,9 @@ public class Filling {
 
             scan.close();
 
-        } catch (Exception e) {
+        }
+        // TODO: Handle exceptions
+        catch (Exception e) {
             e.printStackTrace();
         }
 
