@@ -190,10 +190,10 @@ public class Filling {
 			picture = new int[height][width];
 
 			for (int i = 0; i < height; i++) {
-				String[] line = br.readLine().trim().split(" ");
 				for (int j = 0; j < width; j++) {
-					picture[i][j] = Integer.parseInt(line[j]);
+					picture[i][j] = (br.read());
 				}
+				br.readLine();
 			}
 
 			br.close();
