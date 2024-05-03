@@ -2,15 +2,23 @@ package Spring2024.CS220.Labs.Lab07;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+ * Driver class to test CircularArrayQueue and RPNCalculator.
+ * Basic test cases are provided for CircularArrayQueue, and 
+ * user input is taken to evaluate RPN expressions using RPNCalculator.
+ * 
+ * @author Marcus Clements
+ * @since 2024-05-01
+ */
 public class Driver {
 
     public static void main(String[] args) {
 
         // Program 1: Implementing Queue using Circular Array
 
+        // Get the starting time
         double startTime = System.currentTimeMillis();
         // Create a CircularArrayQueue with initial capacity of 5
         CircularArrayQueue<Integer> queue = new CircularArrayQueue<>(5);
@@ -34,6 +42,7 @@ public class Driver {
         while (!queue.isEmpty()) {
             System.out.println("Dequeued element: " + queue.dequeue());
         }
+        // Calculate the execution time
         double duration = (System.currentTimeMillis() - startTime);
         NumberFormat formatter = new DecimalFormat("#0.00000");
         System.out.println("Execution time: " + formatter.format((duration) / 1000d) + " seconds\n");
@@ -47,13 +56,14 @@ public class Driver {
         while (!expression.equals("exit")) {
             String result;
             try {
+                // Get the starting time
                 startTime = System.currentTimeMillis();
                 result = RPNCalculator.evaluateRPN(expression);
+                // Calculate the execution time
                 duration = (System.currentTimeMillis() - startTime);
             }
-            // TODO: Handle exceptions
             catch (Exception e) {
-                System.out.println(Arrays.toString(e.getStackTrace()));
+                System.out.println((e.getStackTrace()));
                 break;
             }
             System.out.println(expression.trim() + " -> " + result);
