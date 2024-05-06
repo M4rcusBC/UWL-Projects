@@ -1,21 +1,27 @@
 package Spring2024.CS220.Assignments.Assign05;
 
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * A class for allowing a user to color a picture by choosing a row/col value
  * and then recoloring all the adjacent positions using either a stack,
  * a queue, or recursion.
  *
- * @author asauppe
+ * @author asauppe, Marcus Clements
  */
 public class Filling {
 
     public static void main(String[] args) {
 
         // reads in the "picture" from the file
-        int[][] picture = readPicture("Spring2024/CS220/Assignments/Assign05/image.txt");
+        int[][] picture = readPicture("Spring2024/CS220/Assignments/Assign05/image.pgm");
 
         // array with enums representing each of the three techniques you will implement
         Technique[] techniques = {Technique.STACK, Technique.RECURSIVE, Technique.QUEUE};
@@ -30,6 +36,8 @@ public class Filling {
 
             // color the pixel at 2, 2 and all contiguous pixels of the same color to 9
             colorPicture(toUse, new Coordinate(2, 2), 9, t);
+
+            printPicture(toUse);
 
             // write picture to file, prepended with the technique
             writePicture(toUse, t + ".pgm");
@@ -71,7 +79,33 @@ public class Filling {
      */
     private static void stackColor(int[][] picture, Coordinate coor, int coloring, int newColor) {
 
+        int height = picture.length;
+        int width = picture[0].length;
 
+        Stack<Coordinate> stack = new Stack<>();
+        stack.push(coor);
+
+        while (!stack.isEmpty()) {
+            Coordinate current = stack.pop();
+            int row = current.getRow();
+            int col = current.getCol();
+
+            picture[row][col] = newColor;
+
+            // Check neighbors
+            if (row - 1 >= 0 && picture[row - 1][col] == coloring) {
+                stack.push(new Coordinate(row - 1, col));
+            }
+            if (row + 1 < height && picture[row + 1][col] == coloring) {
+                stack.push(new Coordinate(row + 1, col));
+            }
+            if (col - 1 >= 0 && picture[row][col - 1] == coloring) {
+                stack.push(new Coordinate(row, col - 1));
+            }
+            if (col + 1 < width && picture[row][col + 1] == coloring) {
+                stack.push(new Coordinate(row, col + 1));
+            }
+        }
     }
 
     /**
@@ -84,6 +118,33 @@ public class Filling {
      */
     private static void queueColor(int[][] picture, Coordinate coor, int coloring, int newColor) {
 
+        int height = picture.length;
+        int width = picture[0].length;
+
+        Queue<Coordinate> queue = new LinkedList<>();
+        queue.offer(coor);
+
+        while (!queue.isEmpty()) {
+            Coordinate current = queue.poll();
+            int row = current.getRow();
+            int col = current.getCol();
+
+            picture[row][col] = newColor;
+
+            if (row - 1 >= 0 && picture[row - 1][col] == coloring) {
+                queue.offer(new Coordinate(row - 1, col));
+            }
+            if (row + 1 < height && picture[row + 1][col] == coloring) {
+                queue.offer(new Coordinate(row + 1, col));
+            }
+            if (col - 1 >= 0 && picture[row][col - 1] == coloring) {
+                queue.offer(new Coordinate(row, col - 1));
+            }
+            if (col + 1 < width && picture[row][col + 1] == coloring) {
+                queue.offer(new Coordinate(row, col + 1));
+            }
+
+        }
 
     }
 
@@ -97,7 +158,25 @@ public class Filling {
      */
     private static void recursiveColor(int[][] picture, Coordinate coor, int coloring, int newColor) {
 
+        int height = picture.length;
+        int width = picture[0].length;
 
+        int row = coor.getRow();
+        int col = coor.getCol();
+
+        // Base case: Check if current pixel is within bounds and has the old color
+        if (row < 0 || row >= height || col < 0 || col >= width || picture[row][col] != coloring) {
+            return;
+        }
+
+        // Fill the current pixel with the new color
+        picture[row][col] = newColor;
+
+        // Recursively fill the adjacent pixels
+        recursiveColor(picture, new Coordinate(row - 1, col), coloring, newColor); // Up
+        recursiveColor(picture, new Coordinate(row + 1, col), coloring, newColor); // Down
+        recursiveColor(picture, new Coordinate(row, col - 1), coloring, newColor); // Left
+        recursiveColor(picture, new Coordinate(row, col + 1), coloring, newColor); // Right
     }
 
     /**
@@ -168,6 +247,7 @@ public class Filling {
      * @return The picture as a 2D array of ints.
      */
     private static int[][] readPicture(String file) {
+        // Declare the 2D array to hold the picture
         int[][] picture = null;
 
         try {
@@ -213,6 +293,32 @@ public class Filling {
      * @param file    The file to write to
      */
     private static void writePicture(int[][] picture, String file) {
+
+        try {
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            int maxVal = 18;
+            writer.write("P2");
+            writer.newLine();
+            writer.write(picture[0].length + " " + picture.length);
+            writer.newLine();
+            writer.write(maxVal);
+            writer.newLine();
+
+            for (int[] ints : picture) {
+                for (int j = 0; j < ints.length; j++) {
+                    if (ints[j] < 10) {
+                        writer.write(" ");
+                    }
+                    writer.write(ints[j]);
+                    writer.write(" ");
+                }
+                writer.newLine();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

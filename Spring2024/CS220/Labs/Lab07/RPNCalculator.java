@@ -1,5 +1,3 @@
-package Spring2024.CS220.Labs.Lab07;
-
 import java.util.Stack;
 
 /**

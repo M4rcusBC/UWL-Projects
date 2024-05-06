@@ -1,6 +1,4 @@
-package Spring2024.CS220.Labs.Lab07;
-
-/*
+/**
  * CircularArrayQueue class to implement a queue using a circular array.
  * The queue has a fixed capacity, and it expands when the capacity is reached.
  * 
