@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage{amsfonts} % optional line, but this gets the mathbb lines below to work
+\usepackage{amsmath} % optional line, but this gets aligned notation to work
+\usepackage{xcolor} % option line, but allows use of color
+\usepackage[letterpaper, margin=1.0in]{geometry} %optional line but ensures letter paper is used and margins are 1-inch on all four sides
+
+% If you want to type \Z instead of typing \mathbb{Z}, you can! In fact, you can use \newcommand following the format(s) below to define whatever you end up using over and over.
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+
+\begin{document}
+
+\begin{enumerate}
+
+\item Your job is to create a LaTeX file that will produce a PDF that looks just like this five-page PDF (including this sentence), with the only difference being that the end of this paragraph should have your name. Since the purpose of this assignment is to train you to use LaTeX, you may not share code on this assignment with anyone. Download the template which uses one-inch margins, modify the LaTeX file, and upload the modified LaTeX file to Canvas. It must compile without errors (no red circle before line numbers if using Overleaf) and the filename should end in tex like the template does. My name is Marcus Clements.
+
+To get an automatically-numbered list, use enumerate. Individual parts of the list follow the command called item. Notice that if you use 'single quote marks' that the PDF has both quote marks going the same way. To get the quote marks to `balance' properly, use the character in the upper left of the keyboard for the left quote mark. The same applies for ``double quotes'' by using the left quote symbol twice for the left part and the standard quote symbol twice for the right part.
+
+From this point on in your mathematical career, mathematics is always written in complete sentences. Grammar matters. Math should always be in math mode. Notice the difference between x and $x$. The latter $x$ is in dollar signs, thus in math mode. There are generally two levels of formality when writing mathematics. Handwritten mathematics with a time issue (your work on quizzes/tests, my writing on the board) will typically be informal, whereas everything else (including anything typed, such as homework) is more formal. It will quickly become seamless to read formal math and write informally, and vice versa. Start a new page with the newpage command.
+
+\newpage
+
+\item Let $A$ be an $m \times n$ matrix. Note $A$ is in math mode but A is not. Instead of using the letter x, the math mode command ``times'' was used. Compare $m \times n$ and $mxn$. The latter just looks like variables $m$ and $x$ and $m$ were all multiplied together. Formal math never begins with mathematical notation. As an example, suppose $m = n$. Then the matrix $A$ is a square matrix. The last sentence was formal. $A$ is a square matrix. Since the previous sentence started with mathematical notation, this is informal. Informal math is fine for quizzes (to save you time) and the board (where you can always interrupt with a question), but formal math has tiny phrases (such as ``Then the matrix'') to help guide the reader.
+
+\newpage
+
+\item Mathematics can be inline such as $a^2 + b^2 = c^2$ or can be centered. There is no need to over-use dollar signs. For a consecutive block of notation, start with a dollar sign and end with a dollar sign. For instance, the first sentence on this page did not use six dollar signs, but only two dollar signs: one before the equation and one after. Doing this helps in formatting complete, coherent sentences. Centered math (which is obtained either by double dollar signs or by backslash and square bracket) is better for more complicated stuff. We take the equation \[ax^2 + bx + c = 0\] and divide by $a$ to get \[x^2 + \frac{bx}{a} + \frac{c}{a} = 0.\]
+
+Notice that there is a period at the end of the second centered math but not the first. This is because the period still marks the end of a sentence. Type the period before the baclslash and right square bracket.
+
+Compare the following two sentences. For all $x$, $x^2 = x \cdot x$. For all $x$, the equation $x^2 = x \cdot x$ holds. While the second is a little longer, it is a little easier to read. In the first sentence, it is a little distracting (visually) to have notation right before the comma and immediately after the comma. In the second sentence, we put the words ``the equation'' to help separate notation from notation.
+
+\newpage
+
+\item Consider how much consecutive writing is notation, and use one dollar sign to start and one to end. For example, when writing $x^2 + x^3 + x^4$, you should only use two dollar signs, not six.
+
+There are function names (and many pieces of mathematical notation used like functions) which are available by introducing a backslash. Compare $cos^2\theta + sin^2\theta$ versus $\cos^2\theta + \sin^2\theta$. The second is correct, and you don't have to leave math mode to type this. Compare $det(A)det(B)$ versus $\det(A)\det(B)$. The second is correct, obtained by putting a backslash before each det.
+
+Some notation in this paragraph uses the mathbb command, which requires the amsfonts package. We use $\Z$ for the set of all integers. So, $\Z = \{\dots, -3, -2, -1, 0, 1, 2, 3, \dots\}$. We use $\Q$ for the set of rational numbers. For instance, $\frac{3}{11}\in\Q$. We use $\R$ to denote the set of all real numbers. As an example, $\sqrt{\pi}\in\R$. Finally, we let $\C$ denote the set of all complex numbers.
+
+\newpage
+
+\item In college algebra, to find the domain of \[f(x) = \frac{\sqrt{2x + 10}}{x^2 - x - 90}\] we need to ensure that $2x + 10 \geq 0$ and that any solutions to $x^2 - x - 90$ are excluded. For the inequality, subtracting $10$ from both sides gives $2x \geq -10$, so $x \geq -5$. For the equation, we factor the left side to get $(x - 10)(x + 9) = 0$, so $x = 10$ or $x = -9$. While these two $x$-values must be avoided, we already avoid $-9$ since we require $x \geq -5$. Thus, the domain of the function $f$ is $\left[-5, 10\right) \cup (10, \infty)$.
+
+\end{enumerate}
+
+\end{document}
