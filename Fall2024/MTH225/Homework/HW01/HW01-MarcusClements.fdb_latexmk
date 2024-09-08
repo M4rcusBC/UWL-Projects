@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1725564714.64599 "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW01/HW01-MarcusClements.tex" "HW01-MarcusClements.pdf" "HW01-MarcusClements" 1725564722.17302 0
-  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1725564721 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "C:/Users/mbcle/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1725564683 24265332 56b9861c6b33e973fe42188bec193c0b ""
+["pdflatex"] 1725824198.38625 "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW01/HW01-MarcusClements.tex" "HW01-MarcusClements.pdf" "HW01-MarcusClements" 1725824199.0938 0
+  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1725822894 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/mbcle/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1725558874 24265332 1cc552cd10b085474282125321fe3155 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -14,9 +14,9 @@
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty" 1578053545 42759 9cf6c5257b1bc7af01a58859749dd37a ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1718270727 2671 70891d50dac933918b827d326687c6e8 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1716480499 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
-  "HW01-MarcusClements.aux" 1725564721 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "HW01-MarcusClements.tex" 1725564573 3284 499a8df3c75e489f8c96383b8dc0abc7 ""
-  "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW01/HW01-MarcusClements.tex" 1725564573 3284 499a8df3c75e489f8c96383b8dc0abc7 ""
+  "HW01-MarcusClements.aux" 1725824198 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "HW01-MarcusClements.tex" 1725824197 4722 a4889abe0a5e970f085f58ca6cf66010 ""
+  "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW01/HW01-MarcusClements.tex" 1725824197 4722 a4889abe0a5e970f085f58ca6cf66010 ""
   (generated)
   "HW01-MarcusClements.aux"
   "HW01-MarcusClements.log"

@@ -22,6 +22,9 @@ Clarification: When $x=1$ we have $y=1$. When $x=2$ then $y=2$. When $x=3$ then 
 For this homework question, let $C$ be the set of all car brands.
 \begin{enumerate}
 \item With correct notation, state three elements of $C$.
+
+\indent Let $r$ be ``Rolls-Royce'', let $f$ be ``Ford'', and let $t$ be ``Toyota''. Then $r, f, t \in C$.
+
 \item Write what \fbox{$r \in C$} means in plain English.
 \end{enumerate}
 
@@ -29,20 +32,60 @@ For this homework question, let $C$ be the set of all car brands.
 Let $p$ be the proposition ``Madison is the capital of Wisconsin'', and let $q$ be the proposition ``Tables are a type of food'', and let $r$ be ``Dogs are not animals''. State each of the following in words:
 \begin{enumerate}
 \item $p \wedge q$
+
+Madison is the capital of Wisconsin and tables are a type of food.
+
 \item $p \vee q$
+
+Madison is the capital of Wisconsin or tables are a type of food.
+
 \item $(r \wedge p) \rightarrow q$
+
+If dogs are not animals and Madison is the capital of Wisconsin, then tables are a type of food.
+
 \item $q \rightarrow \neg r$
+
+If tables are a type of food, then dogs are animals.
+
 \item $r \wedge r$
+
+Dogs are not animals and dogs are not animals.
+
 \end{enumerate}
 
 \item 
 Let $p$ be the proposition ``Madison is the capital of Wisconsin'', and let $q$ be the proposition ``Tables are a type of food'', and let $r$ be ``Dogs are not animals''. For each proposition below, state in symbols and ALSO determine if the proposition is true or false (and provide some explanation for why).
 \begin{enumerate}
 \item Madison is the capital of Wisconsin and dogs are not animals.
+
+Symbolic representation: $p \wedge r$
+
+Explanation:
+
 \item Madison is the capital of Wisconsin or dogs are animals.
+
+Symbolic representation: $p \vee \neg r$
+
+Explanation:
+
 \item If dogs are animals, then tables are a type of food.
+
+Symbolic representation: $\neg r \rightarrow q$
+
+Explanation:
+
 \item If Madison is not the capital of Wisconsin, then dogs are not animals.
+
+Symbolic representation: $\neg p \rightarrow r$
+
+Explanation:
+
 \item Dogs are not animals or dogs are animals.
+
+Symbolic representation: $r \vee \neg r$
+
+Explanation: 
+
 \end{enumerate}
 
 \item Provide a complete truth table for $(p \rightarrow \neg q) \wedge (q \vee r)$.
@@ -51,5 +94,20 @@ Clarification: for a complete truth table, I am expecting you to ``show your wor
 
 \end{enumerate}
 
+\begin{table}[]
+\centering
+\begin{tabular}{|l|l|l||l|l|l|}
+\hline
+$p$ & $q$ & $r$ & $(p \rightarrow \neg q)$ & $(q \vee r)$ & $(p \rightarrow \neg q) \wedge (q \vee r)$ \\ \hline
+  T  &  T  &  T  &      &      &     \\ \hline
+  T  &  T  &  F  &      &      &     \\ \hline
+  T  &  F  &  T  &      &      &     \\ \hline
+  T  &  F  &  F  &      &      &     \\ \hline
+  F  &  T  &  T  &      &      &     \\ \hline
+  F  &  T  &  F  &      &      &     \\ \hline
+  F  &  F  &  T  &      &      &     \\ \hline
+  F  &  F  &  F  &      &      &     \\ \hline
+\end{tabular}
+\end{table}
 
 \end{document}
