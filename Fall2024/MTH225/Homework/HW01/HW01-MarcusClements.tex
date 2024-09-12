@@ -1,6 +1,9 @@
+% Homework 01 for MTH 225 Fall 2024
+% Authors: Dr. Edward Kim, Marcus Clements
 \documentclass{article}
 
 \usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
 
 \begin{document}
 
@@ -13,101 +16,116 @@ Answer each question on a separate page. Use the newpage command (with a backsla
 % By typing % again on another line, I created another comment. Using \begin{enumerate} and \end{enumerate} creates an automatically numbered list. The next number appears with \item, and the system requires \item to appear at least once.
 \begin{enumerate}
 
-\item 
-Find a piece-wise non-recursive formula for the sequence $a_n$ whose first terms are: $2,2,5,5,8,8,11,11,14,14,17,17$ and so on.
+  \item
+        Find a piece-wise non-recursive formula for the sequence $a_n$ whose first terms are: $2,2,5,5,8,8,11,11,14,$
 
-Clarification: When $x=1$ we have $y=1$. When $x=2$ then $y=2$. When $x=3$ then $y=5$. However, I am just using $x$ and $y$ for convenience. Change the $x$s to $n$s, and the $y$s to $a_n$s when you turn in your homework.
+        $14,17,17$ and so on.
 
-\item 
-For this homework question, let $C$ be the set of all car brands.
-\begin{enumerate}
-\item With correct notation, state three elements of $C$.
+        Clarification: When $x=1$ we have $y=1$. When $x=2$ then $y=2$. When $x=3$ then $y=5$. However, I am just using $x$ and $y$ for convenience. Change the $x$s to $n$s, and the $y$s to $a_n$s when you turn in your homework.
 
-\indent Let $r$ be ``Rolls-Royce'', let $f$ be ``Ford'', and let $t$ be ``Toyota''. Then $r, f, t \in C$.
+        $\bullet$ The formula for this question can be expressed as
+        $a_n = \begin{cases}
+            2 + \frac{3(n-1)}{2} \text{ for all } n \text{ if } n \text{ is odd} \\
+            2 + \frac{3(n-2)}{2} \text{ for all } n \text{ if } n \text{ is even}
+          \end{cases}$.
 
-\item Write what \fbox{$r \in C$} means in plain English.
-\end{enumerate}
+  \item
+        For this homework question, let $C$ be the set of all car brands.
+        \begin{enumerate}
+          \item With correct notation, state three elements of $C$.
 
-\item 
-Let $p$ be the proposition ``Madison is the capital of Wisconsin'', and let $q$ be the proposition ``Tables are a type of food'', and let $r$ be ``Dogs are not animals''. State each of the following in words:
-\begin{enumerate}
-\item $p \wedge q$
+                $\bullet$ Let $r$ be ``Rolls-Royce'', let $f$ be ``Ford'', and let $t$ be ``Toyota''. Then $r, f, t \in C$.
 
-Madison is the capital of Wisconsin and tables are a type of food.
+          \item Write what \fbox{$r \in C$} means in plain English.
 
-\item $p \vee q$
+                $\bullet$ In plain english and applying my example for $r$, $r \in C$ means that Rolls-Royce is an element of the set of all car brands. More generally speaking, it just means that $r$ is an element of the set $C$. Therefore, we can deduce that $r$ is a car brand!
 
-Madison is the capital of Wisconsin or tables are a type of food.
+        \end{enumerate}
 
-\item $(r \wedge p) \rightarrow q$
+  \item
+        Let $p$ be the proposition ``Madison is the capital of Wisconsin'', and let $q$ be the proposition ``Tables are a type of food'', and let $r$ be ``Dogs are not animals''. State each of the following in words:
+        \begin{enumerate}
+          \item $p \wedge q$
 
-If dogs are not animals and Madison is the capital of Wisconsin, then tables are a type of food.
+               $\bullet$ Madison is the capital of Wisconsin and tables are a type of food.
 
-\item $q \rightarrow \neg r$
+          \item $p \vee q$
 
-If tables are a type of food, then dogs are animals.
+               $\bullet$ Madison is the capital of Wisconsin or tables are a type of food.
 
-\item $r \wedge r$
+          \item $(r \wedge p) \rightarrow q$
 
-Dogs are not animals and dogs are not animals.
+              $\bullet$ If dogs are not animals and Madison is the capital of Wisconsin, then tables are a type of food.
 
-\end{enumerate}
+          \item $q \rightarrow \neg r$
 
-\item 
-Let $p$ be the proposition ``Madison is the capital of Wisconsin'', and let $q$ be the proposition ``Tables are a type of food'', and let $r$ be ``Dogs are not animals''. For each proposition below, state in symbols and ALSO determine if the proposition is true or false (and provide some explanation for why).
-\begin{enumerate}
-\item Madison is the capital of Wisconsin and dogs are not animals.
+               $\bullet$ If tables are a type of food, then dogs are animals.
 
-Symbolic representation: $p \wedge r$
+          \item $r \wedge r$
 
-Explanation:
+               $\bullet$ Dogs are not animals and dogs are not animals.
 
-\item Madison is the capital of Wisconsin or dogs are animals.
+        \end{enumerate}
 
-Symbolic representation: $p \vee \neg r$
+  \item
+        Let $p$ be the proposition ``Madison is the capital of Wisconsin'', and let $q$ be the proposition ``Tables are a type of food'', and let $r$ be ``Dogs are not animals''. For each proposition below, state in symbols and ALSO determine if the proposition is true or false (and provide some explanation for why).
+        \begin{enumerate}
+          \item Madison is the capital of Wisconsin and dogs are not animals.
 
-Explanation:
+                Symbolic representation: $p \wedge r$
 
-\item If dogs are animals, then tables are a type of food.
+                Truth value: False
+                
+                Explanation: We know conjunction of two propositions is true, in this case, only if both $p$ and $r$ are true. Since $r$ (``Dogs are not animals'') is clearly false, the entire statement is false.
 
-Symbolic representation: $\neg r \rightarrow q$
+          \item Madison is the capital of Wisconsin or dogs are animals.
 
-Explanation:
+                Symbolic representation: $p \vee \neg r$
 
-\item If Madison is not the capital of Wisconsin, then dogs are not animals.
+                Truth value: True
+                
+                Explanation: We also know the disjunction of two propositions is true if either $p$ or $\neg r$ (the negation of $r$) is true. Since p (``Madison is the capital of Wisconsin'') is true, the entire statement is true, regardless of the truth value of $\neg r$.
 
-Symbolic representation: $\neg p \rightarrow r$
+          \item If dogs are animals, then tables are a type of food.
 
-Explanation:
+                Symbolic representation: $\neg r \rightarrow q$
 
-\item Dogs are not animals or dogs are animals.
+                Explanation:
 
-Symbolic representation: $r \vee \neg r$
+          \item If Madison is not the capital of Wisconsin, then dogs are not animals.
 
-Explanation: 
+                Symbolic representation: $\neg p \rightarrow r$
 
-\end{enumerate}
+                Explanation:
 
-\item Provide a complete truth table for $(p \rightarrow \neg q) \wedge (q \vee r)$.
+          \item Dogs are not animals or dogs are animals.
 
-Clarification: for a complete truth table, I am expecting you to ``show your work'' by giving relevant columns that lead up to the final column. For example, one of the columns you should display work for is $q \vee r$.
+                Symbolic representation: $r \vee \neg r$
+
+                Explanation:
+
+        \end{enumerate}
+
+  \item Provide a complete truth table for $(p \rightarrow \neg q) \wedge (q \vee r)$.
+
+        Clarification: for a complete truth table, I am expecting you to ``show your work'' by giving relevant columns that lead up to the final column. For example, one of the columns you should display work for is $q \vee r$.
 
 \end{enumerate}
 
 \begin{table}[]
-\centering
-\begin{tabular}{|l|l|l||l|l|l|}
-\hline
-$p$ & $q$ & $r$ & $(p \rightarrow \neg q)$ & $(q \vee r)$ & $(p \rightarrow \neg q) \wedge (q \vee r)$ \\ \hline
-  T  &  T  &  T  &      &      &     \\ \hline
-  T  &  T  &  F  &      &      &     \\ \hline
-  T  &  F  &  T  &      &      &     \\ \hline
-  T  &  F  &  F  &      &      &     \\ \hline
-  F  &  T  &  T  &      &      &     \\ \hline
-  F  &  T  &  F  &      &      &     \\ \hline
-  F  &  F  &  T  &      &      &     \\ \hline
-  F  &  F  &  F  &      &      &     \\ \hline
-\end{tabular}
+  \centering
+  \begin{tabular}{|c|c|c||c|c|c|}
+    \hline
+    $p$ & $q$ & $r$ & $(p \rightarrow \neg q)$ & $(q \vee r)$ & $(p \rightarrow \neg q) \wedge (q \vee r)$ \\ \hline
+    T   & T   & T   &                          &              &                                            \\ \hline
+    T   & T   & F   &                          &              &                                            \\ \hline
+    T   & F   & T   &                          &              &                                            \\ \hline
+    T   & F   & F   &                          &              &                                            \\ \hline
+    F   & T   & T   &                          &              &                                            \\ \hline
+    F   & T   & F   &                          &              &                                            \\ \hline
+    F   & F   & T   &                          &              &                                            \\ \hline
+    F   & F   & F   &                          &              &                                            \\ \hline
+  \end{tabular}
 \end{table}
 
 \end{document}
