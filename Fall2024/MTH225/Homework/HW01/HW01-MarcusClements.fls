@@ -34,11 +34,14 @@ INPUT .\HW01-MarcusClements.aux
 INPUT .\HW01-MarcusClements.aux
 INPUT HW01-MarcusClements.aux
 OUTPUT HW01-MarcusClements.aux
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 OUTPUT HW01-MarcusClements.pdf
 INPUT C:\Users\mbcle\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT HW01-MarcusClements.aux
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb

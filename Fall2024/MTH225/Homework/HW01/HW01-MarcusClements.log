@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  12 SEP 2024 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  12 SEP 2024 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -166,8 +166,8 @@ LaTeX Font Info:    ... okay on input line 8.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (3.03014pt too wide) in paragraph at lines 20--21
-[]\OT1/cmr/m/n/10 Find a piece-wise non-recursive for-mula for the se-quence $\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 whose first terms are: $2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 8\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 8\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 11\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 11\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 14\OML/cmm/m/it/10 ;$ 
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
  []
 
 
@@ -175,30 +175,38 @@ Overfull \hbox (3.03014pt too wide) in paragraph at lines 20--21
 [1
 
 {C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (3.03014pt too wide) in paragraph at lines 25--26
+[]\OT1/cmr/m/n/10 Find a piece-wise non-recursive for-mula for the se-quence $\OML/cmm/m/it/10 a[]$ \OT1/cmr/m/n/10 whose first terms are: $2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 8\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 8\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 11\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 11\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 14\OML/cmm/m/it/10 ;$ 
+ []
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 115.
 
 
+[2]
 
-[2] (HW01-MarcusClements.aux)
+[3]
+
+[4]
+
+[5]
+
+[6] (HW01-MarcusClements.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1743 strings out of 473899
- 27683 string characters out of 5726501
- 1940960 words of memory out of 5000000
- 24661 multiletter control sequences out of 15000+600000
- 558523 words of font info for 38 fonts, out of 8000000 for 9000
+ 1749 strings out of 473899
+ 27822 string characters out of 5726501
+ 1936960 words of memory out of 5000000
+ 24666 multiletter control sequences out of 15000+600000
+ 558831 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,615b,264s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on HW01-MarcusClements.pdf (2 pages, 84296 bytes).
+ 57i,9n,65p,434b,283s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on HW01-MarcusClements.pdf (6 pages, 99766 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
