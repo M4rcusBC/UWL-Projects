@@ -1,0 +1,128 @@
+\documentclass{article}
+
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+
+\begin{document}
+
+% Answer each question on a separate page. Use the newpage command (with a backslash in front of newpage) to separate pages.
+
+\begin{enumerate}
+
+      \item State a predicate $P(x)$ which has the following properties: first $P(x)$
+            should have $\mathbb{R}$ as a universe of discourse, second $\exists x \in
+                  \mathbb{R} [P(x)]$ is true, and third $\forall x \in \mathbb{R} [P(x)]$ is
+            false. When stating your predicate, make it CLEAR what the predicate is by
+            using balanced quote marks, or putting it \fbox{in a framed box like this}.
+            Then, provide brief and informal explanations of why $\exists x \in \mathbb{R}
+                  [P(x)]$ is true and why $\forall x \in \mathbb{R} [P(x)]$ is false.
+
+            Let $P(x)$ be \fbox{$x$ is a positive real number.}
+
+            Then the statement $\exists x \in \mathbb{R} [P(x)]$ is true because there
+            exists at least one positive real number.
+
+            Then the statement $\forall x \in \mathbb{R} [P(x)]$ is false because there are
+            (infinitely many) real numbers that are not positive.
+
+            The quantifiers in front of the predicate $P(x)$ cause these statements to mean
+            different things, and I believe I have accurately shown this here.
+
+            \newpage
+
+      \item Let $C(x)$ be \fbox{$x$ is a painter}. Let $S$ be the set of all students.
+            \begin{itemize}
+                  \item State $\forall x \in S [C(x)]$ in formal mathematical English.
+
+                        ``For all painters $x$ in the set of all students $S$, $x$ is a painter.''
+
+                  \item State $\forall x \in S [C(x)]$ in plain English. (For this part, think of how
+                        you'd talk to a kid.)
+
+                        ``Every student is a painter.''
+
+                  \item State $\exists x \in S [C(x)]$ in formal mathematical English.
+
+                        ``There exists a painter $x$ in the set of all students $S$ such that $x$ is a painter.''
+
+                  \item State $\exists x \in S [C(x)]$ in plain English. (For this part, think of how
+                        you'd talk to a kid.)
+
+                        ``There is a student who is a painter.''
+
+                  \item State $\exists x \in S [\neg C(x)]$ in plain English. (For this part, think of
+                        how you'd talk to a kid.)
+
+                        ``There is a student who is not a painter.''
+
+            \end{itemize}
+
+            \newpage
+
+      \item Negate and simplify $\forall a \in A [\forall b \in B [\exists c \in C [\forall
+                                                      d \in D [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]]]]$. Show {\bf ALL} steps
+            one at a time for credit (no work leads to no credit). Because you are typing,
+            it is actually fairly nice to show all steps: type a thing, then copy-paste and
+            make a minimal change on the copy, then take the new thing, copy-paste, and
+            make a minimal change again.) Simplify to the point where the only place
+            negation signs appear is immediately before a predicate.
+
+            \[\forall a \in A [\forall b \in B [\exists c \in C [\forall d \in D [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]]]]\]
+
+            \rule{\linewidth}{0.5pt}
+
+            \begin{equation}
+
+                  \begin{align*}
+                        
+                        \forall a \in A [\forall b \in B [\exists c \in C [\forall d \in D [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]]]] & \equiv \neg [\forall a \in A [\forall b \in B [\exists c \in C [\forall d \in D [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]]]]] \\
+
+                                                                                                                                          & \equiv \exists a \in A \neg [\forall b \in B [\exists c \in C [\forall d \in D [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]]]]   \\
+
+                                                                                                                                          & \equiv \exists a \in A \exists b \in B \neg [\exists c \in C [\forall d \in D [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]]]     \\
+
+                                                                                                                                          & \equiv \exists a \in A \exists b \in B \forall c \in C \neg [\forall d \in D [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]]       \\
+
+                                                                                                                                          & \equiv \exists a \in A \exists b \in B \forall c \in C \exists d \in D \neg [ ( P(a,b) \wedge Q(c) ) \rightarrow R(d) ]         \\
+
+                                                                                                                                          & \equiv \exists a \in A \exists b \in B \forall c \in C \exists d \in D [P(a,b) \wedge Q(c)] \wedge \neg R(d)
+                  \end{align*}
+            \end{equation}
+
+            \newpage
+
+      \item Throughout the semester, we will use $\mathbb{H}$ to denote the set of all
+            humans. Let $P(x,y)$ be the predicate ``$x$ sent an email to $y$''. Negate the
+            statement $\forall x \in \mathbb{H}, \exists y \in \mathbb{H} [P(x,y)]$ and
+            simplify to the point of not having any negation symbols in front of
+            quantifiers. (Please show your steps here, since there aren't even that many
+            steps.) Then state what the result you have is in plain English.
+
+            \newpage
+
+      \item State:
+            \begin{itemize}
+                  \item A set $A$
+                  \item A set $B$ that is different from $A$
+                  \item A predicate $P(x,y)$, where $x$ should always be an element of $A$, and $y$
+                        should always be an element of $B$. (The ``fancy'' language for this is that
+                        $A$ is the universe of discourse of $x$, and $B$ is the universe of discourse
+                        of the variable $y$.)
+            \end{itemize}
+            If what you describe for $P(x,y)$ is not a predicate, it is not possible to award any points on this question. So, go to the handbook and review the definition of predicate. In addition to stating a set $A$, stating a set $B$, and stating a predicate $P(x,y)$, the following should occur:
+            \begin{enumerate}
+                  \item $\forall a \in A [ \exists b \in B [ P(a,b) ] ]$ is true
+                  \item $\exists b \in B [ \forall a \in A [ P(a,b) ] ]$ is false
+            \end{enumerate}
+            Since the two propositions above will have different truth values, the purpose of this exercise (once complete) is to remind you that you cannot swap the places of a universal quantifier and an existential quantifier. (Well, you can, but the meaning has changed.)
+
+      \item (OPTIONAL; 0pts) After rubbing a magic lantern, a genie appears. The genie will grant you one million dollars if you can identify the fake coin. There are $9$ coins, all except one are the same weight, the fake one is heavier than the rest. You must determine which is fake using an old fashioned balance. You may use the balance TWO times. (The scales are of the old balance variety. That is, a small dish hangs from each end of a rod that is balanced in the middle. The device enables you to conclude either that the contents of the dishes weigh the same or that the dish that falls lower has heavier contents than the other.) Explain how this can be done.
+
+\end{enumerate}
+
+\end{document}

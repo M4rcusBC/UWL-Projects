@@ -1,49 +1,154 @@
 \documentclass{article}
 
 \usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
 
 \begin{document}
 
-After downloading, I recommend you rename the LaTeX right away from HW02-Instructions.tex to something like HW02-YourName.tex. After editing in Overleaf or TeXShop or TeXWorks, take the PDF (which should open in Adobe Acrobat Reader) and upload to Canvas.
-
-Answer each question on a separate page. Use the newpage command (with a backslash in front of newpage) to separate pages. At the top of each page, you may choose to keep the question text and write your answer below, OR you can delete the question text and just have your answer. Either way is fine! (So, page 3 should have JUST the answer to question 3, OR page 3 should have the original question text followed by the answer.)
-
 \begin{enumerate}
 
-\item 
-Find a piece-wise non-recursive formula for the sequence $a_n$ whose first terms are: $1,1,1,2,2,2,3,3,3,4,4,4,5,5,5$ and so on.
+    \item
+          Find a piece-wise non-recursive formula for the sequence $a_n$ whose first
+          terms are: $1,1,1,2,2,2,3,3,3,4,4,4,5,5,5$ and so on.
 
-Check that your formula works for $n=1$ up through $n=15$.
+          Check that your formula works for $n=1$ up through $n=15$.
+ 
+          \[
+          a_n = \begin{cases}
+                  1+\frac{n-1}{3}, & \text{if } n \equiv 1 \pmod{3}; \\
+                  1+\frac{n-2}{3}, & \text{if } n \equiv 2 \pmod{3}; \\
+                  1+\frac{n-3}{3}, & \text{if } n \equiv 0 \pmod{3}.
+              \end{cases}
+          \]
 
-\item Let $p$ be the proposition ``It is below freezing''. Let $q$ be the proposition ``It is snowing''. Write the propositions below symbolically using $p$ and $q$ and logical operation symbols.
-\begin{itemize}
-\item It is below freezing and snowing.
-\item It is below freezing but not snowing.
-\item It is not below freezing and it is not snowing.
-\item If it is below freezing, it is also snowing.
-\item It is below freezing if and only if it is not snowing.
-\end{itemize}
+    \newpage
 
-\item In the parts to this question, we will examine \fbox{$r \rightarrow s$}. Before starting, review the truth table and the definition of implication. (Note, in the various parts, $r$ might not always mean the same thing, and $s$ might not always be the same proposition.)
-\begin{itemize}
-\item Determine the truth value of $r \rightarrow s$, given the information that $r$ is \fbox{Pizza grows on trees}. (In this part, we are not told what specific proposition $s$ is. Answer this part based on $s$ is some mystery proposition that we do not know.)
-\item State the converse of $r \rightarrow s$ in symbols.
-\item State the contrapositive of $r \rightarrow s$ in symbols.
-\item State the contrapositive of $r \rightarrow s$ in words, given the information that $r$ is \fbox{Cats grow on trees} and $s$ is \fbox{Wisconsin is larger than Alaska}.
-\item Determine the truth value of the contrapositive of $r \rightarrow s$, given the information that $r$ is \fbox{Cats grow on trees} and $s$ is \fbox{Wisconsin is larger than Alaska}.
-\end{itemize}
+    \item Let $p$ be the proposition ``It is below freezing''. Let $q$ be the proposition
+          ``It is snowing''. Write the propositions below symbolically using $p$ and $q$
+          and logical operation symbols.
+          \begin{itemize}
+              \item It is below freezing and snowing.
 
+                    $p \wedge q$
+              \item It is below freezing but not snowing.
 
-\item The following logical equivalence is called the distributive law: $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$. Apply the definitions Section 2.3 of the Handbook of Mathematical Proof (the back half of the spiral bound) one step at a time. Write individual sentences: each sentence should process one concept and turn it into another process. After working through the definitions, perform a verification by writing a truth table. (For reference, see the discussion in the first half of Method 105.)
+                    $p \wedge \neg q$
+              \item It is not below freezing and it is not snowing.
 
-\item Show that the proposition $\neg ( (p \wedge q) \rightarrow q)$ is a contradiction WITHOUT using truth tables.
+                    $\neg p \wedge \neg q$
+              \item If it is below freezing, it is also snowing.
 
-\item (OPTIONAL; 0pts) After rubbing a magic lantern, a genie appears. The genie will grant you one million dollars if you can identify the fake coin. There are $9$ coins, all except one are the same weight, the fake one is heavier than the rest. You must determine which is fake using an old fashioned balance. You may use the balance three times. (The scales are of the old balance variety. That is, a small dish hangs from each end of a rod that is balanced in the middle. The device enables you to conclude either that the contents of the dishes weigh the same or that the dish that falls lower has heavier contents than the other.) Explain how this can be done.
+                    $p \rightarrow q$
+              \item It is below freezing if and only if it is not snowing.
 
+                    $p \leftrightarrow \neg q$
+          \end{itemize}
 
+    \newpage
+
+    \item In the parts to this question, we will examine \fbox{$r \rightarrow s$}. Before
+          starting, review the truth table and the definition of implication. (Note, in
+          the various parts, $r$ might not always mean the same thing, and $s$ might not
+          always be the same proposition.)
+          \begin{itemize}
+              \item Determine the truth value of $r \rightarrow s$, given the information that $r$
+                    is \fbox{Pizza grows on trees}. (In this part, we are not told what specific
+                    proposition $s$ is. Answer this part based on $s$ is some mystery proposition
+                    that we do not know.)
+
+                    We can say that the truth value of $r \rightarrow s$ is always \fbox{True}
+                    because $s$ is not dependant on $r$ to be true. According to the truth table
+                    for this problem, this entire proposition can only be false when the leftmost
+                    proposition is true and the rightmost is false. Therefore, there is no possible
+                    case, given the truth value of $r$, where this proposition is false.
+
+              \item State the converse of $r \rightarrow s$ in symbols.
+
+                    $s \rightarrow r$
+              \item State the contrapositive of $r \rightarrow s$ in symbols.
+
+                    $\neg s \rightarrow \neg r$
+              \item State the contrapositive of $r \rightarrow s$ in words, given the information
+                    that $r$ is \fbox{Cats grow on trees} and $s$ is \fbox{Wisconsin is larger than
+                        Alaska}.
+
+                    If Wisconsin is not larger than Alaska, then cats do not grow on trees.
+
+              \item Determine the truth value of the contrapositive of $r \rightarrow s$, given the
+                    information that $r$ is \fbox{Cats grow on trees} and $s$ is \fbox{Wisconsin is
+                        larger than Alaska}.
+          \end{itemize}
+
+          The proposition is \fbox{True}! Wisconsin is not larger than Alaska, so that
+          part's good, then we evaluate $r$ and find that cats do not grow on trees! Both
+          the premise and conclusion are true, which means the proposition is true!
+
+    \newpage
+
+    \item The following logical equivalence is called the distributive law: $p \wedge (q
+              \vee r) \equiv (p \wedge q) \vee (p \wedge r)$. Apply the definitions Section
+          2.3 of the Handbook of Mathematical Proof (the back half of the spiral bound)
+          one step at a time. Write individual sentences: each sentence should process
+          one concept and turn it into another process. After working through the
+          definitions, perform a verification by writing a truth table. (For reference,
+          see the discussion in the first half of Method 105.)
+
+          \begin{itemize}
+
+              \item We know $q \wedge r$ is true if at least one of $q$ or $r$ is true.
+
+              \item We know $p \wedge (q \vee r)$ is true if $p$ is true and $q \vee r$ is true.
+
+              \item We know $q \vee r$ is true if at least one of $q$ or $r$ is true.
+
+              \item According to the distribuutive law, we can rewrite this expression as $(p
+                        \wedge q) \vee (p \wedge r)$. This is true if $p \wedge q$ is true or $p \wedge
+                        r$ is true.
+                    \begin{table}[h]
+                        \centering
+                        \begin{tabular}{|c|c|c||c|c|c|c|c|}
+                            \hline
+                            $p$ & $q$ & $r$ & $q \vee r$ & $p \wedge (q \vee r)$ & $p \wedge q$ & $p \wedge r$ & $(p \wedge q) \vee (p \wedge r)$ \\ \hline
+                            T   & T   & T   & T          & T                     & T            & T            & T                                \\ \hline
+                            T   & T   & F   & T          & T                     & T            & F            & T                                \\ \hline
+                            T   & F   & T   & T          & T                     & F            & T            & T                                \\ \hline
+                            T   & F   & F   & F          & F                     & F            & F            & F                                \\ \hline
+                            F   & T   & T   & T          & F                     & F            & F            & F                                \\ \hline
+                            F   & T   & F   & T          & F                     & F            & F            & F                                \\ \hline
+                            F   & F   & T   & T          & F                     & F            & F            & F                                \\ \hline
+                            F   & F   & F   & F          & F                     & F            & F            & F                                \\ \hline
+                        \end{tabular}
+                        \caption{Since the fourth and eighth rows match, we can say these two statements are logically equivalent.}
+                    \end{table}
+
+          \end{itemize}
+
+    \newpage
+
+    \item Show that the proposition $\neg ( (p \wedge q) \rightarrow q)$ is a
+          contradiction WITHOUT using truth tables.
+
+          \begin{itemize}
+              \item We know that $p \wedge q$ is true if both $p$ and $q$ are true.
+
+              \item We know that $(p \wedge q) \rightarrow q$ is true if $p \wedge q$ is true and
+                    $q$ is true.
+
+              \item We know that $\neg ( (p \wedge q) \rightarrow q)$ is true if $(p \wedge q)
+                        \rightarrow q$ is false.
+
+              \item We know that $(p \wedge q) \rightarrow q$ is false if $p \wedge q$ is true and
+                    $q$ is false.
+
+              \item Since $p \wedge q$ is true if both $p$ and $q$ are true, and $q$ is false, we
+                    can say that $p \wedge q$ is false.
+
+              \item Therefore, the proposition $\neg ( (p \wedge q) \rightarrow q)$ is a
+                    contradiction.
+
+          \end{itemize}
 
 \end{enumerate}
-
 
 \end{document}
 
