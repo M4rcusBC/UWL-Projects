@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  23 SEP 2024 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  27 SEP 2024 18:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -130,27 +130,30 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks30
 ) (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count283
 ) (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count283
+\l__color_backend_stack_int=\count284
 \l__pdf_internal_box=\box54
 ) (HW03-MarcusClements.aux)
 \openout1 = `HW03-MarcusClements.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -186,11 +189,11 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
 (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
  (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -200,492 +203,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
 [2]
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:80: Missing $ inserted.
-<inserted text> 
-                $
-l.80 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:80: Missing } inserted.
-<inserted text> 
-                }
-l.80 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:80: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.80 
-     
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:80: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.80 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-Runaway argument?
- 
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:82: Paragraph ended before \align* was complete.
-<to be read again> 
-                   \par 
-l.82 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:82: Missing $ inserted.
-<inserted text> 
-                $
-l.82 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:82: Missing } inserted.
-<inserted text> 
-                }
-l.82 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:82: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.82 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:82: Display math should end with $$.
-<to be read again> 
-                   \tex_par:D 
-l.82 
-     
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:82: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.82 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:83: Missing $ inserted.
-<inserted text> 
-                $
-l.83                         \forall
-                                     a \in A [\forall b \in B [\exists c \in...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:83: Misplaced alignment tab character &.
-l.83 ...a,b) \wedge Q(c) ) \rightarrow R(d) ]]]] &
-                                                   \equiv \neg [\forall a \i...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:84: Missing $ inserted.
-<inserted text> 
-                $
-l.84 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:84: Missing } inserted.
-<inserted text> 
-                }
-l.84 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:84: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.84 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:85: Misplaced alignment tab character &.
-l.85 ...                                         &
-                                                   \equiv \exists a \in A \n...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:85: Missing $ inserted.
-<inserted text> 
-                $
-l.85 ...                                  & \equiv
-                                                   \exists a \in A \neg [\fo...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:86: Missing $ inserted.
-<inserted text> 
-                $
-l.86 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:86: Missing } inserted.
-<inserted text> 
-                }
-l.86 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:86: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.86 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:87: Misplaced alignment tab character &.
-l.87 ...                                         &
-                                                   \equiv \exists a \in A \e...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:87: Missing $ inserted.
-<inserted text> 
-                $
-l.87 ...                                  & \equiv
-                                                   \exists a \in A \exists b...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:88: Missing $ inserted.
-<inserted text> 
-                $
-l.88 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:88: Missing } inserted.
-<inserted text> 
-                }
-l.88 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:88: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.88 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:89: Misplaced alignment tab character &.
-l.89 ...                                         &
-                                                   \equiv \exists a \in A \e...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:89: Missing $ inserted.
-<inserted text> 
-                $
-l.89 ...                                  & \equiv
-                                                   \exists a \in A \exists b...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:90: Missing $ inserted.
-<inserted text> 
-                $
-l.90 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:90: Missing } inserted.
-<inserted text> 
-                }
-l.90 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:90: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.90 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:91: Misplaced alignment tab character &.
-l.91 ...                                         &
-                                                   \equiv \exists a \in A \e...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:91: Missing $ inserted.
-<inserted text> 
-                $
-l.91 ...                                  & \equiv
-                                                   \exists a \in A \exists b...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:92: Missing $ inserted.
-<inserted text> 
-                $
-l.92 
-     
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:92: Missing } inserted.
-<inserted text> 
-                }
-l.92 
-     
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:92: Extra }, or forgotten \endgroup.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.92 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:93: Misplaced alignment tab character &.
-l.93 ...                                         &
-                                                   \equiv \exists a \in A \e...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:93: Missing $ inserted.
-<inserted text> 
-                $
-l.93 ...                                  & \equiv
-                                                   \exists a \in A \exists b...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Misplaced \cr.
-\math@cr@@@ ->\cr 
-                  
-l.94                   \end{align*}
-                                   
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Misplaced \noalign.
-\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
-                                                  {\vskip #1\relax }
-l.94                   \end{align*}
-                                   
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Missing $ inserted.
-<inserted text> 
-                $
-l.94                   \end{align*}
-                                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Missing } inserted.
-<inserted text> 
-                }
-l.94                   \end{align*}
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Extra }, or forgotten \endgroup.
-\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
-                                                  
-l.94                   \end{align*}
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Misplaced \noalign.
-\black@ #1->\noalign 
-                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
-l.94                   \end{align*}
-                                   
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Extra }, or forgotten \endgroup.
-\endalign ->\math@cr \black@ \totwidth@ \egroup 
-                                                \ifingather@ \restorealignst...
-l.94                   \end{align*}
-                                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Missing $ inserted.
-<inserted text> 
-                $
-l.94                   \end{align*}
-                                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:94: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.94                   \end{align*}
-                                   
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:95: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.95             \end{equation}
-                               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:95: You can't use `\eqno' in horizontal mode.
-\veqno ->\@kernel@eqno 
-                       \aftergroup \ignorespaces 
-l.95             \end{equation}
-                               
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:95: Missing $ inserted.
-<inserted text> 
-                $
-l.95             \end{equation}
-                               
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW03/HW03-MarcusClements.tex:95: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.95             \end{equation}
-                               
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
-
-
 
 [3]
 
@@ -698,17 +215,17 @@ L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2358 strings out of 473899
- 35139 string characters out of 5726501
+ 2677 strings out of 473899
+ 39135 string characters out of 5726501
  1931960 words of memory out of 5000000
- 25251 multiletter control sequences out of 15000+600000
- 560411 words of font info for 46 fonts, out of 8000000 for 9000
+ 25567 multiletter control sequences out of 15000+600000
+ 560103 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,780b,198s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\mbcle\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW03-MarcusClements.pdf (5 pages, 66729 bytes).
+ 57i,8n,65p,310b,200s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\mbcle\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on HW03-MarcusClements.pdf (5 pages, 54056 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
