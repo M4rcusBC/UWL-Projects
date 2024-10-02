@@ -2,6 +2,8 @@
 
 \usepackage[margin=1.0in]{geometry}
 \usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
 
 \newcommand\Z{\mathbb{Z}}
 \newcommand\Q{\mathbb{Q}}
@@ -10,38 +12,96 @@
 
 \begin{document}
 
+\definecolor{1c768acb-5c6c-5bd2-bbde-0c2f57677488}{RGB}{192, 192, 192}
+\definecolor{f3551e38-74df-57e2-b793-83d7fe876c85}{RGB}{0, 0, 0}
+\definecolor{0b71a967-1f15-55a5-9bb9-70efa7b4fc58}{RGB}{51, 51, 51}
+\definecolor{5856d031-3da1-575c-834e-c77e9e438c62}{RGB}{162, 177, 195}
+
+\tikzstyle{4f40dc70-f77d-567c-ad97-b7948e2d6634} = [rectangle, rounded corners, minimum width=2cm, minimum height=1cm, text centered, font=\normalsize, color=0b71a967-1f15-55a5-9bb9-70efa7b4fc58, draw=f3551e38-74df-57e2-b793-83d7fe876c85, line width=0.2, fill=1c768acb-5c6c-5bd2-bbde-0c2f57677488]
+\tikzstyle{7be24b85-97d0-5b76-ba9e-d94005dca8f2} = [thick, draw=5856d031-3da1-575c-834e-c77e9e438c62, line width=2, ->, >=stealth]
+
 % Answer each question on a separate page. Use the newpage command (with a backslash in front of newpage) to separate pages.
-Please note: answer the first four questions in light of the rules of inference (the ``flowcharts'') we have seen. The first four questions are very quick to answer, but the point is to have you process and practice the flowcharts we have seen. (Pay attention to ``use'' versus ``prove''.)
+Please note: answer the first four questions in light of the rules of inference
+(the ``flowcharts'') we have seen. The first four questions are very quick to
+answer, but the point is to have you process and practice the flowcharts we
+have seen. (Pay attention to ``use'' versus ``prove''.)
 
 \begin{enumerate}
 
-\item Say we know \fbox{Olaf likes warm hugs and Anna wants to build a snowman}. What (if anything) can we conclude? Briefly explain why.
+    \item Say we know \fbox{Olaf likes warm hugs \textcolor{red}{and} Anna wants to build
+              a snowman}. What (if anything) can we conclude? Briefly explain why.
 
+          Let $p$ be the statement ``Olaf like warm hugs'' and $q$ be the statement
+          ``Anna wants to build a snowman''. We know $p \land q$ is true from the above
+          proposition.
 
+          From this, we can safely conclude that both $p$ and $q$ are true independently
+          of each other, seen in the flowchart below.
 
-\newpage
+          \begin{center}
+              \begin{tikzpicture}[node distance=2cm]
+                  \node (347e0db3-0031-4fa0-bd48-aa14ee508544) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \land q$};
+                  \node (872d2943-a43d-4d7c-8214-dc609a07979e) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=347e0db3-0031-4fa0-bd48-aa14ee508544, left of=347e0db3-0031-4fa0-bd48-aa14ee508544] {$p$};
+                  \node (90348078-0426-48cb-ad8e-47e9726dd8dd) [4f40dc70-f77d-567c-ad97-b7948e2d6634, right of=872d2943-a43d-4d7c-8214-dc609a07979e, xshift=2cm] {$q$};
+                  \node (4) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=872d2943-a43d-4d7c-8214-dc609a07979e, right of=872d2943-a43d-4d7c-8214-dc609a07979e] {$\neg p \lor \neg q$};
+                  \draw [->] (347e0db3-0031-4fa0-bd48-aa14ee508544) --  (872d2943-a43d-4d7c-8214-dc609a07979e);
+                  \draw [->] (347e0db3-0031-4fa0-bd48-aa14ee508544) --  (90348078-0426-48cb-ad8e-47e9726dd8dd);
+                  \draw [<->] (347e0db3-0031-4fa0-bd48-aa14ee508544) --  (4);
+              \end{tikzpicture}
+          \end{center}
 
-\item Say we know \fbox{If Olaf likes warm hugs, then Anna wants to build a snowman}. In addition to this, say we also know \fbox{Olaf likes warm hugs}. What (if anything) can we conclude? Briefly explain why.
+          \newpage
 
+    \item Say we know \fbox{\textcolor{red}{If} Olaf likes warm hugs,
+              \textcolor{red}{then} Anna wants to build a snowman}. In addition to this, say
+          we also know \fbox{Olaf likes warm hugs}. What (if anything) can we conclude?
+          Briefly explain why.
 
+          Let $p$ be the statement ``Olaf like warm hugs'' and $q$ be the statement
+          ``Anna wants to build a snowman''. We know $p \rightarrow q$ is true from the
+          above proposition.
 
-\newpage
+          From this, we can safely conclude that $q$ is true based upon $p \rightarrow q$
+          and $p$ being true, seen in the flowchart below. The rule of inference used to
+          derive this conclusion is \textit{Modus Ponens}.
 
-\item Say we know \fbox{If Olaf likes warm hugs, then Anna wants to build a snowman}.  In addition to this, say we also know \fbox{Olaf does not like warm hugs}. What (if anything) can we conclude? Briefly explain why.
+          \begin{center}
+              \begin{tikzpicture}[node distance=2cm]
+                  \node (347e0db3-0031-4fa0-bd48-aa14ee508544) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \rightarrow q$};
+                  \node (872d2943-a43d-4d7c-8214-dc609a07979e) [4f40dc70-f77d-567c-ad97-b7948e2d6634, right of=347e0db3-0031-4fa0-bd48-aa14ee508544, xshift=2cm] {$p$};
+                  \node (90348078-0426-48cb-ad8e-47e9726dd8dd) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=347e0db3-0031-4fa0-bd48-aa14ee508544, left of=872d2943-a43d-4d7c-8214-dc609a07979e] {$q$};
+                  \draw [->] (347e0db3-0031-4fa0-bd48-aa14ee508544) --  (90348078-0426-48cb-ad8e-47e9726dd8dd);
+                  \draw [->] (872d2943-a43d-4d7c-8214-dc609a07979e) --  (90348078-0426-48cb-ad8e-47e9726dd8dd);
+              \end{tikzpicture}
+          \end{center}
 
+          \newpage
 
+    \item Say we know \fbox{\textcolor{red}{If} Olaf likes warm hugs, \textcolor{red}{then} Anna wants to build a snowman}.
+          In addition to this, say we also know \fbox{Olaf does \textcolor{red}{not} like warm hugs}. What
+          (if anything) can we conclude? Briefly explain why.
 
-\newpage
+          \begin{center}
+          \begin{tikzpicture}[node distance=2cm]
+            \node (pimpq) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \rightarrow q$};
+            \node (np) [4f40dc70-f77d-567c-ad97-b7948e2d6634, right of=pimpq, xshift=2cm] {$\neg p$};
+            \node (x) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=pimpq, right of=pimpq] {};
+            \draw [->] (pimpq) --  (x);
+            \draw [->] (np) --  (x);
+          \end{tikzpicture}
+          \end{center}
 
-\item Say $T$ is the set of all the world's turtles. Say $M(x)$ is the predicate \fbox{$x$ has $33$ feet}. What steps would we have to take to prove \fbox{There exists $h \in T [M(h)]$}?
+          \newpage
 
+    \item Say $T$ is the set of all the world's turtles. Say $M(x)$ is the predicate
+          \fbox{$x$ has $33$ feet}. What steps would we have to take to prove \fbox{There
+              exists $h \in T [M(h)]$}?
 
+          \newpage
 
-\newpage
-
-\item Say that $c$ and $d$ are both integers. Prove: if $c$ is even and $d$ is even, then $c-d$ is even.
+    \item Say that $c$ and $d$ are both integers. Prove: if $c$ is even and $d$ is even,
+          then $c-d$ is even.
 
 \end{enumerate}
-
 
 \end{document}
