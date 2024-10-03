@@ -31,8 +31,12 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
     \item Say we know \fbox{Olaf likes warm hugs \textcolor{red}{and} Anna wants to build
               a snowman}. What (if anything) can we conclude? Briefly explain why.
 
-          Let $p$ be the statement ``Olaf like warm hugs'' and $q$ be the statement
-          ``Anna wants to build a snowman''. We know $p \land q$ is true from the above
+          \begin{itemize}
+              \item Let $p$ be the statement ``Olaf like warm hugs''.
+              \item Let $q$ be the statement ``Anna wants to build a snowman''.
+          \end{itemize}
+
+          We know $p \land q$ is true from the above
           proposition.
 
           From this, we can safely conclude that both $p$ and $q$ are true independently
@@ -43,10 +47,8 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
                   \node (347e0db3-0031-4fa0-bd48-aa14ee508544) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \land q$};
                   \node (872d2943-a43d-4d7c-8214-dc609a07979e) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=347e0db3-0031-4fa0-bd48-aa14ee508544, left of=347e0db3-0031-4fa0-bd48-aa14ee508544] {$p$};
                   \node (90348078-0426-48cb-ad8e-47e9726dd8dd) [4f40dc70-f77d-567c-ad97-b7948e2d6634, right of=872d2943-a43d-4d7c-8214-dc609a07979e, xshift=2cm] {$q$};
-                  \node (4) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=872d2943-a43d-4d7c-8214-dc609a07979e, right of=872d2943-a43d-4d7c-8214-dc609a07979e] {$\neg p \lor \neg q$};
                   \draw [->] (347e0db3-0031-4fa0-bd48-aa14ee508544) --  (872d2943-a43d-4d7c-8214-dc609a07979e);
                   \draw [->] (347e0db3-0031-4fa0-bd48-aa14ee508544) --  (90348078-0426-48cb-ad8e-47e9726dd8dd);
-                  \draw [<->] (347e0db3-0031-4fa0-bd48-aa14ee508544) --  (4);
               \end{tikzpicture}
           \end{center}
 
@@ -56,9 +58,12 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
               \textcolor{red}{then} Anna wants to build a snowman}. In addition to this, say
           we also know \fbox{Olaf likes warm hugs}. What (if anything) can we conclude?
           Briefly explain why.
+          \begin{itemize}
+          \item Let $p$ be the statement ``Olaf like warm hugs''.
+          \item Let $q$ be the statement ``Anna wants to build a snowman''.
+          \end{itemize}
 
-          Let $p$ be the statement ``Olaf like warm hugs'' and $q$ be the statement
-          ``Anna wants to build a snowman''. We know $p \rightarrow q$ is true from the
+          We know $p \rightarrow q$ is true from the
           above proposition.
 
           From this, we can safely conclude that $q$ is true based upon $p \rightarrow q$
@@ -77,18 +82,19 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
 
           \newpage
 
-    \item Say we know \fbox{\textcolor{red}{If} Olaf likes warm hugs, \textcolor{red}{then} Anna wants to build a snowman}.
-          In addition to this, say we also know \fbox{Olaf does \textcolor{red}{not} like warm hugs}. What
-          (if anything) can we conclude? Briefly explain why.
+    \item Say we know \fbox{\textcolor{red}{If} Olaf likes warm hugs,
+              \textcolor{red}{then} Anna wants to build a snowman}. In addition to this, say
+          we also know \fbox{Olaf does \textcolor{red}{not} like warm hugs}. What (if
+          anything) can we conclude? Briefly explain why.
 
           \begin{center}
-          \begin{tikzpicture}[node distance=2cm]
-            \node (pimpq) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \rightarrow q$};
-            \node (np) [4f40dc70-f77d-567c-ad97-b7948e2d6634, right of=pimpq, xshift=2cm] {$\neg p$};
-            \node (x) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=pimpq, right of=pimpq] {};
-            \draw [->] (pimpq) --  (x);
-            \draw [->] (np) --  (x);
-          \end{tikzpicture}
+              \begin{tikzpicture}[node distance=2cm]
+                  \node (pimpq) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \rightarrow q$};
+                  \node (np) [4f40dc70-f77d-567c-ad97-b7948e2d6634, right of=pimpq, xshift=2cm] {$\neg p$};
+                  \node (x) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=pimpq, right of=pimpq] {};
+                  \draw [->] (pimpq) --  (x);
+                  \draw [->] (np) --  (x);
+              \end{tikzpicture}
           \end{center}
 
           \newpage
