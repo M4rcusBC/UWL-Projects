@@ -90,6 +90,17 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
           we also know \fbox{Olaf does \textcolor{red}{not} like warm hugs}. What (if
           anything) can we conclude? Briefly explain why.
 
+          \begin{itemize}
+              \item Let $p$ be the statement, ``.''
+              \item Let $q$ be the statement, ``.''
+              \item Naturally, we can let $\neg p$ be the statement, ``.''
+          \end{itemize}
+
+          We cannot conclude anything from the information available to us at this time.
+          This is because the two propositions do not form a logically sound argument
+          when used as a rule of inference. I have included a written example of this
+          fallacy and the truth table which highlights my reasoning.
+
           \begin{center}
               \begin{tikzpicture}[node distance=2cm]
                   \node (pimpq) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \rightarrow q$};
@@ -98,15 +109,7 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
               \end{tikzpicture}
           \end{center}
 
-          This is because the two propositions do not form a logically sound argument
-          when used as a rule of inference. I have included a written example of this
-          fallacy and the truth table which highlights my reasoning.
-
-          \begin{itemize}
-              \item Let $p$ be the statement, ``.''
-              \item Let $q$ be the statement, ``.''
-              \item Naturally, we can let $\neg p$ be the statement, ``.''
-          \end{itemize}
+          \rule{\linewidth}{1pt}
 
           \begin{table}[h]
               \centering
@@ -160,10 +163,13 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
               \item Let $M(h)$ be the statement, ``$h$ has $33$ feet''.
           \end{itemize}
           If we can prove that there exists at least one turtle in the set of all the world's turtles that has $33$ feet, then we can conclude that $\exists h \in T    s.t. M(h)$.
-          
-          This statement, if true, proves that there exists a turtle in the set of all the world's turtles that has $33$ feet.
-          
-          The rule of inference used to derive this conclusion is \textit{Existential Instantiation}.
+
+          This statement, if true, proves that there exists a turtle in the set of all
+          the world's turtles that has $33$ feet.
+
+          The rule of inference used to derive this conclusion is \textit{Existential
+              Instantiation}.
+
           \newpage
 
     \item \begin{theorem}
