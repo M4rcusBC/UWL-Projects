@@ -3,12 +3,17 @@
 \usepackage[margin=1.0in]{geometry}
 \usepackage{amsfonts}
 \usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage{amsthm}
+\usepackage[english]{babel}
 \usetikzlibrary{shapes.geometric, arrows}
 
 \newcommand\Z{\mathbb{Z}}
 \newcommand\Q{\mathbb{Q}}
 \newcommand\R{\mathbb{R}}
 \newcommand\C{\mathbb{C}}
+
+\newtheorem{theorem}{Theorem}
 
 \begin{document}
 
@@ -36,8 +41,7 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
               \item Let $q$ be the statement ``Anna wants to build a snowman''.
           \end{itemize}
 
-          We know $p \land q$ is true from the above
-          proposition.
+          We know $p \land q$ is true from the above proposition.
 
           From this, we can safely conclude that both $p$ and $q$ are true independently
           of each other, seen in the flowchart below.
@@ -59,12 +63,11 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
           we also know \fbox{Olaf likes warm hugs}. What (if anything) can we conclude?
           Briefly explain why.
           \begin{itemize}
-          \item Let $p$ be the statement ``Olaf like warm hugs''.
-          \item Let $q$ be the statement ``Anna wants to build a snowman''.
+              \item Let $p$ be the statement ``Olaf like warm hugs''.
+              \item Let $q$ be the statement ``Anna wants to build a snowman''.
           \end{itemize}
 
-          We know $p \rightarrow q$ is true from the
-          above proposition.
+          We know $p \rightarrow q$ is true from the above proposition.
 
           From this, we can safely conclude that $q$ is true based upon $p \rightarrow q$
           and $p$ being true, seen in the flowchart below. The rule of inference used to
@@ -91,11 +94,60 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
               \begin{tikzpicture}[node distance=2cm]
                   \node (pimpq) [4f40dc70-f77d-567c-ad97-b7948e2d6634] {$p \rightarrow q$};
                   \node (np) [4f40dc70-f77d-567c-ad97-b7948e2d6634, right of=pimpq, xshift=2cm] {$\neg p$};
-                  \node (x) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=pimpq, right of=pimpq] {};
-                  \draw [->] (pimpq) --  (x);
-                  \draw [->] (np) --  (x);
+                  \node (x) [4f40dc70-f77d-567c-ad97-b7948e2d6634, below of=pimpq, right of=pimpq] {We cannot conclude anything from the two above propositions.};
               \end{tikzpicture}
           \end{center}
+
+          This is because the two propositions do not form a logically sound argument
+          when used as a rule of inference. I have included a written example of this
+          fallacy and the truth table which highlights my reasoning.
+
+          \begin{itemize}
+              \item Let $p$ be the statement, ``.''
+              \item Let $q$ be the statement, ``.''
+              \item Naturally, we can let $\neg p$ be the statement, ``.''
+          \end{itemize}
+
+          \begin{table}[h]
+              \centering
+              \begin{tabular}{|c|c||c|c|}
+                  \hline
+                  $p$                        & $q$                        & $\neg p$                   & $(p \rightarrow q)$        \\ \hline
+                  \hline
+                  \textcolor{red}{\sout{T}}  & \textcolor{red}{\sout{T}}  & \textcolor{red}{\sout{F}}  & \textcolor{red}{\sout{T}}  \\ \hline
+                  \textcolor{blue}{\sout{T}} & \textcolor{blue}{\sout{F}} & \textcolor{blue}{\sout{F}} & \textcolor{blue}{\sout{F}} \\ \hline
+                  F                          & T                          & T                          & T                          \\ \hline
+                  F                          & F                          & T                          & T                          \\ \hline
+                  \textcolor{red}{\sout{T}}  & \textcolor{red}{\sout{T}}  & \textcolor{red}{\sout{F}}  & \textcolor{red}{\sout{T}}  \\ \hline
+                  \textcolor{blue}{\sout{T}} & \textcolor{blue}{\sout{F}} & \textcolor{blue}{\sout{F}} & \textcolor{blue}{\sout{F}} \\ \hline
+                  F                          & T                          & T                          & T                          \\ \hline
+                  F                          & F                          & T                          & T                          \\ \hline
+              \end{tabular}
+              \caption{Truth Table}
+          \end{table}
+
+          \begin{enumerate}
+              \item \textcolor{blue}{Remove rows where $p \rightarrow q$ is false.}
+              \item \textcolor{red}{Remove rows where $\neg p$ is false (in other words, where $p$ is true).}
+          \end{enumerate}
+
+          After this point, we are left with the following truth table:
+
+          \begin{table}[h]
+              \centering
+              \begin{tabular}{|c|c||c|c|}
+                  \hline
+                  $p$ & $q$ & $\neg p$ & $(p \rightarrow q)$ \\ \hline
+                  \hline
+                  F   & T   & T        & T                   \\ \hline
+                  F   & F   & T        & T                   \\ \hline
+                  F   & T   & T        & T                   \\ \hline
+                  F   & F   & T        & T                   \\ \hline
+              \end{tabular}
+              \caption{Truth Table}
+          \end{table}
+
+          Given the truth values shown for , we cannot conclude anything about .
 
           \newpage
 
@@ -103,10 +155,35 @@ have seen. (Pay attention to ``use'' versus ``prove''.)
           \fbox{$x$ has $33$ feet}. What steps would we have to take to prove \fbox{There
               exists $h \in T [M(h)]$}?
 
+          \begin{itemize}
+              \item Let $h$ be the statement, ``$h$ is a turtle''.
+              \item Let $M(h)$ be the statement, ``$h$ has $33$ feet''.
+          \end{itemize}
+          If we can prove that there exists at least one turtle in the set of all the world's turtles that has $33$ feet, then we can conclude that $\exists h \in T    s.t. M(h)$.
+          
+          This statement, if true, proves that there exists a turtle in the set of all the world's turtles that has $33$ feet.
+          
+          The rule of inference used to derive this conclusion is \textit{Existential Instantiation}.
           \newpage
 
-    \item Say that $c$ and $d$ are both integers. Prove: if $c$ is even and $d$ is even,
-          then $c-d$ is even.
+    \item \begin{theorem}
+              Say that $c$ and $d$ are both integers. Prove: if $c$ is even and $d$ is even,
+              then $c-d$ is even.
+          \end{theorem}
+
+          \begin{proof}
+              Let $c, d \in \mathbb{Z}$. Suppose that $c$ is even and $d$ is even. By definition,
+              an integer $n$ is even if there exists an integer $k$ such that $n = 2k$. Since $c$ is
+              even, there exists an integer $x$ such that $c = 2x$. Similarly, since $d$ is even,
+              there exists an integer $y$ such that $d = 2y$. Substituting these values into the
+              expression $c - d$, we have:
+
+              \[c - d = 2x - 2y = 2(x - y)\]
+
+              The value $(x - y)$ is an integer because the set of integers is closed under
+              subtraction. From this, we can conclude that $c - d$ is even. Therefore, if $c$
+              is even and $d$ is even, then $c - d$ is even.
+          \end{proof}
 
 \end{enumerate}
 
