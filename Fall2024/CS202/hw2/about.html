@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Meaning</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="pls.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">    
+</head>
+<body>
+
+  <header>
+    <a href="home.html"><div class="pls"></div></a>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li>About</li>
+        <li><a href="contact.html">Contact</a></li>                
+      </ul>
+    </nav>
+  </header>
+
+  
+  <footer>
+    &copy; Programming Languages Society
+  </footer>
+  
+  <section>
+   <h1>About the Programming Languages Society</h1>
+   <p>
+    Welcome to the Programming Languages Society (PLS), a vibrant community of developers, enthusiasts, and learners passionate about exploring, understanding, and advancing the world of programming languages. Whether you're a seasoned professional or just beginning your coding journey, our society offers a welcoming space to dive into the fascinating variety of languages that power today's software development.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>The mission of the Programming Languages Society is to foster a collaborative environment where individuals can explore the theoretical and practical aspects of programming languages. We aim to promote:</p>
+
+    <ul>
+      <li>Learning: Providing resources, workshops, and mentorship opportunities for learners of all levels to deepen their knowledge of programming languages, from the foundational concepts to the cutting-edge developments.</li>
+      <li>Innovation: Encouraging experimentation with different languages, paradigms, and tools, and supporting projects that push the boundaries of what's possible in software development.</li>
+      <li>Community: Building connections between language creators, developers, and enthusiasts to exchange ideas, share experiences, and collaborate on open-source projects.</li>
+    </ul>
+
+    <h2>What We Do</h2>
+    <ul class="bold-colons">
+      <li><span>Workshops & Tutorials:</span> Regular hands-on workshops to help members learn new languages or enhance their skills in familiar ones. From <span class="language">Python</span> to <span class="language">Rust</span>, <span class="language">JavaScript</span> to <span class="language">Haskell</span>, our sessions cover the full spectrum of programming languages.</li>
+      <li><span>Guest Speakers & Talks:</span> Industry experts, language designers, and leading developers are invited to share insights into the future of programming languages and software development.</li>
+      <li><span>Hackathons & Competitions:</span> Our annual coding challenges and hackathons provide opportunities to test your skills, collaborate with others, and create innovative solutions using various programming languages.
+      </li>
+    </ul>
+
+    <h2>Members</h2>
+    <div class="business-card">
+            <header class="bussiness-card-header">
+              <h1>John Von Neumann</h1>
+            </header>
+            
+            <div class="business-card-body">
+              <img class="avatar shadowed"
+                   src="https://upload.wikimedia.org/wikipedia/commons/5/5e/JohnvonNeumann-LosAlamos.gif"
+                   alt="Portrait of Birmingham Youst">
+              <div>
+                <p>
+                 John Von Neumannis a long-time member of <span class="pls"></span> and is a huge fan of 
+                  <span class="span language">PROLOG</span>.
+                </p>
+                
+                <div class="contact">
+                  <ul>
+                    <li><span class="phone">655.123.1235</span></li>
+                    <li><span class="email">jvonneumann@spa.io</span></li>                
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="business-card-button">+ Connect</button>          
+    </div>
+        <div class="business-card">
+            <header class="bussiness-card-header">
+              <h1>Shaffi Goldwasser</h1>
+            </header>
+            
+            <div class="business-card-body">
+              <img class="avatar shadowed"
+                   src="https://upload.wikimedia.org/wikipedia/commons/8/84/Shafi_Goldwasser.JPG"
+                   alt="Portrait of Shafi Goldwasser">
+              <div>
+                <p>
+                  Shafi Goldwasser has only recently joined <span class="pls"></span>.  
+                  She is the RSA Professor of Electrical Engineering and Computer Science at Massachusetts Institute of Technology; a professor of mathematical sciences at the Weizmann Institute of Science, Israel; the director of the Simons Institute for the Theory of Computing at the University of California, Berkeley; and co-founder and chief scientist of Duality Technologies.
+                </p>
+                
+                <div class="contact">
+                  <ul>
+                    <li><span class="phone">655.123.5432</span></li>
+                    <li><span class="phone">508.123.5432</span></li>
+                    <li><span class="email">sgoldwasser@spa.io</span></li>
+                    <li><span class="email">mit@pas.io</span></li>               
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="business-card-button">+ Connect</button>          
+    </div>
+
+  </section>
+
+<script>
+  $(document).ready(function () {
+    $('li.tab-label').click(function () {
+      $('.tab-set li.tab-label').removeClass('active');
+      $(this).addClass('active');
+
+      var id = $(this).find('a').attr('href');
+      $('.tab').removeClass('active');
+      $(id).addClass('active');
+    });
+  });
+</script>
+</body>
+</html>
