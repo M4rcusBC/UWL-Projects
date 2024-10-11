@@ -15,112 +15,157 @@
 \noindent Several of the questions have comments/expecatations/hints as footnotes. Please read through these footnotes.\footnote{Here is a short footnote before question one, so you see what the footnote looks like in the PDF and what it looks like in the LaTeX.}
 \begin{enumerate}
 
-\item Find a piecewise formula for the sequence $a_n$ whose first terms are\vskip1pt $1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,\dots$\vskip1pt  Comments/expecations/hints in footnote.\footnote{You may not have a recursive formula. Your formula must work for all positive integers $n$, not just up to $n \leq 20$. You should certainly {\bf check} that your formula works for $n=5$ and for $n=18$ and so on, but your formula should also work for $n=2876387$. Hint: create a piecewise formula with $4$ pieces, and look at the key for previous HW where there was a three-piece formula.}
+    \item Find a piecewise formula for the sequence $a_n$ whose first terms are\vskip1pt
+          $1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,\dots$\vskip1pt
+          Comments/expecations/hints in footnote.\footnote{You may not have a recursive
+              formula. Your formula must work for all positive integers $n$, not just up to
+              $n \leq 20$. You should certainly {\bf check} that your formula works for $n=5$
+              and for $n=18$ and so on, but your formula should also work for $n=2876387$.
+              Hint: create a piecewise formula with $4$ pieces, and look at the key for
+              previous HW where there was a three-piece formula.}
 
-\newpage
+          \newpage
 
-\item Given the hypotheses:
-\begin{itemize}
-\item H1: If Jax does not make jewlery, then Carl does not go camping. \fbox{$\neg j \rightarrow \neg c$}
-\item H2: If Bo does not bake cakes, then Jax makes jewelry. \fbox {$\neg b \rightarrow j$}
-\item H3: If Kofi does not fly kites, then Fiona goes fishing. \fbox{$\neg k \rightarrow f$}
-\item H4: If Al does not like Archery, then Carl goes camping. \fbox{$\neg a \rightarrow c$}
-\item H5: If Bo bakes cakes, then Al does not like archery. \fbox{$b \rightarrow \neg a$}
-\item H6: If Carl goes camping, Kofi flies kites. \fbox{$c \rightarrow k$}
-\item H7: If Jax makes jewelry, then Matthijs records music. \fbox{$j \rightarrow m$}
-\item H8: If Kofi flies kites, then Matthijs does not record music. \fbox{$k \rightarrow \neg m$}
-\end{itemize}
-Prove: If Al likes archery, then Fiona goes fishing.
+    \item Given the hypotheses:
+          \begin{itemize}
+              \item H1: If Jax does not make jewlery, then Carl does not go camping. \fbox{$\neg j
+                            \rightarrow \neg c$}
+              \item H2: If Bo does not bake cakes, then Jax makes jewelry. \fbox {$\neg b
+                            \rightarrow j$}
+              \item H3: If Kofi does not fly kites, then Fiona goes fishing. \fbox{$\neg k
+                            \rightarrow f$}
+              \item H4: If Al does not like Archery, then Carl goes camping. \fbox{$\neg a
+                            \rightarrow c$}
+              \item H5: If Bo bakes cakes, then Al does not like archery. \fbox{$b \rightarrow \neg
+                            a$}
+              \item H6: If Carl goes camping, Kofi flies kites. \fbox{$c \rightarrow k$}
+              \item H7: If Jax makes jewelry, then Matthijs records music. \fbox{$j \rightarrow m$}
+              \item H8: If Kofi flies kites, then Matthijs does not record music. \fbox{$k
+                            \rightarrow \neg m$}
+          \end{itemize}
+          Prove: If Al likes archery, then Fiona goes fishing.
 
-\begin{proof}
-    Assume Al likes Archery. This also means ``Al does not like Archery'' is false.
+          \begin{proof}
+              Assume Al likes Archery. This also means ``Al does not like Archery'' is false.
 
-    Using H5, we know that if Bo bakes cakes, then Al does not like Archery. Since Al likes Archery, Bo must not bake cakes.
+              Using H5, we know that if Bo bakes cakes, then Al does not like Archery. Since
+              Al likes Archery, Bo must not bake cakes.
 
-    Then, using H2, we know that if Bo does not make cakes, then Jax must make jewelry. Since Bo does not bake cakes, Jax must make jewelry.
+              Then, using H2, we know that if Bo does not make cakes, then Jax must make
+              jewelry. Since Bo does not bake cakes, Jax must make jewelry.
 
-    Since Jax makes jewelrey, we can apply H7 to conclude that Matthijs records music.
+              Since Jax makes jewelrey, we can apply H7 to conclude that Matthijs records
+              music.
 
-    By H8, if Kofi flies kites, it would contradict our previous finding that Matthijs records music. Therefore, Kofi must not be flying kites.
+              By H8, if Kofi flies kites, it would contradict our previous finding that
+              Matthijs records music. Therefore, Kofi must not be flying kites.
 
-    Finally, using H3, we know that if Kofi does not fly kites, then Fiona goes fishing. Since Kofi does not fly kites, we can conclude that Fiona goes fishing.
+              Finally, using H3, we know that if Kofi does not fly kites, then Fiona goes
+              fishing. Since Kofi does not fly kites, we can conclude that Fiona goes
+              fishing.
 
-\end{proof}
+          \end{proof}
 
-Proof with symbols:
+          Proof with symbols:
 
-\begin{itemize}
-    \item Let $j$ be the statement, ``Jax makes jewelrey''.
-    \item Let $b$ be the statement, ``Bo bakes cakes''.
-    \item Let $k$ be the statement, ``Kofi flies kites''.
-    \item Let $a$ be the statement, ``Al likes Archery''.
-    \item Let $c$ be the statement, ``Carl goes camping''.
-    \item Let $m$ be the statement, ``Matthijs records music''.
-    
- \end{itemize}
+          \begin{itemize}
+              \item Let $j$ be the statement, ``Jax makes jewelrey''.
+              \item Let $b$ be the statement, ``Bo bakes cakes''.
+              \item Let $k$ be the statement, ``Kofi flies kites''.
+              \item Let $a$ be the statement, ``Al likes Archery''.
+              \item Let $c$ be the statement, ``Carl goes camping''.
+              \item Let $m$ be the statement, ``Matthijs records music''.
 
- \begin{proof}
-    Assume $a$ is true. This also means $\neg a$ is false.
+          \end{itemize}
 
-    Using H5, we know that if $b$ is true, then $\neg a$ is true. Since $\neg a$ is false, $b$ must be false ($\neg b$ must be true).
+          \begin{proof}
+              Assume $a$ is true. This also means $\neg a$ is false.
 
-    Then, using H2, we know that if $\neg b$ is true, then $j$ is true. Since $\neg b$ is true, $j$ must be true.
+              Using H5, we know that if $b$ is true, then $\neg a$ is true. Since $\neg a$ is
+              false, $b$ must be false ($\neg b$ must be true).
 
-    Since $j$ is true, we can apply H7 to conclude that $m$ is true.
+              Then, using H2, we know that if $\neg b$ is true, then $j$ is true. Since $\neg
+                  b$ is true, $j$ must be true.
 
-    By H8, if $k$ were true, it would contradict our previous finding that $m$ is true. Therefore, $k$ must be false ($\neg k$ must be true).
+              Since $j$ is true, we can apply H7 to conclude that $m$ is true.
 
-    Finally, using H3, we know that if $\neg k$ is true, then $f$ is true. Since $\neg k$ is true, $f$ must be true.
+              By H8, if $k$ were true, it would contradict our previous finding that $m$ is
+              true. Therefore, $k$ must be false ($\neg k$ must be true).
 
-\end{proof}
+              Finally, using H3, we know that if $\neg k$ is true, then $f$ is true. Since
+              $\neg k$ is true, $f$ must be true.
 
-\newpage
+          \end{proof}
 
-\item Prove: for all $a \in \mathbb{Z}$, for all $b \in \mathbb{Z}$, for all $c \in \mathbb{Z}$, if $a$ divides $b$, and $b$ divides $c$, then $a$ divides $c$.
+          \newpage
 
-\begin{proof}
-    Let $a$, $b$, and $c$ be integers. Assume $a$ divides $b$ and $b$ divides $c$. This means there exists integers $k$ and $m$ such that $b = ak$ and $c = bm$.
+    \item Prove: for all $a \in \mathbb{Z}$, for all $b \in \mathbb{Z}$, for all $c \in
+              \mathbb{Z}$, if $a$ divides $b$, and $b$ divides $c$, then $a$ divides $c$.
 
-    Substituting $b = ak$ into $c = bm$, we get $c = akm$. Since $km$ is an integer, we can conclude that $a$ divides $c$. Therefore, if $a$ divides $b$ and $b$ divides $c$, then $a$ divides $c$.
-\end{proof}
+          \begin{proof}
+              Let $a$, $b$, and $c$ be integers. Assume $a$ divides $b$ and $b$ divides $c$. This means there exists integers $k$ and $m$ such that $b = ak$ and $c = bm$.
 
-\newpage
+              Substituting $b = ak$ into $c = bm$, we get $c = akm$. Since $km$ is an
+              integer, we can conclude that $a$ divides $c$. Therefore, if $a$ divides $b$
+              and $b$ divides $c$, then $a$ divides $c$.
+          \end{proof}
 
-\item Prove: for all $c \in \mathbb{Z}$, for all $d \in \mathbb{Z}$, if $c$ is even and $d$ is odd, then $c-d$ is odd.\footnote{Note for this question: apply {\bf real} algebra, so note that order of operations matters. As another note apply the definition of odd that is given. Do NOT make up your own ``alternate'' definition of odd.}
+          \newpage
 
-\begin{proof}
-    Let $c$ and $d$ be integers. Assume $c$ is even and $d$ is odd. This means there exists integers $k$ and $m$ such that $c = 2k$ and $d = 2m + 1$.
+    \item Prove: for all $c \in \mathbb{Z}$, for all $d \in \mathbb{Z}$, if $c$ is even
+          and $d$ is odd, then $c-d$ is odd.\footnote{Note for this question: apply {\bf
+                      real} algebra, so note that order of operations matters. As another note apply
+              the definition of odd that is given. Do NOT make up your own ``alternate''
+              definition of odd.}
 
-    Substituting $c = 2k$ and $d = 2m + 1$ into $c - d$, we get $c - d = 2k - (2m + 1) = 2(k - m) - 1$. Since $k - m$ is an integer, we can conclude that $c - d$ is odd. Therefore, if $c$ is even and $d$ is odd, then $c - d$ is odd.
-\end{proof}
+          \begin{proof}
+              Let $c$ and $d$ be integers. Assume $c$ is even and $d$ is odd. This means there exists integers $k$ and $m$ such that $c = 2k$ and $d = 2m + 1$.
 
-\newpage
+              Substituting $c = 2k$ and $d = 2m + 1$ into $c - d$, we get $c - d = 2k - (2m +
+                  1) = 2(k - m) - 1$. Since $k - m$ is an integer, we can conclude that $c - d$
+              is odd. Therefore, if $c$ is even and $d$ is odd, then $c - d$ is odd.
+          \end{proof}
 
-Using the hypotheses:
-\begin{itemize}
-\item For all $y \in Y$, if $y$ is a poet, then $y$ does not skateboard.
-\item For all $s \in V$, for all $t \in W$, if $s$ gives $t$ chocolate, then $t$ tap dances.
-\item Every element in the set $C$ is also in the set $V$.
-\item Every element in the set $C$ is also in the set $Y$.
-\item Every element in the set $A$ is also in the set $V$.
-\item Every element in the set $B$ is also in the set $W$.
-\item For all $h \in B$, if $h$ tap dances, then $h$ is happy.
-\end{itemize}
-Prove: For all $a \in A$, for all $b \in B$, for all $c \in C$, if $c$ skateboards and $a$ gives $b$ chocolate, then $b$ is happy and $c$ is not a poet.\footnote{Take it one step at a time. For example, if we knew \fbox{For all $g \in U$, if $g$ works hard, then the boss gives $g$ a raise} and we knew \fbox{$k \in U$} was already established, then we'd get the implication \fbox{if $k$ works hard, then the boss gives $k$ a raise}. My expectation is that you write about this implication that is newly-obtained (newly-proved). Then, now that we know this implication is true, we'd be looking for an opportunity to {\bf use} it. That is, we could do something if we knew \fbox{$k$ works hard}, and we could also use the implication if we knew \fbox{the boss does not give $k$ a raise}. (My point is: slow down, take things one step at a time, and show your work. Using a for all ends up giving you a statement that is \emph{slightly} smaller.) Of course, the question that you have to work on doesn't talk about raises, working hard, etc. I just wanted to discuss based on an example that has different activities than the poetry, skateboard, tap dances, etc. in the problem.}
+          \newpage
 
-\begin{proof}
-    Let $a \in A$, $b \in B$, and $c \in C$. Assume $c$ skateboards and $a$ gives $b$ chocolate.
-    Since every element in the set $C$ is also in the set $Y$, we know $c$ is not a poet.
-    Since every element in the set $A$ is also in the set $V$, we know $a$ gives $b$ chocolate implies $b$ tap dances.
-    Since every element in the set $B$ is also in the set $W$, we know if $b$ tap dances, then $b$ is happy.
-    Therefore, if $c$ skateboards and $a$ gives $b$ chocolate, then $b$ is happy and $c$ is not a poet.
-\end{proof}
+    \item Using the hypotheses:
 
-\newpage
+          \begin{itemize}
+              \item For all $y \in Y$, if $y$ is a poet, then $y$ does not skateboard.
+              \item For all $s \in V$, for all $t \in W$, if $s$ gives $t$ chocolate, then $t$ tap
+                    dances.
+              \item Every element in the set $C$ is also in the set $V$.
+              \item Every element in the set $C$ is also in the set $Y$.
+              \item Every element in the set $A$ is also in the set $V$.
+              \item Every element in the set $B$ is also in the set $W$.
+              \item For all $h \in B$, if $h$ tap dances, then $h$ is happy.
+          \end{itemize}
+          Prove: For all $a \in A$, for all $b \in B$, for all $c \in C$, if $c$ skateboards and $a$ gives $b$ chocolate, then $b$ is happy and $c$ is not a poet.\footnote{Take it one step at a time. For example, if we knew \fbox{For all $g \in U$, if $g$ works hard, then the boss gives $g$ a raise} and we knew \fbox{$k \in U$} was already established, then we'd get the implication \fbox{if $k$ works hard, then the boss gives $k$ a raise}. My expectation is that you write about this implication that is newly-obtained (newly-proved). Then, now that we know this implication is true, we'd be looking for an opportunity to {\bf use} it. That is, we could do something if we knew \fbox{$k$ works hard}, and we could also use the implication if we knew \fbox{the boss does not give $k$ a raise}. (My point is: slow down, take things one step at a time, and show your work. Using a for all ends up giving you a statement that is \emph{slightly} smaller.) Of course, the question that you have to work on doesn't talk about raises, working hard, etc. I just wanted to discuss based on an example that has different activities than the poetry, skateboard, tap dances, etc. in the problem.}
 
-\item Optional (0pts). You walk home from a friend's house and run into another genie. ``Oh no, not you again!'' you exclaim. The genie lays out $12$ coins and a balance while saying, ``I'll give you one trillion dollars if you can identify which one of these twelve coins is fake, but you can only use the balance three times.'' You think for a minute, without even using scratch paper to say, ``Oh hey, that's \emph{easy} now! Give me that balance and I'll identify which of these coins is heaviest in no time!'' The genie grabs the balance from you and says, ``Not so fast! I didn't say whether the fake coin is lighter than the rest or heavier than the rest. Here, have some scratch paper.'' The genie gives an evil laugh, only to say, ``Oh, for the trillion dollars, you have to identify \emph{which} coin is fake, and whether the fake coin is heavier than a genuine coin or lighter than a genuine coin.'' Explain how using the balance at most three times, you can identify the fake, and whether it is heavier or lighter than the typical coin. Good luck!
+          \begin{proof}
+              Let $a \in A$, $b \in B$, and $c \in C$. Assume $c$ skateboards and $a$ gives $b$ chocolate.
+              Since every element in the set $C$ is also in the set $Y$, we know $c$ is not a poet.
+              Since every element in the set $A$ is also in the set $V$, we know $a$ gives $b$ chocolate implies $b$ tap dances.
+              Since every element in the set $B$ is also in the set $W$, we know if $b$ tap dances, then $b$ is happy.
+              Therefore, if $c$ skateboards and $a$ gives $b$ chocolate, then $b$ is happy and $c$ is not a poet.
+          \end{proof}
 
+          \newpage
 
+    \item Optional (0pts). You walk home from a friend's house and run into another
+          genie. ``Oh no, not you again!'' you exclaim. The genie lays out $12$ coins and
+          a balance while saying, ``I'll give you one trillion dollars if you can
+          identify which one of these twelve coins is fake, but you can only use the
+          balance three times.'' You think for a minute, without even using scratch paper
+          to say, ``Oh hey, that's \emph{easy} now! Give me that balance and I'll
+          identify which of these coins is heaviest in no time!'' The genie grabs the
+          balance from you and says, ``Not so fast! I didn't say whether the fake coin is
+          lighter than the rest or heavier than the rest. Here, have some scratch
+          paper.'' The genie gives an evil laugh, only to say, ``Oh, for the trillion
+          dollars, you have to identify \emph{which} coin is fake, and whether the fake
+          coin is heavier than a genuine coin or lighter than a genuine coin.'' Explain
+          how using the balance at most three times, you can identify the fake, and
+          whether it is heavier or lighter than the typical coin. Good luck!
 
 \end{enumerate}
 
