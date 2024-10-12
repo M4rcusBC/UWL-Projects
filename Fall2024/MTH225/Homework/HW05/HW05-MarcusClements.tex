@@ -13,7 +13,6 @@
 
 \begin{document}
 
-\noindent Several of the questions have comments/expecatations/hints as footnotes. Please read through these footnotes.\footnote{Here is a short footnote before question one, so you see what the footnote looks like in the PDF and what it looks like in the LaTeX.}
 \begin{enumerate}
 
     \item Find a piecewise formula for the sequence $a_n$ whose first terms are\vskip1pt
@@ -56,7 +55,7 @@
           Prove: If Al likes archery, then Fiona goes fishing.
 
           \begin{proof}
-              Assume Al likes Archery. This also means ``Al does not like Archery'' is false.
+              Assume Al likes Archer (``Al does not like Archery'' is false).
 
               Using H5, we know that if Bo bakes cakes, then Al does not like Archery. Since
               Al likes Archery, Bo must not bake cakes.
@@ -138,6 +137,8 @@
           \newpage
 
     \item Using the hypotheses:
+    
+    I have given each of these hypotheses a name, H1 through H7, to more clearly reference them in the proof and preserve conciseness.
 
           \begin{itemize}
               \item For all $y \in Y$, if $y$ is a poet, then $y$ does not skateboard.
@@ -153,9 +154,12 @@
 
           \begin{proof}
               Let $a \in A$, $b \in B$, and $c \in C$. Assume $c$ skateboards and $a$ gives $b$ chocolate.
-              Since every element in the set $C$ is also in the set $Y$, we know $c$ is not a poet.
-              Since every element in the set $A$ is also in the set $V$, we know $a$ gives $b$ chocolate implies $b$ tap dances.
-              Since every element in the set $B$ is also in the set $W$, we know if $b$ tap dances, then $b$ is happy.
+              Since every element in the set $C$ is also in the set $Y$, we conclude that $c \in y$.
+              From H1, we note that if $c$ skateboards, then $c$ cannot be a poet. Thus, $c$ is not a poet.
+              Since every element in the set $A$ is also in the set $V$, we have $a \in V$.
+              According to H2, we know that because $a$ gives $b$ chocolate, it  follows that $b$ tap dances.
+              Since every element in the set $B$ is also in the set $W$, we have $b \in W$.
+              From H7, we know that since $b$ tap dances, $b$ is happy.
               Therefore, if $c$ skateboards and $a$ gives $b$ chocolate, then $b$ is happy and $c$ is not a poet.
           \end{proof}
 
