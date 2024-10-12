@@ -2,6 +2,7 @@
 
 \usepackage[margin=0.5in]{geometry}
 \usepackage{amsfonts,xcolor}
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage[english]{babel}
 
@@ -16,13 +17,22 @@
 \begin{enumerate}
 
     \item Find a piecewise formula for the sequence $a_n$ whose first terms are\vskip1pt
-          $1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,\dots$\vskip1pt
-          Comments/expecations/hints in footnote.\footnote{You may not have a recursive
-              formula. Your formula must work for all positive integers $n$, not just up to
-              $n \leq 20$. You should certainly {\bf check} that your formula works for $n=5$
-              and for $n=18$ and so on, but your formula should also work for $n=2876387$.
-              Hint: create a piecewise formula with $4$ pieces, and look at the key for
-              previous HW where there was a three-piece formula.}
+          $1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,4,5,5,5,5,\dots$\vskip1pt \footnote{You may not
+              have a recursive formula. Your formula must work for all positive integers $n$,
+              not just up to $n \leq 20$. You should certainly {\bf check} that your formula
+              works for $n=5$ and for $n=18$ and so on, but your formula should also work for
+              $n=2876387$. Hint: create a piecewise formula with $4$ pieces, and look at the
+              key for previous HW where there was a three-piece formula.}
+
+          The piecewise formula for this sequence can be expressed as:
+          \[
+              a_n = \begin{cases}
+                  \frac{n + 3}{4} \text{ if } n + 3 \text{ is a multiple of } 4; \\
+                  \frac{n + 2}{4} \text{ if } n + 2 \text{ is a multiple of } 4; \\
+                  \frac{n + 1}{4} \text{ if } n + 1 \text{ is a multiple of } 4; \\
+                  \frac{n}{4} \text{ if } n \text{ is a multiple of } 4.
+              \end{cases}
+          \]
 
           \newpage
 
@@ -50,16 +60,12 @@
 
               Using H5, we know that if Bo bakes cakes, then Al does not like Archery. Since
               Al likes Archery, Bo must not bake cakes.
-
               Then, using H2, we know that if Bo does not make cakes, then Jax must make
               jewelry. Since Bo does not bake cakes, Jax must make jewelry.
-
               Since Jax makes jewelrey, we can apply H7 to conclude that Matthijs records
               music.
-
               By H8, if Kofi flies kites, it would contradict our previous finding that
               Matthijs records music. Therefore, Kofi must not be flying kites.
-
               Finally, using H3, we know that if Kofi does not fly kites, then Fiona goes
               fishing. Since Kofi does not fly kites, we can conclude that Fiona goes
               fishing.
@@ -79,19 +85,15 @@
           \end{itemize}
 
           \begin{proof}
-              Assume $a$ is true. This also means $\neg a$ is false.
+              Assume $a$ is true ($\neg a$ is false).
 
               Using H5, we know that if $b$ is true, then $\neg a$ is true. Since $\neg a$ is
               false, $b$ must be false ($\neg b$ must be true).
-
               Then, using H2, we know that if $\neg b$ is true, then $j$ is true. Since $\neg
-                  b$ is true, $j$ must be true.
-
+              b$ is true, $j$ must be true.
               Since $j$ is true, we can apply H7 to conclude that $m$ is true.
-
               By H8, if $k$ were true, it would contradict our previous finding that $m$ is
               true. Therefore, $k$ must be false ($\neg k$ must be true).
-
               Finally, using H3, we know that if $\neg k$ is true, then $f$ is true. Since
               $\neg k$ is true, $f$ must be true.
 
@@ -102,12 +104,15 @@
     \item Prove: for all $a \in \mathbb{Z}$, for all $b \in \mathbb{Z}$, for all $c \in
               \mathbb{Z}$, if $a$ divides $b$, and $b$ divides $c$, then $a$ divides $c$.
 
+              Symbolic representation: $\forall a \in \Z, \forall b \in \Z, \forall c \in \Z, (a|b \land b|c) \rightarrow a|c$.
+    
           \begin{proof}
               Let $a$, $b$, and $c$ be integers. Assume $a$ divides $b$ and $b$ divides $c$. This means there exists integers $k$ and $m$ such that $b = ak$ and $c = bm$.
-
-              Substituting $b = ak$ into $c = bm$, we get $c = akm$. Since $km$ is an
-              integer, we can conclude that $a$ divides $c$. Therefore, if $a$ divides $b$
-              and $b$ divides $c$, then $a$ divides $c$.
+              Substituting $b = ak$ into $c = bm$, we get:
+              \[
+                c = bm = (ak)m = a(km).
+              \]
+              We know $km$ is an integer because the set of integers is closed under multiplication, so we can conclude that $a$ divides $c$. Therefore, if $a$ divides $b$ and $b$ divides $c$, then $a$ divides $c$.
           \end{proof}
 
           \newpage
@@ -119,11 +124,15 @@
               definition of odd.}
 
           \begin{proof}
-              Let $c$ and $d$ be integers. Assume $c$ is even and $d$ is odd. This means there exists integers $k$ and $m$ such that $c = 2k$ and $d = 2m + 1$.
-
-              Substituting $c = 2k$ and $d = 2m + 1$ into $c - d$, we get $c - d = 2k - (2m +
-                  1) = 2(k - m) - 1$. Since $k - m$ is an integer, we can conclude that $c - d$
-              is odd. Therefore, if $c$ is even and $d$ is odd, then $c - d$ is odd.
+              Let $c$ and $d$ be integers. Assume $c$ is even and $d$ is odd. This means there exists integers $k$ and $m$ such that
+              \[
+              c = 2k \text{ and } d = 2m + 1.
+            \]
+              Substituting $c = 2k$ and $d = 2m + 1$ into $c - d$, we get:
+              \[
+              c - d = 2k - (2m + 1) = 2k - 2m - 1 = 2(k - m) - 1.
+              \]
+              Let $w = (k - m).$ We know that $w \in \mathbb{Z}$ because $k$ and $m$ are integers, and the set of integers is closed under subtraction. Thus, we can conclude that $c - d$ is odd. Therefore, if $c$ is even and $d$ is odd, then $c - d$ is odd.
           \end{proof}
 
           \newpage
