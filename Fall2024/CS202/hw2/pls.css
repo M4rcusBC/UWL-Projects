@@ -3,3 +3,52 @@
     padding: 0;
 }
 
+::selection {
+    background-color: #c9e4c1;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9e6d2;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+header a {
+    position: relative;
+    justify-content: left;
+    width: 25%;
+    height: 3em;
+    background-color: #f9e6d2;
+    display: inline-block;
+}
+
+nav {
+    display: inline;
+}
+
+div.pls {
+    display: inline-block;
+    background-color: darkorange;
+}
+
+.paradigm-list {
+    list-style-type: circle;
+    font-style: italic;
+}
+
+.language {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: blue;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
