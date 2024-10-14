@@ -85,11 +85,7 @@ nav ul li a {
     text-decoration: underline;
 }
 
-h1 {
-    border-bottom: #e0e0e0 solid 1px;
-}
-
-h2 {
+h1, h2 {
     border-bottom: #e0e0e0 solid 1px;
 }
 
