@@ -6,7 +6,7 @@
 body {
     margin: 3em;
     font-family: 'Times New Roman', Times, serif;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 ::selection {
@@ -19,9 +19,8 @@ footer {
     left: 0;
     width: 100%;
     background-color: #f9e6d2;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 1em;
+    padding: 1em;
+    z-index: 10;
 }
 
 header {
@@ -105,12 +104,38 @@ p {
     padding-bottom: 0.5em;
 }
 
+.sq {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.sq::before {
+    content: "'";
+}
+
+.sq::after {
+    content: "'";
+}
+
 p::first-letter {
     font-size: 150%;
 }
 
 .tab p::first-letter {
     font-size: 100%;
+}
+
+.tab p:first-of-type::first-letter {
+    font-size: 5em; /* Make the first letter much larger */
+    font-weight: bold; /* Make it bold for emphasis */
+    line-height: 1; /* Set a line height to control the spacing */
+    float: left; /* Float the letter to the left */
+    margin-right: 0.1em; /* Add some space between the letter and text */
+    margin-top: 0.1em; /* Optional: Adjusts vertical positioning */
+    color: red;
+    text-shadow: 3px 3px 3px #000000;
+
 }
 
 .tab-set {
@@ -149,14 +174,15 @@ li.active {
 }
 
 .tab {
-    position: relative;
     display: none;
     border: #000000 solid 1px;
     border-top: none;
     padding: 1em;
+    overflow: hidden;
 }
 
 .tab.active {
+    position: relative;
     display: block;
     background-color: #febe6f;
 }
@@ -167,7 +193,8 @@ code {
     white-space: pre;
     font-family: 'Courier New', Courier, monospace;
     background-color: #fef2e0;
-
+    border-radius: 5px;
+    border: #000000 solid 1px;
 }
 
 .language {
@@ -182,6 +209,7 @@ code {
     max-width: 20%;
     border-style: solid;
     border-width: 2px;
+
 }
 
 .avatar {
@@ -189,4 +217,3 @@ code {
     height: 80px;
     width: 80px;
 }
-
