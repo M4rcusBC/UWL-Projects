@@ -23,12 +23,12 @@ footer {
     z-index: 10;
 }
 
-header {
-    justify-content: left;
-    max-width: 100%;
+header:first-of-type {
+    margin-right: 2em;
+    
 }
 
-header a {
+header>a {
     width: 100%;
     min-height: 75px;
     display: inline-block;
@@ -100,8 +100,8 @@ section section {
 }
 
 p {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .sq {
@@ -120,6 +120,7 @@ p {
 
 p::first-letter {
     font-size: 150%;
+    font-weight: bold;
 }
 
 .tab p::first-letter {
@@ -127,15 +128,14 @@ p::first-letter {
 }
 
 .tab p:first-of-type::first-letter {
-    font-size: 5em; /* Make the first letter much larger */
-    font-weight: bold; /* Make it bold for emphasis */
-    line-height: 1; /* Set a line height to control the spacing */
-    float: left; /* Float the letter to the left */
-    margin-right: 0.1em; /* Add some space between the letter and text */
-    margin-top: 0.1em; /* Optional: Adjusts vertical positioning */
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1;
+    float: left;
+    margin-right: 0.1em;
+    margin-top: 0.1em;
     color: red;
     text-shadow: 3px 3px 3px #000000;
-
 }
 
 .tab-set {
@@ -161,6 +161,10 @@ li.tab-label {
 
 li.tab-label:hover:not(.active) {
     background-color: #744e1c;
+}
+
+li.tab-label:not(.active) a:hover {
+    color: white;
 }
 
 li.tab-label a {
@@ -197,10 +201,85 @@ code {
     border: #000000 solid 1px;
 }
 
+section>ul:not(.tab-labels, .paradigm-list) {
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+section>ul:first-of-type:not(.tab-labels, .paradigm-list) {
+    padding-top: 0;
+}
+
 .language {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     color: blue;
+}
+
+.business-card {
+    border: #000000 solid 1px;
+    margin: 1em;
+}
+
+div.business-card header{
+    color: white;
+    background-color: #744e1c;
+    padding: 0.8em 0;
+    width: 100%;
+}
+
+div.business-card header h1 {
+    text-decoration-line: none;
+    border: none;
+    text-align: center;
+    font-size: 125%;
+}
+
+.business-card-body {
+    margin: 1em;
+    overflow: hidden;
+}
+
+.tab-set .business-card {
+    background-color: white;
+}
+
+div.business-card .contact ul {
+    list-style-type: none;
+    float: right;
+    display: flex;
+}
+
+div.business-card .contact ul li {
+    margin-right: 0.25em;
+    padding: 0.25em;
+    justify-content: center;
+    border: gray solid 1.5px;
+    background-color: #fcbe6f;
+}
+
+.phone::before {
+    content: "ph: ";
+}
+
+.email::before {
+    content: "em: ";
+}
+
+button.business-card-button {
+    background-color: #744e1c;
+    color: white;
+    font-weight: bold;
+    font-size: 75%;
+    border: none;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.business-card img {
+    float: left;
+    margin: 1em 1em 1em 0;
 }
 
 .portrait {
@@ -216,4 +295,8 @@ code {
     border-radius: 50%;
     height: 80px;
     width: 80px;
+}
+
+.shadowed {
+    box-shadow: 3px 3px 3px #000000;
 }
