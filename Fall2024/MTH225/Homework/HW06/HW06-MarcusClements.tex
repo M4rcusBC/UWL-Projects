@@ -43,20 +43,36 @@
                   \mathbb{Z}$, for all $c \in \mathbb{Z}$, if $a \mid b$, and $b \mid c$, then $a
                   \mid c$.
 
+            \begin{proof}
+                  Let $a, b, c \in \mathbb{Z}$ be arbitrary. Suppose $a \mid b$ and $b \mid c$. Then, by definition of divisibility, there exists an integer $k$ such that $b = ak$ and an integer $m$ such that $c = bm$. Substituting $b = ak$ into $c = bm$ gives $c = akm$. Since $k$ and $m$ are integers, $km$ is an integer. Therefore, $c = a(km)$, which implies that $a \mid c$. Thus, for all $a, b, c \in \mathbb{Z}$, if $a \mid b$ and $b \mid c$, then $a \mid c$.
+            \end{proof}
+
             \newpage
 
       \item Prove: for all $x \in \mathbb{Z}$, if $x$ is even, then $x^2$ is even. After
             processing the ``for all'', provide a {\bf direct} proof.
+
+            \begin{proof}
+                  Let $x \in \mathbb{Z}$ be arbitrary. Suppose $x$ is even. Then, by definition of even, there exists an integer $k$ such that $x = 2k$. Squaring both sides gives $x^2 = (2k)^2 = 4k^2$. Since $k$ is an integer, $k^2$ is an integer. Therefore, $x^2 = 4k^2 = 2(2k^2)$, which implies that $x^2$ is even. Thus, for all $x \in \mathbb{Z}$, if $x$ is even, then $x^2$ is even.
+            \end{proof}
 
             \newpage
 
       \item Prove: for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even. After
             processing the ``for all'', provide an {\bf indirect} proof.
 
+            \begin{proof}
+                  Let $c \in \mathbb{Z}$ be arbitrary. Suppose $c$ is odd. Then, by definition of odd, there exists an integer $k$ such that $c = 2k + 1$. Squaring both sides gives $c^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$. Since $k$ is an integer, $2k^2 + 2k$ is an integer. Therefore, $c^2 = 2(2k^2 + 2k) + 1$, which implies that $c^2$ is odd. Thus, for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even.
+            \end{proof}
+
             \newpage
 
       \item Prove: for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even. After
             processing the ``for all'', provide a proof by contradiction.
+
+            \begin{proof}
+                  Let $c \in \mathbb{Z}$ be arbitrary. Suppose $c$ is odd. Then, by definition of odd, there exists an integer $k$ such that $c = 2k + 1$. Squaring both sides gives $c^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$. Since $k$ is an integer, $2k^2 + 2k$ is an integer. Therefore, $c^2 = 2(2k^2 + 2k) + 1$, which implies that $c^2$ is odd. This contradicts the assumption that $c^2$ is even. Thus, for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even.
+            \end{proof}
 
 \end{enumerate}
 
