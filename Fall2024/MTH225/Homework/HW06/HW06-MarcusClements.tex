@@ -1,7 +1,7 @@
 \documentclass{article}
 
 \usepackage[margin=0.5in]{geometry}
-\usepackage{amsfonts,xcolor}
+\usepackage{amsfonts,xcolor,amsmath,amsthm}
 
 \newcommand\Z{\mathbb{Z}}
 \newcommand\Q{\mathbb{Q}}
@@ -13,32 +13,47 @@
 \noindent Note that the core of what we do in this class is proving an implication, using an implication, proving a ``there exists'', using a ``there exists'', proving a ``for all'', and using a ``for all''. So as you go through the questions below, please make sure you apply those ideas. One step at a time, show your work. Some additional comments/hints/expectations are in the footnotes.
 \begin{enumerate}
 
-    \item Use the following hypotheses:
-          \begin{itemize}
-              \item H1: For all $r \in M$, if $r$ likes Disneyland, then $r$ is an element in the
-                    set $S$.
-              \item H2: For all $c \in P$, if $c$ walks to school, then $c$ is a rock climber.
-              \item H3: Every element in the set $M$ is an element in the set $P$.
-              \item H4: For all $b \in M$, if $b$ does not like Disneyland, then $b$ is not an
-                    element in the set $P$.
-              \item H5: For all $s \in S$, the person $s$ walks to school.
-          \end{itemize}
-          to prove the proposition: For all $m \in M$, the person $m$ is a rock climber.\footnote{As in the previous homework, take things one step at a time. To pick an example that is not from this HW (but apply what I am saying here to the this homework question), say we had a hypothesis \fbox{For all $j \in T$, if $j$ sings, then $j$ plays baseball} and we also knew \fbox{$b \in T$}. Then we'd get \fbox{if $b$ sings, then $b$ plays baseball}. Then, if we also later knew \fbox{$b$ sings}, we can combine this with the implication to get \fbox{$b$ plays baseball}.}
+      \item Use the following hypotheses:
+            \begin{itemize}
+                  \item H1: For all $r \in M$, if $r$ likes Disneyland, then $r$ is an element in the
+                        set $S$.
+                  \item H2: For all $c \in P$, if $c$ walks to school, then $c$ is a rock climber.
+                  \item H3: Every element in the set $M$ is an element in the set $P$.
+                  \item H4: For all $b \in M$, if $b$ does not like Disneyland, then $b$ is not an
+                        element in the set $P$.
+                  \item H5: For all $s \in S$, the person $s$ walks to school.
+            \end{itemize}
+            to prove the proposition: For all $m \in M$, the person $m$ is a rock climber.\footnote{As in the previous homework, take things one step at a time. To pick an example that is not from this HW (but apply what I am saying here to the this homework question), say we had a hypothesis \fbox{For all $j \in T$, if $j$ sings, then $j$ plays baseball} and we also knew \fbox{$b \in T$}. Then we'd get \fbox{if $b$ sings, then $b$ plays baseball}. Then, if we also later knew \fbox{$b$ sings}, we can combine this with the implication to get \fbox{$b$ plays baseball}.}
 
-    \item Prove\footnote{This comment applies to question 1, but also to question 2, and
-              to many of the questions below: do not ignore the ``for all'' at the beginning
-              of the statement you prove.}: for all $a \in \mathbb{Z}$, for all $b \in
-              \mathbb{Z}$, for all $c \in \mathbb{Z}$, if $a \mid b$, and $b \mid c$, then $a
-              \mid c$.
+            \begin{proof}
+                  From H3, we know that every element in the set $M$ is an element in the set $P$. So, for all $m \in M$, $m \in P$.
+                  From H2, we know that for all $c \in P$, if $c$ walks to school, then $c$ is a rock climber. So, for all $m \in M$, if $m$ walks to school, then $m$ is a rock climber.
+                  From H5, we know that for all $s \in S$, the person $s$ walks to school. So, for all $m \in M$, if $m$ likes Disneyland, then $m$ is an element in the set $S$.
+                  From H1, we know that for all $r \in M$, if $r$ likes Disneyland, then $r$ is an element in the set $S$. So, for all $m \in M$, if $m$ likes Disneyland, then $m$ is an element in the set $S$.
+                  From H4, we know that for all $b \in M$, if $b$ does not like Disneyland, then $b$ is not an element in the set $P$. So, for all $m \in M$, if $m$ does not like Disneyland, then $m$ is not an element in the set $P$.
+                  Therefore, for all $m \in M$, the person $m$ is a rock climber.
+            \end{proof}
 
-    \item Prove: for all $x \in \mathbb{Z}$, if $x$ is even, then $x^2$ is even. After
-          processing the ``for all'', provide a {\bf direct} proof.
+            \newpage
 
-    \item Prove: for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even. After
-          processing the ``for all'', provide an {\bf indirect} proof.
+      \item Prove\footnote{This comment applies to question 1, but also to question 2, and
+                  to many of the questions below: do not ignore the ``for all'' at the beginning
+                  of the statement you prove.}: for all $a \in \mathbb{Z}$, for all $b \in
+                  \mathbb{Z}$, for all $c \in \mathbb{Z}$, if $a \mid b$, and $b \mid c$, then $a
+                  \mid c$. \newpage
 
-    \item Prove: for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even. After
-          processing the ``for all'', provide a proof by contradiction.
+      \item Prove: for all $x \in \mathbb{Z}$, if $x$ is even, then $x^2$ is even. After
+            processing the ``for all'', provide a {\bf direct} proof.
+
+            \newpage
+
+      \item Prove: for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even. After
+            processing the ``for all'', provide an {\bf indirect} proof.
+
+            \newpage
+
+      \item Prove: for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even. After
+            processing the ``for all'', provide a proof by contradiction.
 
 \end{enumerate}
 
