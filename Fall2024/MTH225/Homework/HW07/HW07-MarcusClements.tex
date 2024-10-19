@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsfonts,xcolor}
+\usepackage{amsmath} % The package amsmath will make it so that the \text{ words here } things work in the sets $S$ and $T$.
+
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+
+\begin{document}
+
+Show your steps --- step by step. Note that when you *use* a for all, the
+statement you get is slightly smaller. (So, if you *use* statement of the form
+for all \ldots if \ldots then \dots the new thing you get will be of the form if \ldots
+then \ldots) For the 5th question, I used a LaTeX thing called text, but to do
+this, I added the amsmath package at the top.
+\begin{enumerate}
+
+    \item Prove the following by contradiction: If the Minesweeper configuration is as
+          given in Figure 3.2, then Cell B is safe. (Figure 3.2 is found in the handbook
+          at the top of page 69. The number 69 is printed in the corner of the page,
+          though it is the 79th page of the PDF file, due to table of contents, cover
+          page, etc.)
+
+    \newpage
+
+    \item Prove the following by cases: If the Minesweeper configuration is as given in
+          Figure 3.2, then Cell V is a mine. [Hint: start where Cells P, Q, and R are and
+                  create three cases.]
+
+    \newpage
+
+    \item Prove: for all $a \in \mathbb{Z}$, for all $b \in \mathbb{Z}$, if $a+b$ is
+          even, then $a-b$ is even.
+
+    \newpage
+
+    \item Prove: for all $c \in \mathbb{Z}$, we have $c$ is even if and only if $c-1$ is
+          odd.
+
+    \newpage
+
+    \item Use the hypotheses:
+          \begin{itemize}
+              \item H1: Every element of $D$ is an element of $A$.
+              \item H2: For all $d \in D$, if $d$ raises tigers, then $d$ does not play soccer.
+              \item H3: Every element of $B$ is an element of $D$.
+              \item H4: Every element of $S$ is an element of $T$.
+              \item H5: For all $b \in B$, if $b$ is a paramedic, then $b$ plays board games.
+              \item H6: Every element of $U$ is an element of $D$.
+              \item H7: For all $a \in A$, if $a$ does not raise tigers, then $a$ is a paramedic.
+          \end{itemize}
+          and the definitions of these sets
+          \begin{itemize}
+              \item $S = \{x \in D : x \text{ plays board games}\}$
+              \item $T = \{c \in U : c \text{ is a barista}\}$
+          \end{itemize}
+          to prove: for all $b \in B$, if $b$ plays soccer, then $b$ is a barista.
+
+\end{enumerate}
+
+\end{document}
