@@ -23,8 +23,8 @@
                         element in the set $P$.
                   \item H5: For all $s \in S$, the person $s$ walks to school.
             \end{itemize}
-            
-            to prove the proposition: For all $m \in M$, the person $m$ is a rock climber.\footnote{As in the previous homework, take things one step at a time. To pick an example that is not from this HW (but apply what I am saying here to the this homework question), say we had a hypothesis \fbox{For all $j \in T$, if $j$ sings, then $j$ plays baseball} and we also knew \fbox{$b \in T$}. Then we'd get \fbox{if $b$ sings, then $b$ plays baseball}. Then, if we also later knew \fbox{$b$ sings}, we can combine this with the implication to get \fbox{$b$ plays baseball}.}
+
+            to prove the proposition: For all $m \in M$, the person $m$ is a rock climber.
 
             \begin{proof}
                   From H3, we know that every element in the set $M$ is an element in the set $P$. So, for all $m \in M$, $m \in P$.
@@ -37,14 +37,14 @@
 
             \newpage
 
-      \item Prove\footnote{This comment applies to question 1, but also to question 2, and
-                  to many of the questions below: do not ignore the ``for all'' at the beginning
-                  of the statement you prove.}: for all $a \in \mathbb{Z}$, for all $b \in
-                  \mathbb{Z}$, for all $c \in \mathbb{Z}$, if $a \mid b$, and $b \mid c$, then $a
-                  \mid c$.
+      \item Prove: for all $a \in \mathbb{Z}$, for all $b \in \mathbb{Z}$, for all $c \in
+                  \mathbb{Z}$, if $a \mid b$, and $b \mid c$, then $a \mid c$.
 
             \begin{proof}
-                  Let $a, b, c \in \mathbb{Z}$ be arbitrary. Suppose $a \mid b$ and $b \mid c$. Then, by definition of divisibility, there exists an integer $k$ such that $b = ak$ and an integer $m$ such that $c = bm$. Substituting $b = ak$ into $c = bm$ gives $c = akm$. Since $k$ and $m$ are integers, $km$ is an integer. Therefore, $c = a(km)$, which implies that $a \mid c$. Thus, for all $a, b, c \in \mathbb{Z}$, if $a \mid b$ and $b \mid c$, then $a \mid c$.
+                  Let $a, b, c \in \mathbb{Z}$ be arbitrary. Suppose $a \mid b$ and $b \mid c$.
+                  Then, by definition of divisibility, there exists an integer $k$ such that $b = ak$ and an integer $m$ such that $c = bm$.
+                  Substituting $b = ak$ into $c = bm$ gives $c = akm$. Since $k$ and $m$ are integers, $km$ is an integer.
+                  Therefore, $c = a(km)$, which implies that $a \mid c$. Thus, for all $a, b, c \in \mathbb{Z}$, if $a \mid b$ and $b \mid c$, then $a \mid c$.
             \end{proof}
 
             \newpage
@@ -53,7 +53,11 @@
             processing the ``for all'', provide a {\bf direct} proof.
 
             \begin{proof}
-                  Let $x \in \mathbb{Z}$ be arbitrary. Suppose $x$ is even. Then, by definition of even, there exists an integer $k$ such that $x = 2k$. Squaring both sides gives $x^2 = {(2k)}^2 = 4k^2$. Since $k$ is an integer, $k^2$ is an integer. Therefore, $x^2 = 4k^2 = 2(2k^2)$, which implies that $x^2$ is even. Thus, for all $x \in \mathbb{Z}$, if $x$ is even, then $x^2$ is even.
+                  Let $x \in \mathbb{Z}$ be arbitrary. Suppose $x$ is even. Then, by definition of even, there exists an integer $k$ such that $x = 2k$.
+                  Squaring both sides gives $x^2 = {(2k)}^2 = 4k^2$.
+                  Since $k$ is an integer, $k^2$ is an integer.
+                  Therefore, $x^2 = 4k^2 = 2(2k^2)$, which implies that $x^2$ is even.
+                  Thus, for all $x \in \mathbb{Z}$, if $x$ is even, then $x^2$ is even.
             \end{proof}
 
             \newpage
@@ -61,8 +65,17 @@
       \item Prove: for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even. After
             processing the ``for all'', provide an {\bf indirect} proof.
 
+            To prove this statement indirectly, we can use the statement's contrapositive.
+            The contrapositive of the statement is: for all $c \in \mathbb{Z}$, if $c$ is
+            odd, then $c^2$ is odd.
+
             \begin{proof}
-                  Let $c \in \mathbb{Z}$ be arbitrary. Suppose $c$ is odd. Then, by definition of odd, there exists an integer $k$ such that $c = 2k + 1$. Squaring both sides gives $c^2 = {(2k + 1)}^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$. Since $k$ is an integer, $2k^2 + 2k$ is an integer. Therefore, $c^2 = 2(2k^2 + 2k) + 1$, which implies that $c^2$ is odd. Thus, for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even.
+                  Let $c \in \mathbb{Z}$ be arbitrary. Suppose $c$ is odd. Then, by definition of odd, there exists an integer $k$ such that $c = 2k + 1$.
+                  Squaring both sides gives $c^2 = {(2k + 1)}^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$.
+                  Since $k$ is an integer, $2k^2 + 2k$ is an integer. Therefore, $c^2 = 2(2k^2 + 2k) + 1$, which implies that $c^2$ is odd.
+                  Therefore, for all $c \in \mathbb{Z}$, if $c$ is odd, then $c^2$ is odd.
+                  Since we have proven the contrapositive of the original statement, we know the original statement must also be true.
+                  Thus, for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even.
             \end{proof}
 
             \newpage
@@ -71,7 +84,18 @@
             processing the ``for all'', provide a proof by contradiction.
 
             \begin{proof}
-                  Let $c \in \mathbb{Z}$ be arbitrary. Suppose $c$ is odd. Then, by definition of odd, there exists an integer $k$ such that $c = 2k + 1$. Squaring both sides gives $c^2 = {(2k + 1)}^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1$. Since $k$ is an integer, $2k^2 + 2k$ is an integer. Therefore, $c^2 = 2(2k^2 + 2k) + 1$, which implies that $c^2$ is odd. This contradicts the assumption that $c^2$ is even. Thus, for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is even.
+                  Let $c \in \mathbb{Z}$ be arbitrary. Suppose $c$ is odd.
+                  Then, by definition of odd, there exists an integer $k$ such that $c = 2k + 1$.
+                  Squaring both sides gives:
+
+                  \[
+                        c^2 = {(2k + 1)}^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1.
+                  \]
+
+                  Since $k$ is an integer, $2k^2 + 2k$ is an integer. Therefore, $c^2 = 2(2k^2 +
+                        2k) + 1$, which implies that $c^2$ is odd. This contradicts the assumption that
+                  $c^2$ is even. Thus, for all $c \in \mathbb{Z}$, if $c^2$ is even, then $c$ is
+                  even.
             \end{proof}
 
 \end{enumerate}
