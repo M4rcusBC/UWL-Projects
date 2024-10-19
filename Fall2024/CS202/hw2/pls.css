@@ -192,8 +192,9 @@ li.active {
 }
 
 code {
+    display: block;
     line-height: 1em;
-    width: 100%;
+    width: fit-content;
     white-space: pre;
     font-family: 'Courier New', Courier, monospace;
     background-color: #fef2e0;
