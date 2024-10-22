@@ -1,6 +1,6 @@
     #MIPS Hello World
-    # Your Name
-    # We are doing an assembly programming for "hello world!"
+    # Marcus Clements
+    # This is an assembly program for "hello world!"
     # begin data segment
 .data
 hi:     .asciiz "Hello World!\n"        #create a null-terminated string "Hello world"
