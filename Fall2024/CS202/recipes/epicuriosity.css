@@ -1,8 +1,19 @@
+/*
+Marcus B Clements
+CS202 HW3: Epicuriosity Recipes
+Created 10/22/2024
+*/
+
 * {
     margin: 0;
     padding: 0;
 }
 
-.icon {
-    height: 1.25em;
+.social-icon {
+    width: 1em;
+}
+
+.recipe-photo {
+    width: 250px;
+    height: auto;
 }
