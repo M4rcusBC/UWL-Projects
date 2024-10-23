@@ -3,7 +3,7 @@
     # This is an assembly program for "hello world!"
     # begin data segment
 .data
-hi:     .asciiz "Hello World!\n"        #create a null-terminated string "Hello world"
+hi:     .asciiz "Hello World!\n"        # create a null-terminated string "Hello world"
         .align  2                       # align data segment after each string
 num:    .word   5                       # reserve space and initialize
 i:      .space  4                       # counter variable

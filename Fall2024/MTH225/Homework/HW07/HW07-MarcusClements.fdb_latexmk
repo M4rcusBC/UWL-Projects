@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1729379629.3904 "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW07/HW07-MarcusClements.tex" "HW07-MarcusClements.pdf" "HW07-MarcusClements" 1729379629.82654 0
-  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1728084997 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1726420183 11548 c205c48c241254aaed9fc7e92661a019 ""
-  "C:/Users/mbcle/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1725564683 24265332 56b9861c6b33e973fe42188bec193c0b ""
+["pdflatex"] 1729691659.4029 "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW07/HW07-MarcusClements.tex" "HW07-MarcusClements.pdf" "HW07-MarcusClements" 1729691662.4205 0
+  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1727978363 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1726175911 11548 8b8817f303c0e51256f98cf950a21e7b ""
+  "C:/Users/mbcle/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1725558874 24265332 1cc552cd10b085474282125321fe3155 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -18,6 +18,7 @@
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty" 1643997108 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty" 1643997108 1057 525c2192b5febbd8c1f662c9468335bb ""
+  "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/amscls/amsthm.sty" 1591023609 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty" 1358197772 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd" 1358197772 961 6518c6525a34feb5e8250ffa91731cff ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd" 1358197772 961 d02606146ba5601b5645f987c92e6193 ""
@@ -36,9 +37,9 @@
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx" 1718270727 2885 9c645d672ae17285bba324998918efd8 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1716480499 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "HW07-MarcusClements.aux" 1729379629 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "HW07-MarcusClements.tex" 1729379628 2636 e485b7ea14190cea28f398dfafbed57a ""
-  "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW07/HW07-MarcusClements.tex" 1729379628 2636 e485b7ea14190cea28f398dfafbed57a ""
+  "HW07-MarcusClements.aux" 1729691661 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
+  "HW07-MarcusClements.tex" 1729691657 2657 f60b32286e44a17a0d0e8addf5e08e55 ""
+  "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW07/HW07-MarcusClements.tex" 1729691657 2657 f60b32286e44a17a0d0e8addf5e08e55 ""
   (generated)
   "HW07-MarcusClements.aux"
   "HW07-MarcusClements.log"
