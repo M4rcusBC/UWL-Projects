@@ -1,13 +1,14 @@
 Information regarding the use of external social icons in this assignment:
+--
 
 All social icons containing trademarks are intended to represent the company, 
 product, or service to which they refer, and serve no other explicit 
 purpose.
 
-All social icons present within this project are sourced from FontAwesome, 
+All social icons present within this project are sourced from FontAwesome 
 and used under the following Creative Commons license, 
 https://creativecommons.org/licenses/by/4.0/, as described by the 
-free licensing policy provided by FontAwesome at 
+free licensing policy for '.svg' icons provided by FontAwesome at 
 https://fontawesome.com/license/free. I can provide the exact
 resources I used from FontAwesome if needed; please let me know if
 this is necessary.
