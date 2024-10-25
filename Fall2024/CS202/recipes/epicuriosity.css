@@ -13,6 +13,12 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 
+.grey-bar {
+    height: 10px;
+    width: 100%;
+    background-color: #d8dadc;
+}
+
 header {
     background-color: #fd8001;
 }
@@ -26,6 +32,7 @@ nav {
 nav ul {
     list-style-type: none;
     display: flex;
+    padding-top: 0.25em;
 }
 
 nav ul li {
@@ -37,13 +44,36 @@ nav ul li a {
     color: black;
 }
 
+nav ul li:not(:first-of-type) {
+    padding-top: 0.25em;
+}
+
+nav ul li:not(:first-of-type) a {
+    font-variant: small-caps;
+}
+
 nav ul li:not(:first-of-type) a:hover {
     color: white;
 }
 
+nav ul li:first-of-type {
+    display: inline-block;
+    font-family: "Pacifico", "Dancing Script", "Great Vibes", "Satisfy", "Caveat", cursive;
+    font-style: italic;
+}
+
 nav ul li:first-of-type::before {
     content: "E";
-    margin-right: 0.5em;
+    margin-right: 0.25em;
+    background-color: black;
+    color: white;;
+    padding: 0.25em 0.75em;
+    border-radius: 50%;
+}
+
+nav ul li:first-of-type::before:hover {
+    background-color: white;
+    color: black;
 }
 
 section.large-background {
@@ -63,52 +93,27 @@ section.large-background h1 {
 }
 
 .recent-recipes {
-    padding: 1em;
     overflow: scroll;
-    padding-bottom: 10em;
+    padding: 1em 1em 12em;
 }
 
 .recipe {
+    position: relative;
     white-space: normal;
     display: inline-block;
     background-color: lightgray;
     border: 1px solid black;
     padding: 1em;
     width: 25%;
+    min-height: 400px;
     margin-bottom: 1em;
     margin-right: 0.75em;
     justify-content: center;
     overflow: hidden;
 }
 
-.recipe p {
-    width: 100%;
-    line-height: 1.25em;
-    text-align: center;
-    margin: 0.5em 0;
-}
-
-.recipe:last-of-type {
-    margin-right: 0.75em;
-}
-
-.social-icon {
-    width: 1em;
-}
-
-.socials ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: left;
-}
-
-.socials ul li {
-    padding-top: 0.25em;
-    margin-right: 1em;
-}
-
 .recipe-photo{
-    filter: grayscale(25%);
+    filter: brightness(80%);
     transition: filter 0.3s ease;
     width: 100%;
     height: auto;
@@ -118,15 +123,29 @@ section.large-background h1 {
 }
 
 .recipe-photo:hover {
-    filter: grayscale(0%);
+    filter: brightness(100%);
+}
+
+.recipe p {
+    width: 100%;
+    line-height: 1.25em;
+    text-align: center;
+    margin: 0.5em 0;
+    padding-top: 0.5em;
+}
+
+.recipe:last-of-type {
+    margin-right: 0.75em;
 }
 
 .go {
+    position: absolute;
     cursor: pointer;
-    width: 100%;
+    width: 86%;
     padding: 0.25em 0;
     border: 1px solid black;
     background-color: #ff9b01;
+    bottom: 1.5em;
 }
 
 .go:hover {
@@ -157,9 +176,32 @@ footer .footer-content div {
     overflow-wrap: normal;
 }
 
+.social-icon {
+    width: 1em;
+}
+
+.social-icon:hover {
+    color: blue;
+}
+
+.socials ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+.socials ul li {
+    padding-top: 0.25em;
+    margin-right: 1em;
+}
+
 footer .footer-copyright {
     background-color: black;
     color: lightgray;
     padding: 0.75em 0;
     text-align: center;
+}
+
+*:active:not(:has(*:active)) {
+    outline: 3px solid darkgray;
 }
