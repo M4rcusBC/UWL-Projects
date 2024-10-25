@@ -1,9 +1,7 @@
 \documentclass{article}
 
 \usepackage[margin=0.5in]{geometry}
-\usepackage{amsfonts,xcolor}
-\usepackage{amsmath} % The package amsmath will make it so that the \text{ words here } things work in the sets $S$ and $T$.
-\usepackage{amsthm}
+\usepackage{amsfonts,xcolor, amsmath, amsthm}
 
 \newcommand\Z{\mathbb{Z}}
 \newcommand\Q{\mathbb{Q}}
@@ -25,21 +23,49 @@ this, I added the amsmath package at the top.
           though it is the 79th page of the PDF file, due to table of contents, cover
           page, etc.)
 
+      For the sake of clarity, I will be referencing one-indexed rows and columns from Figure 3.2. For example, the top left cell is cell (1,1), and cell B is located at (8, 1).
+
+      \begin{proof}
+            Suppose that the Minesweeper configuration is as given in Figure 3.2. Also suppose for the sake of contradiction that Cell B is not safe and contains a mine. 
+            Then since (8,2) has two mines adjacent to it, one being B and the other being (7, 2), then cell C must be safe.
+            Because (10, 2) has three mines adjacent to it, and we know cell C is safe, then cells D and E must contain mines.
+            But if both B and D contain mines, cell (9, 2) would have two mines adjacent to it instead of one, which contradicts the assumed configuration.
+            Therefore, since the assumption that Cell B is not safe leads to a contradiction, Cell B must be safe.
+      \end{proof}
+
     \newpage
 
     \item Prove the following by cases: If the Minesweeper configuration is as given in
           Figure 3.2, then Cell V is a mine. [Hint: start where Cells P, Q, and R are and
                   create three cases.]
 
+      \begin{proof}
+            Suppose that the Minesweeper configuration is as given in Figure 3.2. We will consider three cases based on the contents of cells P, Q, and R. 
+            \begin{itemize}
+                \item Case 1: If cells P, Q, and R are all safe, then since cell V has three mines adjacent to it, cell V must be a mine.
+                \item Case 2: If cell P is a mine, then cell V must be a mine since it has three mines adjacent to it.
+                \item Case 3: If cell Q is a mine, then cell V must be a mine since it has three mines adjacent to it.
+            \end{itemize}
+            Therefore, in all cases, if the Minesweeper configuration is as given in Figure 3.2, then Cell V is a mine.
+      \end{proof}
+
     \newpage
 
     \item Prove: for all $a \in \mathbb{Z}$, for all $b \in \mathbb{Z}$, if $a+b$ is
           even, then $a-b$ is even.
 
+      \begin{proof}
+              Let $a, b \in \Z$ be arbitrary. Suppose $a+b$ is even. Then there exists an integer $k$ such that $a+b = 2k$. Then $a = 2k - b$. Since $2k$ and $b$ are integers, $a$ is an integer. Therefore, $a-b = 2k - b - b = 2k - 2b = 2(k-b)$. Since $k$ and $b$ are integers, $k-b$ is an integer. Therefore, $a-b$ is even.
+      \end{proof}
+
     \newpage
 
     \item Prove: for all $c \in \mathbb{Z}$, we have $c$ is even if and only if $c-1$ is
           odd.
+
+      \begin{proof}
+              Let $c \in \Z$ be arbitrary. Suppose $c$ is even. Then there exists an integer $k$ such that $c = 2k$. Then $c-1 = 2k - 1 = 2(k-1) + 1$. Since $k$ is an integer, $k-1$ is an integer. Therefore, $c-1$ is odd. Now suppose $c-1$ is odd. Then there exists an integer $k$ such that $c-1 = 2k + 1$. Then $c = 2k + 1 = 2(k+1)$. Since $k$ is an integer, $k+1$ is an integer. Therefore, $c$ is even. Therefore, $c$ is even if and only if $c-1$ is odd.
+      \end{proof}
 
     \newpage
 
@@ -59,6 +85,10 @@ this, I added the amsmath package at the top.
               \item $T = \{c \in U : c \text{ is a barista}\}$
           \end{itemize}
           to prove: for all $b \in B$, if $b$ plays soccer, then $b$ is a barista.
+
+          \begin{proof}
+                  Let $b \in B$ be arbitrary. Suppose $b$ plays soccer. Since every element of $B$ is an element of $D$, $b \in D$. Since every element of $D$ is an element of $A$, $b \in A$. Since $b \in A$, by H7, if $b$ does not raise tigers, then $b$ is a paramedic. Since $b$ plays soccer, $b$ does not raise tigers. Therefore, $b$ is a paramedic. Since $b$ is a paramedic, by H5, $b$ plays board games. Since $b$ plays board games, $b \in S$. Since $b \in S$, $b \in T$. Since $b \in T$, $b$ is a barista. Therefore, for all $b \in B$, if $b$ plays soccer, then $b$ is a barista.
+              \end{proof}
 
 \end{enumerate}
 
