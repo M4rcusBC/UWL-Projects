@@ -1,0 +1,60 @@
+<!--
+Marcus Clements
+CS202 Lab 5 - HTML Forms
+10/28/2024
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Medical Survey</h1>
+    <p>
+      This survey collects information that is only used internally to improve
+      products and services that better meet the needs of our clients. The
+      information entered on this survey is not provided to third parties
+      without the written consent of the individual completing the survey.
+    </p>
+    <form action="http://138.49.184.106:3000/meds" method="GET">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <fieldset>
+          <legend>Identification</legend>
+          <label for="fn">First Name</label>
+          <input type="text" name="fn" id="fn">
+          <label for="ln">Last Name</label>
+          <input type="text" name="ln" id="ln">
+          <br>
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob">
+          <label for="citizen">Citizenship</label>
+          <select name="citizen" id="citizen">
+            <option value="USA">United States</option>
+            <option value="CAN">Canada</option>
+            <option value="MEX">Mexico</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Medical History</legend>
+          <input type="checkbox" name="sp" id="sp">
+          <label for="sp">Small Pox</label>
+          <input type="checkbox" name="mumps" id="mumps">
+          <label for="mumps">Mumps</label>
+          <input type="checkbox" name="rsv" id="rsv">
+          <label for="rsv">RSV</label>
+          <input type="checkbox" name="dia" id="dia">
+          <label for="dia">Diabetes</label>
+        </fieldset>
+      </fieldset>
+      <fieldset>
+        <legend>Permission</legend>
+        <p>May we share this information with your insurance company?</p>
+        <label>Yes <input type="radio" name="share" value="yes"></label>
+        <label>No <input type="radio" name="share" value="no"></label>
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+    <footer>&copy; CS 202</footer>
+  </body>
+</html>
