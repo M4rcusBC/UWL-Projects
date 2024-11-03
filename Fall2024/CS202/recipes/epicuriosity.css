@@ -26,13 +26,12 @@ header {
 nav {
     display: inline-block;
     justify-content: left;
-    padding: 1em;
+    padding: 0.75em 1em;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    padding-top: 0.25em;
 }
 
 nav ul li {
@@ -45,35 +44,48 @@ nav ul li a {
 }
 
 nav ul li:not(:first-of-type) {
-    padding-top: 0.25em;
+    padding-top: 0.5em;
 }
 
-nav ul li:not(:first-of-type) a {
+nav ul li:not(:first-of-type, :nth-child(2)) a {
     font-variant: small-caps;
 }
 
-nav ul li:not(:first-of-type) a:hover {
+nav ul li:not(:first-of-type, :nth-child(2)) a:hover {
     color: white;
 }
 
 nav ul li:first-of-type {
-    display: inline-block;
-    font-family: "Pacifico", "Dancing Script", "Great Vibes", "Satisfy", "Caveat", cursive;
-    font-style: italic;
-}
-
-nav ul li:first-of-type::before {
-    content: "E";
     margin-right: 0.25em;
-    background-color: black;
-    color: white;;
-    padding: 0.25em 0.75em;
-    border-radius: 50%;
+    padding-bottom: 0.25em;
 }
 
-nav ul li:first-of-type::before:hover {
-    background-color: white;
+nav ul li:first-of-type a {
+    display: inline-block;
+    font-family: "Parisienne", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5em;
+    color: white;
+    background-color: black;
+    padding: 0.3em  0.5em 0 0.5em;
+    border-radius: 50% 50%;
+}
+
+nav ul li:first-of-type a:hover {
     color: black;
+    background-color: white;
+}
+
+nav ul li:nth-child(2) a {
+    font-family: "Parisienne", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.25em;
+}
+
+nav ul li:nth-child(2) {
+    padding-top: 0.35em;
 }
 
 section.large-background {
@@ -163,7 +175,6 @@ footer {
     justify-content: left;
     border-top: 5px solid black;
 }
-
 footer .footer-content {
     width: 100%;
     display: flex;
@@ -203,8 +214,4 @@ footer .footer-copyright {
     color: lightgray;
     padding: 0.75em 0;
     text-align: center;
-}
-
-*:active:not(:has(*:active)) {
-    outline: 3px solid darkgray;
 }
