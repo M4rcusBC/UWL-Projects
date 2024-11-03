@@ -68,7 +68,7 @@ nav ul li:first-of-type a {
     font-size: 1.5em;
     color: white;
     background-color: black;
-    padding: 0.3em  0.5em 0 0.5em;
+    padding: 0.3em 0.5em 0 0.5em;
     border-radius: 50% 50%;
 }
 
@@ -125,7 +125,7 @@ section.large-background h1 {
     overflow: hidden;
 }
 
-.recipe-photo{
+.recipe-photo {
     filter: brightness(80%);
     transition: filter 0.3s ease;
     width: 100%;
@@ -175,6 +175,7 @@ footer {
     justify-content: left;
     border-top: 5px solid black;
 }
+
 footer .footer-content {
     width: 100%;
     display: flex;
