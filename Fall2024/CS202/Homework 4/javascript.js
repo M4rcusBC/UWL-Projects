@@ -1,15 +1,23 @@
-function elegibility(age, state, filed, dependents) {
-    if (age >= 60) {
-        if (state == "IA" || state == "WI") {
-            if (filed) {
-                if (dependents > 0 && dependents < 6) {
-                    return true;
-                }
-            }
-        }
-    } else {
+function eligibility(age, state, filed, dependents) {
+    if (age < 60) {
         return false;
     }
+
+    state = state.toUpperCase();
+
+    if (state !== "IA" && state !== "WI") {
+        return false;
+    }
+
+    if (!filed) {
+        return false;
+    }
+
+    if (dependents <= 0 || dependents >= 6) {
+        return false;
+    }
+
+    return true;
 }
 
 function oddlyEven(data) {
@@ -33,11 +41,25 @@ function sequence(start, step) {
 }
 
 function repeat(text, n) {
-    return 0;
+    if (n <= 0) {
+        return "";
+    }
+
+    return text + repeat(text, n - 1);
 }
 
 function repeatf(f, n) {
-    return 0;
+    const results = [];
+
+    if (n < 1) {
+        return results;
+    }
+
+    for (i = 0; i < n; i++) {
+        results.push(f());
+    }
+
+    return results;
 }
 
 function matchmaker(obj) {
