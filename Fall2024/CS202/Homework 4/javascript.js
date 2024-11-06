@@ -32,7 +32,7 @@ function oddlyEven(data) {
         7: "####",
         8: "*****",
         9: "#####",
-    };
+    }; // Map for case where data is a number
     const reverseOddEvenMap = {
         "*": "0",
         "#": "1",
@@ -44,15 +44,15 @@ function oddlyEven(data) {
         "####": "7",
         "*****": "8",
         "#####": "9",
-    };
+    }; // Map for case where data is a string
     if (typeof data === "number" && data >= 0 && Number.isInteger(data)) {
         return String(data)
             .split("")
             .map((digit) => oddEvenMap[digit])
             .join(":");
     } else if (typeof data === "string") {
-        const parts = data.split(":");
-        const decoded = parts.map((part) => reverseOddEvenMap[part]);
+        const tokens = data.split(":"); // Split the string into tokens based on the colon
+        const decoded = tokens.map((token) => reverseOddEvenMap[token]);
         if (decoded.includes(undefined)) {
             return undefined;
         }
