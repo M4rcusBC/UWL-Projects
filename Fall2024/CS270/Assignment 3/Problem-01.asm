@@ -1,3 +1,6 @@
+    # Marcus Clements
+    # Multiplication via Repeated Addition
+    # CS 270 - Assignment 3, Problem 1
 .data
 A:          .word   0                                   # First number (multiplicand)
 B:          .word   0                                   # Second number (multiplier)
