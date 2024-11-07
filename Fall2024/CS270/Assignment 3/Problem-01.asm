@@ -6,8 +6,11 @@ A:          .word   0                                   # First number (multipli
 B:          .word   0                                   # Second number (multiplier)
 C:          .word   0                                   # Will store the result of A × B
 promptA:    .asciiz "Enter the first number (A): "      # Prompt for input A
+            .align  2
 promptB:    .asciiz "Enter the second number (B): "     # Prompt for input B
+            .align  2
 resultMsg:  .asciiz "The product of A and B is: "       # Message to display the result of A * B
+            .align  2
 
 .text
             .globl  main
