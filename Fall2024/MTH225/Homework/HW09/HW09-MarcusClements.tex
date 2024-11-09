@@ -2,7 +2,7 @@
 
 \usepackage[margin=0.5in]{geometry}
 \usepackage{amsfonts,xcolor}
-\usepackage{amsmath} % The package amsmath will make it so that the \text{ words here } things work in the sets $S$ and $T$.
+\usepackage{amsmath, amsthm} % The package amsmath will make it so that the \text{ words here } things work in the sets $S$ and $T$.
 
 \newcommand\Z{\mathbb{Z}}
 \newcommand\Q{\mathbb{Q}}
@@ -14,13 +14,43 @@
 
 \begin{enumerate}
 
-\item Let $R = \{(a,b) \in \mathbb{R} \times \mathbb{R} : 7 \text{ divides } a-b\}$. State five elements of $R$, with proper notation. Note, you must provide five examples of elements which, as a whole, helps someone truly see what kinds of things belong to $R$. This sounds like it's subjective, but it's not quite as subjective as it sounds. If you were only to provide $(7,7) \in R$ and $(14,14) \in R$ and such as elements of $R$, while true, you do not want your examples to mislead someone into a true understanding of the set $R$. Push the limits as much as possible. Go ahead and provide one or two tame elements of $R$, but be sure to give examples to show the actual variety of things that belong to $R$.
+\item Let $R = \{(a,b) \in \mathbb{R} \times \mathbb{R} : 7 \text{ divides } a-b\}$. State five elements of $R$, with proper notation.
+
+\begin{itemize}
+
+    \item $(15, 8) \in \R$, since $7$ divides $(15-8)$.
+    \item $(1.25, 8.25) \in \R$, since $7$ divides $(1.25-8.25)$.
+    \item $(14, -7) \in \R$, since $7$ divides $(14-(-7))$.
+    \item $(56, 7) \in \R$, since $7$ divides $(56-7)$.
+    \item $(-13.15, 0.85) \in \R$, since $7$ divides $(-13.15-0.85)$.
+
+\end{itemize}
+
+\newpage
 
 \item Let $R = \{(a,b) \in \mathbb{R} \times \mathbb{R} : 7 \text{ divides } a-b\}$. Note that $R$ is a binary relation on $\mathbb{R}$. Prove $R$ is reflexive.
 
+\begin{proof}
+    Want to show that for all $a \in \R$, $(a,a) \in R$. Let $a \in \R$ be arbitrary. Since $7$ divides $(a-a)$, we have $7$ divides $0$. Since $7$ divides $0$, we have $0 = 7 \cdot 0$, which is true. Therefore, $(a,a) \in R$. Since $a \in \R$ was arbitrary, we have shown that for all $a \in \R$, $(a,a) \in R$. Therefore, $R$ is reflexive.
+\end{proof}
+
+\newpage
+
 \item Let $R = \{(a,b) \in \mathbb{R} \times \mathbb{R} : 7 \text{ divides } a-b\}$. Note that $R$ is a binary relation on $\mathbb{R}$. Prove $R$ is symmetric.
 
+\begin{proof}
+    Want to show that for all $a,b \in \R$, if $(a,b) \in R$, then $(b,a) \in R$. Let $a,b \in \R$ be arbitrary. Suppose $(a,b) \in R$. Then $7$ divides $(a-b)$. Since $7$ divides $(a-b)$, we have $a-b = 7k$ for some $k \in \Z$. Multiplying both sides by $-1$ gives $b-a = -7k$. Since $-7k \in \Z$, we have $7$ divides $(b-a)$. Therefore, $(b,a) \in R$. Since $a,b \in \R$ were arbitrary, we have shown that for all $a,b \in \R$, if $(a,b) \in R$, then $(b,a) \in R$. Therefore, $R$ is symmetric.
+\end{proof}
+
+\newpage
+
 \item Let $R = \{(a,b) \in \mathbb{R} \times \mathbb{R} : 7 \text{ divides } a-b\}$. Note that $R$ is a binary relation on $\mathbb{R}$. Prove $R$ is transitive.
+
+\begin{proof}
+    Want to show that for all $a,b,c \in \R$, if $(a,b) \in R$ and $(b,c) \in R$, then $(a,c) \in R$. Let $a,b,c \in \R$ be arbitrary. Suppose $(a,b) \in R$ and $(b,c) \in R$. Then $7$ divides $(a-b)$ and $7$ divides $(b-c)$. Since $7$ divides $(a-b)$ and $7$ divides $(b-c)$, we have $a-b = 7k$ and $b-c = 7m$ for some $k,m \in \Z$. Adding these equations gives $a-c = 7(k+m)$. Since $k+m \in \Z$, we have $7$ divides $(a-c)$. Therefore, $(a,c) \in R$. Since $a,b,c \in \R$ were arbitrary, we have shown that for all $a,b,c \in \R$, if $(a,b) \in R$ and $(b,c) \in R$, then $(a,c) \in R$. Therefore, $R$ is transitive.
+\end{proof}
+
+\newpage
 
 \item Based on the following set definitions:
 \begin{itemize}
@@ -38,7 +68,10 @@ and hypotheses
 \end{itemize}
 prove: for all $x \in S$, for all $y \in T$, if $x$ is a baker and $y$ skateboards, then $x$ wins GBBO and $y$ wears a helmet.
 
-\end{enumerate}
+\begin{proof}
+    Let $x \in S$ and $y \in T$ be arbitrary. Suppose $x$ is a baker and $y$ skateboards. Since $x \in S$, we know $x$ plays hockey. Since $x$ plays hockey, $x \in T$. Since $x \in T$, $x$'s cat scratches furniture. Since $x$'s cat scratches furniture, $x$ wins GBBO by hypothesis H2. Since $y$ skateboards, $y$ must wear a helmet by hypothesis H3. Therefore, for all $x \in S$, for all $y \in T$, if $x$ is a baker and $y$ skateboards, then $x$ wins GBBO and $y$ wears a helmet.
+\end{proof}
 
+\end{enumerate}
 
 \end{document}
