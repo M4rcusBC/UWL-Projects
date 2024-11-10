@@ -1,3 +1,10 @@
+/*
+* Marcus Clements
+* CS202, Fall 2024
+* Homework 4
+* 11/xx/2024
+*/
+
 function eligibility(age, state, filed, dependents) {
     if (age < 60) {
         return false;
@@ -71,11 +78,22 @@ function props(list, propertyName) {
 }
 
 function grouper(xs, n) {
-    return 0;
+    let results = [];
+    if (n < 1) {
+        return xs;
+    }
+    for (let i = 0; i < xs.length; i += n) {
+        results.push(xs.slice(i, i + n)); // Take a slice of n elements for all elements in the list, then push that slice to the results list
+    }
+    return results;
 }
 
 function sequence(start, step) {
-    return 0;
+    let i = 0;
+    // Return a function that returns the next value in the sequence each time it is called
+    return function() {
+        return start + step * i++;
+    };
 }
 
 function repeat(text, n) {
@@ -156,11 +174,34 @@ function none(list, predicate) {
 }
 
 function noSql(list, query) {
-    var result = [];
+    var result = []; // Initialize an empty list to hold the results
+    var keys = Object.keys(query); // Get the keys of the query object to compare against
 
-    var keys = Object.keys(query);
+    list.forEach(element => { // Iterate over the list
+        var match = true; // Initialize a match variable to true for each element
+        keys.forEach(key => {
+            if (element[key] !== query[key]) {
+                match = false; // If the element does not match the query, set match to false
+            }
+        });
+        if (match) {
+            result.push(element); // If the element matches the query, push it to the results list
+        }
+    });
+    return result; // Return the results list; may be empty
 }
 
 function myChoice(items) {
-    return 0;
+    // Choose a random item from the list
+    let chosenItem = items[Math.floor(Math.random() * items.length)];
+
+    // Return a function that handles the logic, allowing the chosen item to be changed
+    return function(input) {
+        if (input === 'rechoose') {
+            // Choose a new random item if the input is 'rechoose'
+            chosenItem = items[Math.floor(Math.random() * items.length)];
+        }
+        // Return the chosen item
+        return chosenItem;
+    };
 }
