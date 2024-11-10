@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsfonts,xcolor}
+\usepackage{amsmath} % The package amsmath will make it so that the \text{ words here } things work in the sets $S$ and $T$.
+
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+
+\begin{document}
+
+\begin{enumerate}
+
+\item Let $P = \{a \in \mathbb{Z} : a > 0\}$. Let $D = P \times P$. Consider the binary relation $\sim$ on $D$ defined by the following property: $(a,b) \sim (c,d)$ is true means $a+d=b+c$. Prove that $\sim$ is an equivalence relation on $D$. Hints in footnote\footnote{Think about what $P$ is. Once that is accurate, think about what $D$ is. Once you have accurately described what $D$ is, think about what $\sim$ is. Once you have accurately described the set $\sim$, then (and only then) prove that $\sim$ is an equivalence relation on $D$. If you're not sure, please talk to me well before this is due. If you try to give an answer to this question without accurately know what the pieces mean, it will be impossible to have a correct proof. As an interesting side note, the set that I have defined called $P$ is written $\mathbb{N}$ in lots of math books, but because some authors define $\mathbb{N}$ slightly differently (by including $0$), I wanted to avoid writing $\mathbb{N}$, and instead named a set $P$.}.
+
+\newpage
+
+\item Based on these definitions:
+\begin{itemize}
+    \item $B = \{x \in G \mid \text{for all } y \in M, \text{ the post office delivers a letter from } x \text{ to } y\}$
+    \item $G = \{x \in L : \text{the ice skating performance featured } x\}$
+\end{itemize}
+and these hypotheses:
+\begin{itemize}
+    \item H1: For all $c \in S$, the chancellor calls $c$.
+    \item H2: $M \subseteq U$.
+    \item H3: $T \subseteq G$.
+    \item H4: $B \subseteq S$.
+    \item H5: For all $g \in G$, for all $u \in U$, if $g$ plays tennis and the ice skating performance featured $u$, then the post office delivers a letter from $g$ to $u$.
+    \item H6: For all $u \in U$, the ice skating performance featured $u$.
+\end{itemize}
+prove: For all $h \in T$, if $h$ plays tennis, then the chancellor calls $h$. When stuck, see footnote\footnote{Make a flowchart. When you get stuck, start working on the bottom of the flowchart and work ``backwards''. Keep track of what you are using and what you are proving. If you need to use a ``for all'' but try to prove it instead, you will get stuck. Similarly, if you need to prove a ``for all'' but your work looks like an attempt to use that ``for all'', you will get stuck. For this reason, I strongly encourage you to write in all your WTS statements. If you eventually remove them (or most of them) when presenting your final proof, fine, but this is a challenging question, and it is worth taking things slowly. Keep track of using versus proving, for ``for all''s and for an element belonging to a set. In addition, it is important to show your steps: for example, say we knew \fbox{for all $x \in X$, if $x$ goes to school, then $x$ bikes} and we know \fbox{$z \in X$} and we know \fbox{$z$ goes to school}. Do not just combine all this to conclude \fbox{$z$ bikes}. That's skipping too much: instead from the forall and from $z \in X$, conclude the implication \fbox{if $z$ goes to school, then $z$ bikes}, and then from this new implication and from \fbox{$z$ goes to school}, conclude \fbox{$z$ bikes}.}.
+
+\newpage
+
+\item Let $A = \{6,7\}$ and let $B=\{8,9\}$. Let $f=\{(6,8),(7,8),(7,9)\}$. Explain why $f$ is not a function from $A$ to $B$. Expectations in footnote\footnote{Like the question right after this, make your explanation based on the definition of function we provided in class. Formal proofs are not required, but what you write should be informed by the definition of function.}
+
+\newpage
+
+\item Let $A = \{6,7\}$ and let $B=\{8,9\}$. Let $f=\{(6,8),(7,8)\}$. Explain why $f$ is a function from $A$ to $B$. Expectations in footnote\footnote{I am not expecting formal proofs to be done, but I am expecting you to go look at the definition of function, and at least through informal language (such as ``input'' and ``output'') explain why all the parts of the definition of function are satisfied by the $f$ that I defined. In addition to the numbered parts of the definition, be sure to look at the non-numbered part of the definition, and be sure to address that.}.
+
+\newpage
+
+\item Let $A = \{1,2,3\}$. Let $B = \{4,5\}$. State every function from $A$ to $B$. (How many functions total do you end up defining?)
+
+\newpage
+
+\item OPTIONAL: You are the front desk manager at The Count's Hotel at Transylvania Beach. The hotel has an infinite number of rooms in the following sense: each hotel room has a plaque with a positive integer on it, with no duplication, and for each positive integer, there is a hotel room with that number. Using the PA system, you can use the microphone at the front desk to speak to the occupant in each room. Oh! Each room is occupied, so you have no vacancy. 
+
+Suddenly, a bus from Van Helsing's Charter Vans, Inc. with an infinite number of people pulls up. The number of people in the bus is infinite in the following sense: each person on the bus has an index card with a positive integer written on it (with no duplication), and for each positive integer, there is a person who is assigned that number.
+
+How can you accommodate all infinite people already in the hotel and all infinite people on the bus? (Note, you can't just tell all the people in the hotel to move ``an infinite number of spots''. Your instructions should give the occupant in hotel room $54601$ a specific hotel room to use, and should also give the person number $608$ on the bus a specific hotel room to use!
+
+\end{enumerate}
+
+
+\end{document}
