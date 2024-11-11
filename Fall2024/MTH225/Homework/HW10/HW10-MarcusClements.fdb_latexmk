@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1731302865.90514 "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW10/HW10-MarcusClements.tex" "HW10-MarcusClements.pdf" "HW10-MarcusClements" 1731302866.37605 0
-  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1731302799 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1726420183 11548 c205c48c241254aaed9fc7e92661a019 ""
-  "C:/Users/mbcle/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1725564683 24265332 56b9861c6b33e973fe42188bec193c0b ""
+["pdflatex"] 1731339661.89774 "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW10/HW10-MarcusClements.tex" "HW10-MarcusClements.pdf" "HW10-MarcusClements" 1731339663.68097 0
+  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1731339487 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/mbcle/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1726175911 11548 8b8817f303c0e51256f98cf950a21e7b ""
+  "C:/Users/mbcle/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1725558874 24265332 1cc552cd10b085474282125321fe3155 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -54,9 +54,9 @@
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx" 1718270727 2885 9c645d672ae17285bba324998918efd8 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1716480499 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
   "C:/Users/mbcle/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "HW10-MarcusClements.aux" 1731302866 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
-  "HW10-MarcusClements.tex" 1731302865 11735 94ef3119d769636cf7d16740dc387f1a ""
-  "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW10/HW10-MarcusClements.tex" 1731302865 11735 94ef3119d769636cf7d16740dc387f1a ""
+  "HW10-MarcusClements.aux" 1731339663 32 77e0dffd05b653a64f0caf3eb9bb454a "pdflatex"
+  "HW10-MarcusClements.tex" 1731339659 11727 0f50d09c43659879cf12baace096cef6 ""
+  "c:/Users/mbcle/VSCode/UWL-Projects/Fall2024/MTH225/Homework/HW10/HW10-MarcusClements.tex" 1731339659 11727 0f50d09c43659879cf12baace096cef6 ""
   (generated)
   "HW10-MarcusClements.aux"
   "HW10-MarcusClements.log"

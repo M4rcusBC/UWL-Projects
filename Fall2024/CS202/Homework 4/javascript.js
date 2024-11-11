@@ -6,21 +6,21 @@
 */
 
 function eligibility(age, state, filed, dependents) {
+    if (!filed) {
+        return false;
+    }
+    
     if (age < 60) {
         return false;
     }
 
-    state = state.toUpperCase();
-
-    if (state !== "IA" && state !== "WI") {
-        return false;
-    }
-
-    if (!filed) {
-        return false;
-    }
-
     if (dependents <= 0 || dependents >= 6) {
+        return false;
+    }
+
+    state = state.toUpperCase();
+    
+    if (state !== "IA" && state !== "WI") {
         return false;
     }
 
@@ -155,17 +155,14 @@ function breakup(list, partitioner) {
 * Returns true iff all elements in the list do NOT satisfy the predicate.
 * 
 * The function Array.prototype.some() works as expected, returning true if 
-* some element of the array satisfies the argument provided. But even though
-* this works and the function has been widely available and compatible in 
-* browsers since 2015, I feel like it's not the solution you were looking
-* for. I'll iterate over the list and return false as soon as I find an 
-* element that satisfies the predicate, returning true if none does.
+* some element of the array satisfies the argument provided. This function 
+* has been widely available and compatible in browsers since 2015
 */
 function none(list, predicate) {
     // return !list.some(predicate);
+    // equivalent to the following:
 
-    var i;
-    for (i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if (predicate(list[i])) {
             return false;
         }
