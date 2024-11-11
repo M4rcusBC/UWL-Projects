@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  10 NOV 2024 23:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.5)  10 NOV 2024 23:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -146,10 +146,18 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@postskip=\skip55
 \thm@headsep=\skip56
 \dth@everypar=\toks30
+) (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip57
+\enit@outerparindent=\dimen159
+\enit@toks=\toks31
+\enit@inbox=\box54
+\enit@count@id=\count283
+\enitdp@description=\count284
 ) (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count283
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count285
+\l__pdf_internal_box=\box55
 ) (HW10-MarcusClements.aux)
 \openout1 = `HW10-MarcusClements.aux'.
 
@@ -204,17 +212,17 @@ LaTeX Font Info:    ... okay on input line 12.
 
 (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count284
-\scratchdimen=\dimen159
-\scratchbox=\box55
-\nofMPsegments=\count285
-\nofMParguments=\count286
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count287
-\MPscratchDim=\dimen160
-\MPnumerator=\count288
-\makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count286
+\scratchdimen=\dimen160
+\scratchbox=\box56
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen161
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks33
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
  (C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -244,15 +252,15 @@ L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2901 strings out of 473899
- 43920 string characters out of 5726501
- 1942960 words of memory out of 5000000
- 25769 multiletter control sequences out of 15000+600000
+ 3232 strings out of 473899
+ 49679 string characters out of 5726501
+ 1940960 words of memory out of 5000000
+ 26096 multiletter control sequences out of 15000+600000
  563857 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,1508b,239s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,65p,1435b,321s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mbcle\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/mbcle/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on HW10-MarcusClements.pdf (6 pages, 147823 bytes).
+Output written on HW10-MarcusClements.pdf (6 pages, 149274 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
