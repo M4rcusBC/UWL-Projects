@@ -41,6 +41,8 @@ INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsthm.sty
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsthm.sty
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\HW10-MarcusClements.aux
@@ -76,12 +78,16 @@ INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 OUTPUT HW10-MarcusClements.pdf
 INPUT C:\Users\mbcle\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT HW10-MarcusClements.aux
 INPUT C:\Users\mbcle\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\mbcle\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
@@ -98,5 +104,7 @@ INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
