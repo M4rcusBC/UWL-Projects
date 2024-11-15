@@ -10,6 +10,7 @@ function eligibility(age, state, filed, dependents) {
     if (arguments.length !== 4) {
         return false;
     }
+    
     if (!filed) {
         return false;
     }
