@@ -6,7 +6,7 @@
  */
 
 function eligibility(age, state, filed, dependents) {
-    // If there are not exactly 4 elements, we cannot determine eligibility; return false
+    // If there are not exactly 4 arguments, we cannot determine eligibility; return false
     if (arguments.length !== 4) {
         return false;
     }
