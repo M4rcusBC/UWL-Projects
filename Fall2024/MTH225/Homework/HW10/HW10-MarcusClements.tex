@@ -16,16 +16,6 @@
     \item Let $P = \{a \in \Z : a > 0\}$. Let $D = P \times P$. Consider the binary
           relation $\sim$ on $D$ defined by the following property: $(a,b) \sim (c,d)$ is
           true means $a+d=b+c$. Prove that $\sim$ is an equivalence relation on $D$.
-          Hints in footnote\footnote{Think about what $P$ is. Once that is accurate,
-              think about what $D$ is. Once you have accurately described what $D$ is, think
-              about what $\sim$ is. Once you have accurately described the set $\sim$, then
-              (and only then) prove that $\sim$ is an equivalence relation on $D$. If you're
-              not sure, please talk to me well before this is due. If you try to give an
-              answer to this question without accurately know what the pieces mean, it will
-              be impossible to have a correct proof. As an interesting side note, the set
-              that I have defined called $P$ is written $\mathbb{N}$ in lots of math books,
-              but because some authors define $\mathbb{N}$ slightly differently (by including
-              $0$), I wanted to avoid writing $\mathbb{N}$, and instead named a set $P$.}.
 
           \begin{proof}
               To prove that $\sim$ is an equivalence relation on $D$, we need to show that $\sim$ is reflexive, symmetric, and transitive.
@@ -58,23 +48,26 @@
                     $g$ to $u$.
               \item H6: For all $u \in U$, the ice skating performance featured $u$.
           \end{itemize}
-          prove: For all $h \in T$, if $h$ plays tennis, then the chancellor calls $h$. When stuck, see footnote\footnote{Make a flowchart. When you get stuck, start working on the bottom of the flowchart and work ``backwards''. Keep track of what you are using and what you are proving. If you need to use a ``for all'' but try to prove it instead, you will get stuck. Similarly, if you need to prove a ``for all'' but your work looks like an attempt to use that ``for all'', you will get stuck. For this reason, I strongly encourage you to write in all your WTS statements. If you eventually remove them (or most of them) when presenting your final proof, fine, but this is a challenging question, and it is worth taking things slowly. Keep track of using versus proving, for ``for all''s and for an element belonging to a set. In addition, it is important to show your steps: for example, say we knew \fbox{for all $x \in X$, if $x$ goes to school, then $x$ bikes} and we know \fbox{$z \in X$} and we know \fbox{$z$ goes to school}. Do not just combine all this to conclude \fbox{$z$ bikes}. That's skipping too much: instead from the forall and from $z \in X$, conclude the implication \fbox{if $z$ goes to school, then $z$ bikes}, and then from this new implication and from \fbox{$z$ goes to school}, conclude \fbox{$z$ bikes}.}.
+          prove: For all $h \in T$, if $h$ plays tennis, then the chancellor calls $h$.
 
           \begin{proof}
-              Let $h \in T$ and assume $h$ plays tennis. We need to show that the chancellor calls $h$.
-              Since $h \in T$ and $T \subseteq G$ (by H3), we have $h \in G$. By H5, for all $g \in G$ and for all $u \in U$, if $g$ plays tennis and the ice skating performance featured $u$, then the post office delivers a letter from $g$ to $u$. Applying this to $h \in G$, we get that for all $u \in U$, if the ice skating performance featured $u$, then the post office delivers a letter from $h$ to $u$.
-              By H6, for all $u \in U$, the ice skating performance featured $u$. Therefore, for all $u \in U$, the post office delivers a letter from $h$ to $u$. This means that $h \in B$ by the definition of $B$.
-              Since $h \in B$ and $B \subseteq S$ (by H4), we have $h \in S$. By H1, for all $c \in S$, the chancellor calls $c$. Applying this to $h \in S$, we get that the chancellor calls $h$.
-              Therefore, for all $h \in T$, if $h$ plays tennis, then the chancellor calls $h$.
+            Let $h \in T$ be given and assume $h$ plays tennis. We need to show that the chancellor calls $h$.
+            Since $h \in T$ and $T \subseteq G$ (by H3), we know that $h \in G$.
+            Since $h \in G$ and $h$ plays tennis, by H5 we know:
+            For all $u \in U$, if the ice skating performance featured $u$, then the post office delivers a letter from $h$ to $u$.
+            By H6, we know that for all $u \in U$, the ice skating performance featured $u$.
+            Therefore, for all $u \in U$, the post office delivers a letter from $h$ to $u$.
+            Since $M \subseteq U$ (by H2), we know that for all $y \in M$, the post office delivers a letter from $h$ to $y$.
+            This means $h \in B$ (by the definition of $B$).
+            Since $h \in B$ and $B \subseteq S$ (by H4), we know that $h \in S$.
+            By H1, since $h \in S$, the chancellor calls $h$.
+            Therefore, for all $h \in T$, if $h$ plays tennis, then the chancellor calls $h$.
           \end{proof}
 
           \newpage
 
     \item Let $A = \{6,7\}$ and let $B=\{8,9\}$. Let $f=\{(6,8),(7,8),(7,9)\}$. Explain
-          why $f$ is not a function from $A$ to $B$. Expectations in
-          footnote\footnote{Like the question right after this, make your explanation
-              based on the definition of function we provided in class. Formal proofs are not
-              required, but what you write should be informed by the definition of function.}
+          why $f$ is not a function from $A$ to $B$.
 
           \begin{proof}
               To show that $f$ is not a function from $A$ to $B$, we need to show that there exists an element in $A$ that is associated with more than one element in $B$. According to the definition of a function, each element in the domain (set $A$) must be associated with exactly one element in the codomain (set $B$).
@@ -85,13 +78,7 @@
           \newpage
 
     \item Let $A = \{6,7\}$ and let $B=\{8,9\}$. Let $f=\{(6,8),(7,8)\}$. Explain why $f$
-          is a function from $A$ to $B$. Expectations in footnote\footnote{I am not
-              expecting formal proofs to be done, but I am expecting you to go look at the
-              definition of function, and at least through informal language (such as
-              ``input'' and ``output'') explain why all the parts of the definition of
-              function are satisfied by the $f$ that I defined. In addition to the numbered
-              parts of the definition, be sure to look at the non-numbered part of the
-              definition, and be sure to address that.}.
+          is a function from $A$ to $B$.
 
           \begin{proof}
               To show that $f$ is a function from $A$ to $B$, we need to verify that each element in $A$ is associated with exactly one element in $B$. According to the definition of a function, for every input (element in the domain $A$), there must be a unique output (element in the codomain $B$).
@@ -117,7 +104,7 @@
           (How many functions total do you end up defining?)
 
           \begin{proof}
-              There are $2^3 = 8$ functions from $A$ to $B$. Here they are:
+              There are $2^3 = 8$ functions from $A$ to $B$. They are:
               \begin{itemize}
                   \item $f_1 = \{(1,4),(2,4),(3,4)\}$
                   \item $f_2 = \{(1,4),(2,4),(3,5)\}$
