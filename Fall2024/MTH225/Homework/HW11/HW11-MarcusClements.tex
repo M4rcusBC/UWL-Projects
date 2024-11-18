@@ -1,0 +1,115 @@
+\documentclass{article}
+
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsfonts,xcolor}
+\usepackage{amsmath, amsthm, enumitem} % The package amsmath will make it so that the \text{ words here } things work in the sets $S$ and $T$.
+
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+
+\begin{document}
+
+\begin{enumerate}
+
+\item 
+Let $N = \{z \in \mathbb{Z} : z \not= 0\}$. In other words, $N = \mathbb{Z} \setminus \{0\}$. Let $F = \mathbb{Z} \times N$. Consider the binary relation $\sim$ on $F$ defined by the following property: $(a,b) \sim (c,d)$ is true means $ad=bc$. Prove that $\sim$ is an equivalence relation on $F$. While this question is different from the question on last week's homework, I suggest reviewing the key to HW10 (but only copy ideas that ACTUALLY still apply!)
+
+\begin{proof}
+    To show that $\sim$ is an equivalence relation on $F$, we must prove it is reflexive, symmetric, and transitive.
+
+    \textbf{Reflexive:} Let $(a,b) \in F$. Then $ab = ba$ because multiplication is commutative. Therefore, $(a,b) \sim (a,b)$.
+
+    \textbf{Symmetric:} Let $(a,b), (c,d) \in F$ where $(a,b) \sim (c,d)$. Then $ad = bc$. Multiplying both sides by 1 does not change the equation, so $bc = ad$. Therefore, $(c,d) \sim (a,b)$.
+
+    \textbf{Transitive:} Let $(a,b), (c,d), (e,f) \in F$ where $(a,b) \sim (c,d)$ and $(c,d) \sim (e,f)$. Then $ad = bc$ and $cf = de$. 
+    Since $b,d \in N$, they are nonzero. Multiply the first equation by $f$ and the second by $b$:
+    $adf = bcf$ and $bcf = bde$
+    Therefore $adf = bde$, which means $(a,b) \sim (e,f)$.
+
+    Thus, $\sim$ is an equivalence relation on $F$.
+\end{proof}
+
+\newpage
+
+\item 
+Consider the binary relation $R$ on $\mathbb{Z}$ defined by the following property: $aRb$ is true means $10$ divides $(a-b)$. It turns out that $R$ is an equivalence relation on $\mathbb{Z}$, but I am not asking you to prove that. Instead, based on $R$ being an equivalence relation, examine the equivalence class ${[-7]}_R$. Please state THREE elements of ${[-7]}_R$, writing the notation $\in$ where this notation is appropriate. Pay careful attention to ``what kind of thingy'' belongs to ${[-7]}_R$ and ``what kind of thingy'' belongs to $R$. Briefly explain your answers. (Because I am asking you to state three elements of ${[-7]}_R$, a short answer will consist of THREE sentences that are all pretty short.)
+
+\begin{itemize}
+    \item $3 \in {[-7]}_R$ because $-7-3=-10$ which is divisible by 10. 
+    \item $13 \in {[-7]}_R$ because $-7-13=-20$ which is divisible by 10. 
+    \item $-17 \in {[-7]}_R$ because $-7-(-17)=10$ which is divisible by 10.
+\end{itemize}
+
+\newpage
+
+\item 
+Consider a function $f : A \to B$. (Do not pick the function yourself: I just mean that there is a function, any function, from $A$ to $B$.) As part of our set up, $H$ and $K$ are both subsets of $A$. Prove: if $H \subseteq K$, then $f(H) \subseteq f(K)$. Note: you cannot just ``$f$'' both sides: instead, look at a specific definition: what definition do you need to review for what $f(H)$ is? Also, be sure to review the definition of subset.
+
+\begin{proof}
+    Let $y \in f(H)$. Then there exists $x \in H$ such that $f(x)=y$.
+    Since $H \subseteq K$, we know that $x \in K$.
+    Therefore, $y=f(x)$ where $x \in K$, which means $y \in f(K)$.
+    Thus, $f(H) \subseteq f(K)$.
+\end{proof}
+
+\newpage
+
+\item 
+Consider the function $f: \mathbb{R} \to \mathbb{R}$ given by the rule $f(x)=2x+3$. Prove $f$ is injective. Then prove $f$ is surjective. Hint: do not ignore quantifiers. (Be sure to apply the process to prove a ``for all'' when appropriate, the process to prove a ``there exists'' when appropriate, and the process to prove an ``if \dots then \dots'' when appropriate.)
+
+\begin{proof}
+    First, we prove $f$ is injective.
+    Let $a,b \in \mathbb{R}$ and suppose $f(a)=f(b)$.
+    Then $2a+3=2b+3$.
+    Subtracting 3 from both sides: $2a=2b$.
+    Dividing both sides by 2: $a=b$.
+    Therefore, $f$ is injective.
+
+    Next, we prove $f$ is surjective.
+    Let $y \in \mathbb{R}$.
+    Let $x=\frac{y-3}{2}$.
+    Then $f(x)=2(\frac{y-3}{2})+3=y-3+3=y$.
+    Therefore, for any $y \in \mathbb{R}$, there exists an $x \in \mathbb{R}$ such that $f(x)=y$.
+    Thus, $f$ is surjective.
+\end{proof}
+
+\newpage
+
+\item Whenever $F$ is a set of functions from $\mathbb{R}$ to $\mathbb{R}$, in this question, we define $S(F)$ to be the following:
+\[ S(F) = \{x \in \mathbb{R} : \text{for all } f \in F, \text{ we have } f(x)=0\}. \]
+Before moving on, try exploring what $S(F)$ actually is with $F$ being a set of cardinality $1$, then maybe with $F$ being a set of cardinality $2$ or $3$. Note that $F$ is a set, but ``what kind of thingies'' belong to this set $F$?
+
+What's the task? Prove: if $P$ is a set of functions from  $\mathbb{R}$ to $\mathbb{R}$, and $Q$ is a set of functions from $\mathbb{R}$ to $\mathbb{R}$, and $P \subseteq Q$, then $S(Q) \subseteq S(P)$. (Advice: notice that in the definition of $S(F)$, there is a ``for all'' right after the colon. In HW10 question 2, a set (specifically, it was $B$) had a ``for all'' found inside its definition. Second advice: write what $S(Q)$ is and what $S(P)$ is: take what I gave earlier that's centered on its own line and literally replace the $F$.)
+
+\begin{proof}
+    Let $x \in S(Q)$.
+    Then for all $f \in Q$, we have $f(x)=0$.
+    Since $P \subseteq Q$, for any $f \in P$, we know $f \in Q$.
+    Therefore, $f(x)=0$ for all $f \in P$.
+    Thus, $x \in S(P)$.
+    Therefore, $S(Q) \subseteq S(P)$.
+\end{proof}
+
+\newpage
+
+\item OPTIONAL:\@ You work at the deli counter of a sandwich shop. Two separate lines form. Let's name the lines: Line A and Line B. Each line has an infinite number in it, in the following sense: for every positive integer, there is a person who is in that spot number in Line A, and also in Line B. So, we could label the fifth person in Line A using the label A5. We could label the 100th person in line B with B100. Every person in both lines wants a sandwich. You can only serve one person at a time. Describe an algorithm/process by which you can ensure that everyone will (eventually) get a sandwich. That is, person A2348769872346 may have to wait a while, but as soon as they realize the process you're following, they realize that they'll get a sandwich eventually.
+
+Here's a process to serve everyone:
+\begin{itemize}[label=$\circ$]
+    \item First serve person A1, then B1
+    \item Then serve person A2, then B2
+    \item Then serve person A3, then B3
+    \item And so on\ldots
+\end{itemize}
+In this way, the person at position $n$ in either line will be served no later than after $2n$ services. 
+For example, person A5 knows they'll be served after at most 10 people, and B100 knows they'll be served after at most 200 people.
+This ensures everyone will eventually get their sandwich.
+
+This also means that person A2348769872346 will be served after at most $4,697,539,744,692$ people.
+
+\end{enumerate}
+
+
+\end{document}
