@@ -2,3 +2,70 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff2cc;
+    padding: 1em 1em;
+}
+
+header h5 {
+    padding-top: 0.2em;
+    color: #84796f;
+}
+
+form {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #786149;
+    padding: 0.5em 0.5em;
+}
+
+form input[type~="text"] {
+    border: none;
+    border-radius: 2px;
+    margin-right: 0.5em;
+}
+
+form input[type~="submit"] #text {
+    color: #fff;
+}
+
+div.card-container {
+    background-image: url("../assets/cork-wallet.png");
+    background-repeat: repeat;
+    display: inline-block;
+}
+
+div.card {
+    display: inline-block;
+    background-color: #fff2cc;
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 25%;
+    min-height: 25%;
+}
+
+div.card button {
+    border-radius: 50%;
+    padding: 0.5em 0.75em;
+    background-color: red;
+    color: red;
+}
+
+div.card button:hover {
+    background-color: white;
+    color: white;
+    cursor: pointer;
+}
+
+div.card img {
+    width: 100%;
+}
