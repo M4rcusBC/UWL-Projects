@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
 	printf("Remove newline\n");
 	buffer[ strlen(buffer)-1 ] = '\0';
       }
-      printf("Echo: \"\%s\" (%d)\n", buffer, line);
+      printf("Echo: \"%s\" (%d)\n", buffer, line);
       line++;
     }
   } while( fgets_rtn != NULL );
