@@ -10,16 +10,16 @@
 #include <ctype.h>
 
 // buffer size
-#define LINELEN 1024
+#define MAX_LINE_LENGTH 1024
 
 int main(int argc, char **argv) {
   char *fgets_rtn = NULL;  // variable to capture return code
-  char buffer[ LINELEN ];  // where we are reading the data into
+  char buffer[ MAX_LINE_LENGTH ];  // where we are reading the data into
   int line = 1;
 
   do {
     // read data (up to LINELEN chars) into buffer from stdin 
-    fgets_rtn = fgets( buffer, LINELEN, stdin );
+    fgets_rtn = fgets( buffer, MAX_LINE_LENGTH, stdin );
     if( fgets_rtn != NULL ) {
       // fgets was successful!
       if( '\n' == buffer[ strlen(buffer)-1 ] ) {
