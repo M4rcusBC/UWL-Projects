@@ -40,7 +40,7 @@ form input[type~="submit"] #text {
 
 div.card-container {
     background-image: url("../assets/cork-wallet.png");
-    background-repeat: repeat;
+    background-size: cover;
     display: inline-block;
 }
 
@@ -50,7 +50,10 @@ div.card {
     padding: 0.5em;
     margin: 0.5em;
     width: 25%;
-    min-height: 25%;
+    justify-content: center;
+
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 div.card button {
@@ -68,4 +71,19 @@ div.card button:hover {
 
 div.card img {
     width: 100%;
+    border-radius: 2px;
+}
+
+div.card p {
+    background-color: white;
+    padding: 0.25em;
+    border-radius: 2px;
+}
+
+footer {
+    background-color: #fff2cc;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em 0 0.5em 0.5em;
 }
