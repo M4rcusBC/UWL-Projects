@@ -42,42 +42,59 @@ form input[type~="text"] {
 
 form input[type~="submit"] #text {
     color: #fff;
+    padding: 0.5em;
+    ;
 }
 
-div.card-container {
+section.card-container {
     background-image: url("../assets/cork-wallet.png");
-    background-size: cover;
-    display: inline-block;
+    background-repeat: repeat;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    align-items: stretch;
+    column-gap: 1em;
+    row-gap: 2em;
+    margin: 1em;
 }
 
 div.card {
-    display: inline-block;
     background-color: #fff2cc;
     padding: 0.5em;
-    margin: 0.5em;
-    width: 25%;
-    justify-content: center;
-
+    justify-content: space-evenly;
+    min-height: 100%;
     border: 1px solid black;
     border-radius: 5px;
+    box-shadow: 5px 5px 5px #626161;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 div.card button {
+    position: absolute;
+    top: -0.75em;
+    left: -0.75em;
+
+    font-size: 0.5em;
+    border: 1px solid black;
     border-radius: 50%;
     padding: 0.5em 0.75em;
-    background-color: red;
-    color: red;
+    background-color: #720000;
+    color: #720000;
+    box-shadow: 1.5px 1.5px 1.5px black;
+    width: 2.5em;
 }
 
 div.card button:hover {
-    background-color: white;
-    color: white;
-    cursor: pointer;
+    background-color: #fe0000;
+    color: #fe0000;
+    cursor: pointer
 }
 
 div.card img {
     width: 100%;
     border-radius: 2px;
+    padding-top: 1.5em;
 }
 
 div.card p {
