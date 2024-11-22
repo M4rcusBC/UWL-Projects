@@ -26,26 +26,27 @@ addCardForm.appendChild(urlInput);
 let submitButton = document.createElement("button");
 submitButton.type = "submit";
 submitButton.innerHTML = "Add Card";
-submitButton.onsubmit = (e) => {
+addCardForm.appendChild(submitButton);
+addCardForm.onsubmit = (e) => {
   e.preventDefault();
   let desc = descInput.value;
   let url = urlInput.value;
 
-  cb.addCard(desc, url, (data, err) => {
+  cb.addCard(url, desc, (data, err) => {
     if (err) {
       alert(err);
     } else {
       cards.push(data);
+      buildCards(section);
     }
   });
 };
-addCardForm.appendChild(submitButton);
 
 let section = document.createElement("section");
 section.className = "card-container";
 
 let footer = document.createElement("footer");
-footer.innerHTML = "&copy; 2024 Card Board";
+footer.innerHTML = "&copy; The Card Board Team";
 
 cb.getCards((data, err) => {
   if (err) {
@@ -58,6 +59,10 @@ cb.getCards((data, err) => {
 });
 
 function buildCards(sectionElement) {
+
+  //clear all existing cards
+  sectionElement.innerHTML = "";
+
   for (let card of cards) {
     let cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
