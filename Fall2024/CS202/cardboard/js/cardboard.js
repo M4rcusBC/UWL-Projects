@@ -1,5 +1,8 @@
+
+//Init local list of cards to be displayed on the page
 let cards = [];
 
+//Create and configure body elements
 let body = document.getElementsByTagName("body")[0];
 let header = document.createElement("header");
 header.appendChild(document.createElement("h3")).innerHTML = "Card Board";
@@ -58,6 +61,7 @@ cb.getCards((data, err) => {
   }
 });
 
+// This function is built independently of buildPage to enable the cards to be updated without rebuilding the entire page, passing in the relevant section element for the cards to be built under
 function buildCards(sectionElement) {
 
   //clear all existing cards
