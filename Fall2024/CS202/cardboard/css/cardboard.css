@@ -50,18 +50,41 @@ section.card-container {
     background-image: url("../assets/cork-wallet.png");
     background-repeat: repeat;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
     align-items: stretch;
     column-gap: 1em;
     row-gap: 2em;
-    margin: 1em;
+    margin: 1em 5em;
+}
+
+@media screen and (max-width: 1600px) {
+    section.card-container {
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    section.card-container {
+        grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section.card-container {
+        grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section.card-container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
 }
 
 div.card {
     background-color: #fff2cc;
     padding: 0.5em;
     justify-content: space-evenly;
-    min-height: 100%;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 5px 5px 5px #626161;
@@ -88,7 +111,7 @@ div.card button {
 div.card button:hover {
     background-color: #fe0000;
     color: #fe0000;
-    cursor: pointer
+    cursor: pointer;
 }
 
 div.card img {
