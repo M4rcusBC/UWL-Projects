@@ -15,7 +15,7 @@
 char* encrypt(char* string);
 char* decrypt(char* string);
 
-// ASCII Table: https://www.asciitable.com/
+// ASCII Table: https://www.lookuptables.com/
 
 
 
