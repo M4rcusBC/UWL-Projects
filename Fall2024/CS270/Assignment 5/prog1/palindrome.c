@@ -27,7 +27,7 @@ char* remove_punc_to_lower(char* string) {
     }
   }
 
-  result[j] = "\0"; // Ensures returned strings will always be null-terminated, even if empty
+  result[j] = (char)"\0"; // Ensures returned strings will always be null-terminated, even if empty
   return result;
 }
 
@@ -37,9 +37,11 @@ int is_pal(char* string) {
   const int len = (int)strlen(alpha_num_string);
   for (int i = 0; i < ((len) / 2); i++) {
     if (alpha_num_string[i] != alpha_num_string[len - i - 1]) {
+      free(alpha_num_string);
       return 0;
     }
   }
+  free(alpha_num_string);
   return 1;
 
 }
