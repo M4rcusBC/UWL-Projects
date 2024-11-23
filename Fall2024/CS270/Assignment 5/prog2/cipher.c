@@ -12,15 +12,24 @@
 // buffer size
 #define MAX_LINE_LENGTH 1024
 
+char* encrypt(char* string);
+char* decrypt(char* string);
+
+// ASCII Table: https://www.asciitable.com/
+
+
+
 int main(int argc, char **argv)
 {
   char *fgets_rtn = NULL;       // variable to capture return code
   char buffer[MAX_LINE_LENGTH]; // where we are reading the data into
   int line = 1;
 
+  // pre-loop control flow; determine encrypt/decrypt and offset
+
   do
   {
-    // read data (up to LINELEN chars) into buffer from stdin
+    // read data (up to MAX_LINE_LEN chars) into buffer from stdin
     fgets_rtn = fgets(buffer, MAX_LINE_LENGTH, stdin);
     if (fgets_rtn != NULL)
     {
@@ -29,7 +38,9 @@ int main(int argc, char **argv)
       {
         buffer[strlen(buffer) - 1] = '\0';
       }
-      printf("Echo: \"%s\" (%d)\n", buffer, line);
+
+      //loop control flow
+
       line++;
     }
   } while (fgets_rtn != NULL);
