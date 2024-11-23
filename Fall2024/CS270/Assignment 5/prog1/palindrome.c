@@ -27,7 +27,7 @@ char* remove_punc_to_lower(char* string) {
     }
   }
 
-  result[j] = (char)"\0"; // Ensures returned strings will always be null-terminated, even if empty
+  result[j] = '\0'; // Ensures returned strings will always be null-terminated, even if empty
   return result;
 }
 
