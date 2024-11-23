@@ -73,7 +73,7 @@ int main(int argc, char **argv)
     }
   } while (fgets_rtn != NULL);
 
-  printf("Summary:\nTotal Palindromes: %d (out of %d strings)", pal_count, (line - 1));
+  printf("Summary:\nTotal Palindromes: %d (out of %d strings)\n", pal_count, (line - 1));
 
   return 0;
 }
