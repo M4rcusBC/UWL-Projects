@@ -46,13 +46,6 @@ int main(int argc, char **argv) {
     char buffer[MAX_LINE_LENGTH]; // where we are reading the data into
     int line = 1;
 
-    printf("Arg Count: %d\n", argc);
-    printf("Printing Arguments: \n");
-    for (int i = 0; i < argc; i++) {
-        printf("\"%s\"\n", argv[i]);
-    }
-    printf("\n");
-    // pre-loop control flow; determine encrypt/decrypt and offset
 
     int enc_dec;
     if (argv[1] != NULL) {
@@ -107,8 +100,6 @@ int main(int argc, char **argv) {
             line++;
         }
     } while (fgets_rtn != NULL);
-
-    printf("%d line(s) %s.\n", (line - 1), ((!enc_dec) ? "encrypted" : "decrypted"));
 
     return 0;
 }
