@@ -1,0 +1,33 @@
+body {
+    padding: 2em;
+}
+
+.container {
+    padding: .5em;
+    margin: .5em auto;
+}
+
+.bit {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid black;
+    height: 1em;
+    width: 2em;
+    margin: auto .5em;
+}
+
+
+.bit > span {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: #eee;
+}
+
+.bit.on > span:nth-child(1) {
+    background-color: red;
+}
+
+.bit:not(.on) > span:nth-child(2) {
+    background-color: black;
+}
