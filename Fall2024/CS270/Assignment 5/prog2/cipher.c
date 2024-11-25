@@ -23,11 +23,11 @@ void encrypt(char *string, int offset);
 
 void decrypt(char *string, int offset);
 
-void encrypt(char *string, int offset) {
+void encrypt(char *string, const int offset) {
     for (int i = 0; i < strlen(string); i++) {
         if (isalpha(string[i])) {
             const char base = islower(string[i]) ? 'a' : 'A';
-            string[i] = (char) toupper((char) (base + (string[i] - base + offset) % 26));
+            string[i] = (char) toupper(base + (string[i] - base + offset) % 26);
         }
     }
 }

@@ -1,7 +1,9 @@
 /*
- * Author: TODO
- * Date:   TODO
- * Description: TODO
+ * Author: Marcus B Clements, with code from Dr. Mitra
+ * Date:   11/24/2024
+ * Description: Program that reads in text from stdin,
+ * checks if it is a palindrome, then writes the result
+ * to stdout.
  */
 
 #include <stdio.h>
