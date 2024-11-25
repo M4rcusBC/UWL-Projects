@@ -61,10 +61,13 @@ cb.getCards((data, err) => {
   }
 });
 
-// This function is built independently of buildPage to enable the cards to be updated without rebuilding the entire page, passing in the relevant section element for the cards to be built under
+/* 
+ * This function is built independently of buildPage to enable the cards
+ * to be updated without rebuilding the entire page, passing in the
+ * relevant section element for the cards to be built under
+ */
 function buildCards(sectionElement) {
-
-  //clear all existing cards
+  //clear all existing cards, if any
   sectionElement.innerHTML = "";
 
   for (let card of cards) {
