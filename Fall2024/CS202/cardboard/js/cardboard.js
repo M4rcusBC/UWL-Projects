@@ -89,6 +89,8 @@ function buildCards(sectionElement) {
     cardDiv.appendChild(deleteButton);
     let img = document.createElement("img");
     img.src = card.url;
+    img.alt = card.desc;
+    img.loading = "lazy";
     cardDiv.appendChild(img);
     let desc = document.createElement("p");
     desc.innerText = card.desc;
