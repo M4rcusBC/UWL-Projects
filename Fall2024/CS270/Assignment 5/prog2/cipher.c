@@ -57,13 +57,13 @@ int main(int argc, char **argv) {
         } else {
             fprintf(
                 stderr,
-                "\"%s\" is an unrecognized argument.\nPlease provide a valid encryption or decryption argument (\"-e\" or \"-d\")\n",
+                "\"%s\" is an unrecognized argument.\nPlease provide a valid encryption or decryption argument (\'-e\' or \'-d\')\n",
                 (char *) argv[1]);
             return -1;
         }
     } else {
         fprintf(
-            stderr, "Please provide an encryption or decryption directive (\"-e\" or \"-d\") as the first argument.\n");
+            stderr, "Please provide an encryption or decryption directive (\'-e\' or \'-d\') as the first argument.\n");
         return -1;
     }
 
