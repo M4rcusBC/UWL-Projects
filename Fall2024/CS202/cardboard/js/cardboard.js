@@ -5,7 +5,7 @@
  * 11/24/2024
  */
 
-//Init local list of cards to be displayed on the page
+// Local list of cards to be displayed on the page
 let cards = [];
 
 //Create and configure body elements
@@ -37,18 +37,20 @@ submitButton.type = "submit";
 submitButton.innerHTML = "Add Card";
 addCardForm.appendChild(submitButton);
 addCardForm.onsubmit = (e) => {
-  e.preventDefault();
-  let desc = descInput.value;
-  let url = urlInput.value;
+    // Prevent the form from submitting and refreshing the page
+    e.preventDefault();
+    let desc = descInput.value;
+    let url = urlInput.value;
 
-  cb.addCard(url, desc, (data, err) => {
-    if (err) {
-      alert(err);
-    } else {
-      cards.push(data);
-      buildCards(section);
-    }
-  });
+    // Define callback function for the 'API' call for adding a card
+    cb.addCard(url, desc, (data, err) => {
+        if (err) {
+            alert(err);
+        } else {
+            cards.push(data);
+            buildCards(section);
+        }
+    });
 };
 
 let section = document.createElement("section");
@@ -59,13 +61,13 @@ footer.innerHTML = "&copy; The Card Board Team";
 
 // Define callback function for the 'API' call for getting cards
 cb.getCards((data, err) => {
-  if (err) {
-    console.error(err);
-  } else {
-    for (let card of data) {
-      cards.push(card);
+    if (err) {
+        console.error(err);
+    } else {
+        for (let card of data) {
+            cards.push(card);
+        }
     }
-  }
 });
 
 /* 
@@ -74,49 +76,52 @@ cb.getCards((data, err) => {
  * relevant section element for the cards to be built under
  */
 function buildCards(sectionElement) {
-  //clear all existing cards, if any
-  sectionElement.innerHTML = "";
+    //clear all existing cards, if any
+    sectionElement.innerHTML = "";
 
-  // Build the cards
-  for (let card of cards) {
-    let cardDiv = document.createElement("div");
-    cardDiv.classList.add("card");
-    let deleteButton = document.createElement("button");
-    deleteButton.innerHTML = "x";
-    deleteButton.onclick = () => {
-      // Define callback function for the 'API' call for removing a card
-      cb.removeCard(card.id, (data, err) => {
-        if (err) {
-          alert(err);
-        } else {
-          if (data) {
-            cardDiv.remove();
-          }
-        }
-      });
-    };
-    cardDiv.appendChild(deleteButton);
-    let img = document.createElement("img");
-    img.src = card.url;
-    img.alt = card.desc;
-    img.loading = "lazy";
-    cardDiv.appendChild(img);
-    let desc = document.createElement("p");
-    desc.innerText = card.desc;
-    cardDiv.appendChild(desc);
-    sectionElement.appendChild(cardDiv);
-  }
+    // Build the cards
+    for (let card of cards) {
+        let cardDiv = document.createElement("div");
+        cardDiv.classList.add("card");
+        
+        let deleteButton = document.createElement("button");
+        deleteButton.innerHTML = "x";
+        deleteButton.onclick = () => {
+            // Define callback function for the 'API' call for removing a card
+            cb.removeCard(card.id, (data, err) => {
+                if (err) {
+                    alert(err);
+                } else {
+                    if (data) {
+                        cardDiv.remove();
+                    }
+                }
+            });
+        };
+        cardDiv.appendChild(deleteButton);
+        
+        let img = document.createElement("img");
+        img.src = card.url;
+        img.alt = card.desc;
+        img.loading = "eager";
+        cardDiv.appendChild(img);
+        
+        let desc = document.createElement("p");
+        desc.innerText = card.desc;
+        cardDiv.appendChild(desc);
+        sectionElement.appendChild(cardDiv);
+    }
 }
 
 // Build the page by adding all elements to the body
 function buildPage() {
-  let body = document.getElementsByTagName("body")[0];
-  body.appendChild(header);
-  body.appendChild(addCardForm);
-  body.appendChild(section);
-  // Build the cards after the section is added to the body
-  buildCards(section);
-  body.appendChild(footer);
+    let body = document.getElementsByTagName("body")[0];
+    body.appendChild(header);
+    body.appendChild(addCardForm);
+    body.appendChild(section);
+    // Build the cards under the section after the section is added to the body
+    buildCards(section);
+    body.appendChild(footer);
 }
 
 // Load all page content as soon as the DOM is ready
