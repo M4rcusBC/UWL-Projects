@@ -1,3 +1,9 @@
+/*
+ * Marcus Clements
+ * CS202, Fall 2024
+ * Homework 5 (cardboard)
+ * 11/24/2024
+ */
 
 //Init local list of cards to be displayed on the page
 let cards = [];
@@ -51,6 +57,7 @@ section.className = "card-container";
 let footer = document.createElement("footer");
 footer.innerHTML = "&copy; The Card Board Team";
 
+// Define callback function for the 'API' call for getting cards
 cb.getCards((data, err) => {
   if (err) {
     console.error(err);
@@ -61,18 +68,23 @@ cb.getCards((data, err) => {
   }
 });
 
-// This function is built independently of buildPage to enable the cards to be updated without rebuilding the entire page, passing in the relevant section element for the cards to be built under
+/* 
+ * This function is built independently of buildPage to enable the cards
+ * to be updated without rebuilding the entire page, passing in the
+ * relevant section element for the cards to be built under
+ */
 function buildCards(sectionElement) {
-
-  //clear all existing cards
+  //clear all existing cards, if any
   sectionElement.innerHTML = "";
 
+  // Build the cards
   for (let card of cards) {
     let cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
     let deleteButton = document.createElement("button");
     deleteButton.innerHTML = "x";
     deleteButton.onclick = () => {
+      // Define callback function for the 'API' call for removing a card
       cb.removeCard(card.id, (data, err) => {
         if (err) {
           alert(err);
@@ -86,6 +98,8 @@ function buildCards(sectionElement) {
     cardDiv.appendChild(deleteButton);
     let img = document.createElement("img");
     img.src = card.url;
+    img.alt = card.desc;
+    img.loading = "lazy";
     cardDiv.appendChild(img);
     let desc = document.createElement("p");
     desc.innerText = card.desc;
@@ -94,11 +108,13 @@ function buildCards(sectionElement) {
   }
 }
 
+// Build the page by adding all elements to the body
 function buildPage() {
   let body = document.getElementsByTagName("body")[0];
   body.appendChild(header);
   body.appendChild(addCardForm);
   body.appendChild(section);
+  // Build the cards after the section is added to the body
   buildCards(section);
   body.appendChild(footer);
 }

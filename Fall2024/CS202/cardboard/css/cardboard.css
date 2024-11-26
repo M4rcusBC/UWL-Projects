@@ -47,11 +47,10 @@ form button[type~="submit"] {
 }
 
 section.card-container {
-    background-image: url("../assets/cork-wallet.png");
-    background-repeat: repeat;
+    background: url("../assets/cork-wallet.png") repeat;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(16%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
     align-items: stretch;
     column-gap: 1em;
     row-gap: 1em;
