@@ -16,18 +16,17 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-// buffer size
 #define MAX_LINE_LENGTH 1024
+#define ALPHABET_SIZE 26
 
 void encrypt(char *string, int offset);
-
 void decrypt(char *string, int offset);
 
 void encrypt(char *string, const int offset) {
     for (int i = 0; i < strlen(string); i++) {
         if (isalpha(string[i])) {
             const char base = islower(string[i]) ? 'a' : 'A';
-            string[i] = (char) toupper(base + (string[i] - base + offset) % 26);
+            string[i] = (char) toupper(base + (string[i] - base + offset) % ALPHABET_SIZE);
         }
     }
 }
@@ -35,8 +34,12 @@ void encrypt(char *string, const int offset) {
 void decrypt(char *string, int offset) {
     for (int i = 0; i < strlen(string); i++) {
         if (isalpha(string[i])) {
+            /*
+             * Determine the base character to use based on the case of the current character,
+             * allowing for the offset to be applied to the correct ascii range.
+             */
             const char base = islower(string[i]) ? 'a' : 'A';
-            string[i] = (char) (base + (string[i] - base - offset + 26) % 26);
+            string[i] = (char) (base + (string[i] - base - offset + ALPHABET_SIZE) % ALPHABET_SIZE);
         }
     }
 }
@@ -47,6 +50,7 @@ int main(int argc, char **argv) {
     int line = 1;
 
 
+    // Check for valid encryption/decryption directive in argv[1]
     int enc_dec;
     if (argv[1] != NULL) {
         char enc[] = "-e", dec[] = "-d";
@@ -67,6 +71,7 @@ int main(int argc, char **argv) {
         return -1;
     }
 
+    // Check for valid offset value in argv[2]
     int cipher_offset;
     if (argv[2] != NULL) {
         if (strtol(argv[2], NULL, 10) == 0) {
@@ -89,7 +94,7 @@ int main(int argc, char **argv) {
                 buffer[strlen(buffer) - 1] = '\0';
             }
 
-            //loop control flow; encrypt/decrypt
+            // Loop control flow; encrypt/decrypt each line according to args and print to stdout
             if (enc_dec == 0) {
                 encrypt(buffer, cipher_offset);
                 fprintf(stdout, "%s\n", buffer);
