@@ -70,6 +70,8 @@ INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tf
 OUTPUT HW12-MarcusClements.pdf
 INPUT C:\Users\mbcle\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT HW12-MarcusClements.aux
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\mbcle\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb

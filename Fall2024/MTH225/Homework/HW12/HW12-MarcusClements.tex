@@ -13,107 +13,118 @@
 
 \begin{enumerate}
 
-\item Let $f : M \to N$ and $g: N \to L$ both be surjective functions. Prove that $g  \circ f$ is surjective. (First, look carefully at what the domain and codomain of $g \circ f$ are. Of course, be sure to follow the definition of surjective EXACTLY, and do not ignore quantifiers. Determine which ``for all'' is being used and which ``for all'' is being proved, and which ``there exists'' is being used and which ``there exists'' is being proved.)
+    \item Let $f : M \to N$ and $g: N \to L$ both be surjective functions. Prove that $g
+              \circ f$ is surjective. (First, look carefully at what the domain and codomain
+          of $g \circ f$ are. Of course, be sure to follow the definition of surjective
+          EXACTLY, and do not ignore quantifiers. Determine which ``for all'' is being
+          used and which ``for all'' is being proved, and which ``there exists'' is being
+          used and which ``there exists'' is being proved.)
 
-\begin{proof}
-    To prove that $g \circ f$ is surjective, we must show that for all $\ell \in L$, there exists $m \in M$ such that $(g \circ f)(m) = \ell$.
+          \begin{proof}
+              To prove that $g \circ f$ is surjective, we must show that for all $\ell \in L$, there exists $m \in M$ such that $(g \circ f)(m) = \ell$.
 
-    Let $\ell \in L$ be arbitrary.
-    Since $g$ is surjective, there exists $n \in N$ such that $g(n) = \ell$.
-    Since $f$ is surjective, there exists $m \in M$ such that $f(m) = n$.
+              Let $\ell \in L$ be arbitrary. Since $g$ is surjective, there exists $n \in N$
+              such that $g(n) = \ell$. Since $f$ is surjective, there exists $m \in M$ such
+              that $f(m) = n$.
 
-    Therefore, $(g \circ f)(m) = g(f(m)) = g(n) = \ell$.
+              Therefore, $(g \circ f)(m) = g(f(m)) = g(n) = \ell$.
 
-    Thus, for all $\ell \in L$, there exists $m \in M$ such that $(g \circ f)(m) = \ell$, proving that $g \circ f$ is surjective.
-\end{proof}
+              Thus, for all $\ell \in L$, there exists $m \in M$ such that $(g \circ f)(m) =
+                  \ell$, proving that $g \circ f$ is surjective.
+          \end{proof}
 
-\newpage
+          \newpage
 
-\item Let $f : M \to N$ and $g: N \to L$ both be injective functions. Prove that $g  \circ f$ is injective. (The same types of hints as the previous question, and in fact, at this level of math, the following advice always applies: since the question mentions the word injective, go review the definition first and do NOT ignore quantifiers. Determine which ``for all'' is being used and which ``for all'' is being proved.)
+    \item Let $f : M \to N$ and $g: N \to L$ both be injective functions. Prove that $g
+              \circ f$ is injective. (The same types of hints as the previous question, and
+          in fact, at this level of math, the following advice always applies: since the
+          question mentions the word injective, go review the definition first and do NOT
+          ignore quantifiers. Determine which ``for all'' is being used and which ``for
+          all'' is being proved.)
 
-\begin{proof}
-    To prove that $g \circ f$ is injective, we must show that for all $m_1, m_2 \in M$, if $(g \circ f)(m_1) = (g \circ f)(m_2)$, then $m_1 = m_2$.
+          \begin{proof}
+              To prove that $g \circ f$ is injective, we must show that for all $m_1, m_2 \in M$, if $(g \circ f)(m_1) = (g \circ f)(m_2)$, then $m_1 = m_2$.
 
-    Let $m_1, m_2 \in M$ be arbitrary and assume $(g \circ f)(m_1) = (g \circ f)(m_2)$.
-    Then $g(f(m_1)) = g(f(m_2))$.
-    Since $g$ is injective, this implies $f(m_1) = f(m_2)$.
-    Since $f$ is injective, this implies $m_1 = m_2$.
+              Let $m_1, m_2 \in M$ be arbitrary and assume $(g \circ f)(m_1) = (g \circ
+                  f)(m_2)$. Then $g(f(m_1)) = g(f(m_2))$. Since $g$ is injective, this implies
+              $f(m_1) = f(m_2)$. Since $f$ is injective, this implies $m_1 = m_2$.
 
-    Thus, for all $m_1, m_2 \in M$, if $(g \circ f)(m_1) = (g \circ f)(m_2)$, then $m_1 = m_2$, proving that $g \circ f$ is injective.
-\end{proof}
+              Thus, for all $m_1, m_2 \in M$, if $(g \circ f)(m_1) = (g \circ f)(m_2)$, then
+              $m_1 = m_2$, proving that $g \circ f$ is injective.
+          \end{proof}
 
-\newpage
+          \newpage
 
-\item Let $f : M \to N$. Prove: if $A$ and $B$ are subsets of $N$ such that $A \subseteq B$, then $f^{-1}(A) \subseteq f^{-1}(B)$.
+    \item Let $f : M \to N$. Prove: if $A$ and $B$ are subsets of $N$ such that $A
+              \subseteq B$, then $f^{-1}(A) \subseteq f^{-1}(B)$.
 
-\begin{proof}
-    To prove that $f^{-1}(A) \subseteq f^{-1}(B)$, we must show that for all $x \in f^{-1}(A)$, $x \in f^{-1}(B)$.
+          \begin{proof}
+              To prove that $f^{-1}(A) \subseteq f^{-1}(B)$, we must show that for all $x \in f^{-1}(A)$, $x \in f^{-1}(B)$.
 
-    Let $x \in f^{-1}(A)$ be arbitrary.
-    By definition of preimage, this means $f(x) \in A$.
-    Since $A \subseteq B$, this implies $f(x) \in B$.
-    By definition of preimage, this means $x \in f^{-1}(B)$.
+              Let $x \in f^{-1}(A)$ be arbitrary. By definition of preimage, this means $f(x)
+                  \in A$. Since $A \subseteq B$, this implies $f(x) \in B$. By definition of
+              preimage, this means $x \in f^{-1}(B)$.
 
-    Thus, for all $x \in f^{-1}(A)$, $x \in f^{-1}(B)$, proving that $f^{-1}(A) \subseteq f^{-1}(B)$.
-\end{proof}
+              Thus, for all $x \in f^{-1}(A)$, $x \in f^{-1}(B)$, proving that $f^{-1}(A)
+                  \subseteq f^{-1}(B)$.
+          \end{proof}
 
-\newpage
+          \newpage
 
-\item Prove that $[2,6]$ and $[11,20]$ are equicardinal. For clarifcation, both sets/intervals mentioned are subsets of $\mathbb{R}$.
+    \item Prove that $[2,6]$ and $[11,20]$ are equicardinal. For clarifcation, both
+          sets/intervals mentioned are subsets of $\mathbb{R}$.
 
-\newpage
+          \newpage
 
-\begin{proof}
-    To prove that [2,6] and [11,20] are equicardinal, we need to find a bijective function between them.
+          \begin{proof}
+              To prove that [2,6] and [11,20] are equicardinal, we need to find a bijective function between them.
 
-    Let f: [2,6] → [11,20] be defined by f(x) = 3x + 5.
+              Let $f: [2,6] \rightarrow [11,20]$ be defined by $f(x) = 3x + 5$.
 
-    First, let's prove f is injective:
-    Let x₁, x₂ ∈ [2,6] and assume f(x₁) = f(x₂).
-    Then 3x₁ + 5 = 3x₂ + 5
-    Therefore x₁ = x₂, proving f is injective.
+              First, let's prove $f$ is injective: Let $x_1, x_2 \in [2,6]$ and assume
+              $f(x_1) = f(x_2)$. Then $3x_1 + 5 = 3x_2 + 5$. Therefore $x_1 = x_2$, proving
+              $f$ is injective.
 
-    Now, let's prove f is surjective:
-    Let y ∈ [11,20] be arbitrary.
-    Let x = (y-5)/3.
-    Then f(x) = y, and we need to verify x ∈ [2,6].
-    When y = 11, x = 2
-    When y = 20, x = 5
-    Since f is linear and continuous, x ∈ [2,6].
-    Therefore f(x) = y for some x ∈ [2,6].
+              Now, let's prove f is surjective: Let $y \in [11,20]$ be arbitrary. Let $x =
+                  (y-5)/3$. Then $f(x) = y$, and we need to verify $x \in [2,6]$. When y = 11, x
+              = 2 When y = 20, x = 5 Since $f$ is linear and continuous, $x \in [2,6]$.
+              Therefore $f(x) = y$ for some $x \in [2,6]$.
 
-    Since f is both injective and surjective, it is bijective.
-    Therefore [2,6] and [11,20] are equicardinal.
-\end{proof}
+              Since $f$ is both injective and surjective, it is bijective. Therefore $[2,6]$
+              and $[11,20]$ are equicardinal.
+          \end{proof}
 
-\item Prove: if $A$ is countably infinite and $B$ is countably infinite and $C$ is countably infinite and $A \cap B = \emptyset$ and $A \cap C= \emptyset$ and $B \cap C = \emptyset$, prove $A \cup B \cup C$ is countably infinite. (Hint: it will be helpful to look at a past HW key where a formula for a sequence was given.)
+    \item Prove: if $A$ is countably infinite and $B$ is countably infinite and $C$ is
+          countably infinite and $A \cap B = \emptyset$ and $A \cap C= \emptyset$ and $B
+              \cap C = \emptyset$, prove $A \cup B \cup C$ is countably infinite. (Hint: it
+          will be helpful to look at a past HW key where a formula for a sequence was
+          given.)
+
+          \begin{proof}
+              Since A is countably infinite, there exists a bijection $f: \mathbb{N} \rightarrow A$.
+              Since B is countably infinite, there exists a bijection $g: \mathbb{N} \rightarrow B$.
+              Since C is countably infinite, there exists a bijection $h: \mathbb{N} \rightarrow C$.
+
+              Define $\emptyset: \mathbb{N} \rightarrow A \cup B \cup C$ by: $\phi(n) = \begin{cases}
+                      f(k) & \text{if } n = 3k-2 \text{ for some } k \in \mathbb{N} \\
+                      g(k) & \text{if } n = 3k-1 \text{ for some } k \in \mathbb{N} \\
+                      h(k) & \text{if } n = 3k \text{ for some } k \in \mathbb{N}
+                  \end{cases}$
+
+              To prove $\emptyset$ is injective: Let $n_1, n_2 \in \mathbb{N}$ with
+              $\emptyset(n_1) = \emptyset(n_2)$. If $n_1, n_2$ came from different cases,
+              they would map to different sets $(A, B, or C)$, which are disjoint. If from
+              the same case, $f, g, h$ being injective implies $n_1 = n_2$. Thus $\emptyset$
+              is injective.
+
+              To prove $\emptyset$ is surjective: Let $x \in A \cup B \cup C$. If $x \in A$,
+              then $x = f(k)$ for some $k$, so $x = \emptyset(3k-2)$. If $x \in B$, then $x =
+                  g(k)$ for some $k$, so $x = \emptyset(3k-1)$. If $x \in C$, then $x = h(k)$ for
+              some $k$, so $x = \emptyset(3k)$. Thus $\emptyset$ is surjective.
+
+              Therefore $A \cup B \cup C$ is countably infinite.
+          \end{proof}
 
 \end{enumerate}
-    \begin{proof}
-        Since A is countably infinite, there exists a bijection f: ℕ → A.
-        Since B is countably infinite, there exists a bijection g: ℕ → B.
-        Since C is countably infinite, there exists a bijection h: ℕ → C.
 
-        Define φ: ℕ → A ∪ B ∪ C by:
-        φ(n) = \begin{cases}
-            f(k) & \text{if } n = 3k-2 \text{ for some } k \in ℕ \\
-            g(k) & \text{if } n = 3k-1 \text{ for some } k \in ℕ \\
-            h(k) & \text{if } n = 3k \text{ for some } k \in ℕ
-        \end{cases}
-
-        To prove φ is injective:
-        Let n₁, n₂ ∈ ℕ with φ(n₁) = φ(n₂).
-        If n₁, n₂ came from different cases, they would map to different sets (A, B, or C), which are disjoint.
-        If from the same case, f, g, h being injective implies n₁ = n₂.
-        Thus φ is injective.
-
-        To prove φ is surjective:
-        Let x ∈ A ∪ B ∪ C.
-        If x ∈ A, then x = f(k) for some k, so x = φ(3k-2).
-        If x ∈ B, then x = g(k) for some k, so x = φ(3k-1).
-        If x ∈ C, then x = h(k) for some k, so x = φ(3k).
-        Thus φ is surjective.
-
-        Therefore A ∪ B ∪ C is countably infinite.
-    \end{proof}
 \end{document}
