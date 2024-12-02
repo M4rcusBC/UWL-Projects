@@ -59,13 +59,13 @@
               \subseteq B$, then $f^{-1}(A) \subseteq f^{-1}(B)$.
 
           \begin{proof}
-              To prove that $f^{-1}(A) \subseteq f^{-1}(B)$, we must show that for all $x \in f^{-1}(A)$, $x \in f^{-1}(B)$.
+              NTS:\@ $\forall x \in f^{-1}(A)$, $x \in f^{-1}(B)$.
 
-              Let $x \in f^{-1}(A)$ be arbitrary. By definition of preimage, this means $f(x)
-                  \in A$. Since $A \subseteq B$, this implies $f(x) \in B$. By definition of
-              preimage, this means $x \in f^{-1}(B)$.
+              Let $x \in f^{-1}(A)$ be arbitrary. Then by definition of preimage, $f(x) \in
+                  A$. Since $A \subseteq B$, we know that $f(x) \in B$. Therefore, by definition
+              of preimage, $x \in f^{-1}(B)$.
 
-              Thus, for all $x \in f^{-1}(A)$, $x \in f^{-1}(B)$, proving that $f^{-1}(A)
+              Thus, $\forall x \in f^{-1}(A)$, $x \in f^{-1}(B)$, proving that $f^{-1}(A)
                   \subseteq f^{-1}(B)$.
           \end{proof}
 
@@ -74,25 +74,24 @@
     \item Prove that $[2,6]$ and $[11,20]$ are equicardinal. For clarifcation, both
           sets/intervals mentioned are subsets of $\mathbb{R}$.
 
-          \newpage
-
           \begin{proof}
-              To prove that [2,6] and [11,20] are equicardinal, we need to find a bijective function between them.
+              Need to find a bijective function between the two sets that is both bijective and surjective.
 
               Let $f: [2,6] \rightarrow [11,20]$ be defined by $f(x) = 3x + 5$.
 
-              First, let's prove $f$ is injective: Let $x_1, x_2 \in [2,6]$ and assume
-              $f(x_1) = f(x_2)$. Then $3x_1 + 5 = 3x_2 + 5$. Therefore $x_1 = x_2$, proving
-              $f$ is injective.
+              Prove $f$ is injective: Let $x_1, x_2 \in [2,6]$ and assume $f(x_1) = f(x_2)$.
+              Then $3x_1 + 5 = 3x_2 + 5$. Therefore $x_1 = x_2$, proving $f$ is injective.
 
-              Now, let's prove f is surjective: Let $y \in [11,20]$ be arbitrary. Let $x =
-                  (y-5)/3$. Then $f(x) = y$, and we need to verify $x \in [2,6]$. When y = 11, x
-              = 2 When y = 20, x = 5 Since $f$ is linear and continuous, $x \in [2,6]$.
-              Therefore $f(x) = y$ for some $x \in [2,6]$.
+              Prove f is surjective: Let $y \in [11,20]$ be arbitrary. Let $x = (y-5)/3$.
+              Then $f(x) = y$, and we need to verify $x \in [2,6]$. When y = 11, x = 2 When y
+              = 20, x = 5 Since $f$ is linear and continuous, $x \in [2,6]$. Therefore $f(x)
+                  = y$ for some $x \in [2,6]$.
 
               Since $f$ is both injective and surjective, it is bijective. Therefore $[2,6]$
               and $[11,20]$ are equicardinal.
           \end{proof}
+
+          \newpage
 
     \item Prove: if $A$ is countably infinite and $B$ is countably infinite and $C$ is
           countably infinite and $A \cap B = \emptyset$ and $A \cap C= \emptyset$ and $B
@@ -113,9 +112,9 @@
 
               To prove $\emptyset$ is injective: Let $n_1, n_2 \in \mathbb{N}$ with
               $\emptyset(n_1) = \emptyset(n_2)$. If $n_1, n_2$ came from different cases,
-              they would map to different sets $(A, B, or C)$, which are disjoint. If from
-              the same case, $f, g, h$ being injective implies $n_1 = n_2$. Thus $\emptyset$
-              is injective.
+              they would therefore map to different sets $(A, B, or C)$, which are disjoint.
+              If from the same case, $f, g, h$ being injective implies $n_1 = n_2$. Thus
+              $\emptyset$ is injective.
 
               To prove $\emptyset$ is surjective: Let $x \in A \cup B \cup C$. If $x \in A$,
               then $x = f(k)$ for some $k$, so $x = \emptyset(3k-2)$. If $x \in B$, then $x =
