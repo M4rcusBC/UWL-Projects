@@ -27,7 +27,7 @@ function addCountry() {
            // Only one country object will ever be returned by this API call
             let container = document.getElementById("country-container");
             let countryDiv = document.createElement("div");
-            result = result[0];
+            result = result[0]; // Extract the country object from the array; there will only ever be one
             console.log(result);
             let cca3 = result['cca3'];
 
@@ -80,7 +80,6 @@ function addCountry() {
             alert('There was an error adding the country to the page.');
         }
     });
-
 }
 
 
