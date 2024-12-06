@@ -1,4 +1,3 @@
-
 function toggleLinks() {
     let links = document.getElementsByClassName("wiki-link");
     for (let i = 0; i < links.length; i++) {
@@ -8,34 +7,45 @@ function toggleLinks() {
 
 function addCountry() {
     let list = document.getElementById('country-list');
+    // Retrieve the value of the selected option. This was set to be the country code, so it can be used to query the API
     let query = list.options[list.selectedIndex].value;
 
+    // 10 extra credit points implementation below:
     let countries = document.getElementById('country-container').children;
     for (let i = 0; i < countries.length; i++) {
         if (countries[i].id === query) {
             alert('This country already exists on the page. Please add another country or search for a new set.');
-            return;
+            return; // Returns without making any API calls
         }
     }
 
     let urlString = `https://restcountries.com/v3.1/alpha/${query}`;
 
+    /*
+    * The following AJAX function is equivalent to past one-parameter $.ajax calls, e.g.,
+    * $.ajax({
+    *   url: urlString,
+    *   method: 'GET',
+    *   // etc.
+    * });
+    * The only difference is that the first parameter is the url and the second is an object containing the rest of the settings for the AJAX call.
+    * 
+    * */
     $.ajax(urlString, {
-       method: 'GET',
-         accepts: 'application/json',
+        method: 'GET',
+        accepts: 'application/json',
         success: (result) => {
-           // Only one country object will ever be returned by this API call
+            // Given: only one country object will ever be returned by this API call
             let container = document.getElementById("country-container");
             let countryDiv = document.createElement("div");
-            result = result[0]; // Extract the country object from the array; there will only ever be one
-            console.log(result);
+            result = result[0]; // Extract the country object from the array
             let cca3 = result['cca3'];
 
             countryDiv.id = cca3;
             countryDiv.className = "country";
 
             let stats = {
-                "Population": result['population'].toLocaleString(),
+                "Population": result['population'].toLocaleString(), // Add commas to the population number
                 "Common Name": result['name']['common'],
                 "Country Code": cca3,
                 "Continents": result['continents'],
@@ -83,22 +93,14 @@ function addCountry() {
 }
 
 
-
 function buildPage() {
-    // Create and configure body elements
-    let body = document.getElementsByTagName("body")[0];
-    let header = document.createElement("header");
-    header.appendChild(document.createElement("h4")).innerHTML = "Global Ascension";
-    header.appendChild(document.createElement("h5")).innerHTML = "jdoe@uwlax.edu";
-
-    // Create and configure form elements
-    let searchCountryForm = document.createElement("form");
-    searchCountryForm.className = "add-country-form";
+    // Configure form elements
+    let searchCountryForm = document.getElementById('search-country-form');
 
     let nameInput = document.createElement("input");
     nameInput.type = "text";
     nameInput.name = "name";
-    nameInput.id = "name";
+    nameInput.id = "search-country-form-name";
     nameInput.placeholder = "Country name (or partial name)";
     nameInput.required = true;
 
@@ -136,8 +138,7 @@ function buildPage() {
         });
     }
 
-    let addCountryForm = document.createElement("form");
-    addCountryForm.className = "add-country-form";
+    let addCountryForm = document.getElementById('add-country-form')
 
     let countryList = document.createElement("select");
     countryList.name = "country-list";
@@ -167,29 +168,12 @@ function buildPage() {
     wikiLinksLabel.innerHTML = "show wiki links";
     wikiLinksLabel.htmlFor = "links";
 
-    let wikiLinksDiv = document.createElement("div");
-    wikiLinksDiv.className = "wiki-links";
-    wikiLinksDiv.appendChild(wikiLinksCheckbox);
-    wikiLinksDiv.appendChild(wikiLinksLabel);
-
-    let countryFormContainer = document.createElement("div");
-    countryFormContainer.className = "country-form-container";
-    countryFormContainer.appendChild(searchCountryForm);
-    countryFormContainer.appendChild(addCountryForm);
-    countryFormContainer.appendChild(wikiLinksDiv);
-
-    let countryContainer = document.createElement("section");
-    countryContainer.id = "country-container";
-
-    let footer = document.createElement("footer");
-    footer.innerHTML = "&copy; Countries Inc.";
-
-    body.appendChild(header);
-    body.appendChild(countryFormContainer);
-    body.appendChild(countryContainer);
-    body.appendChild(footer);
+    let wikiLinksToggleDiv = document.getElementById('wiki-links-toggle');
+    wikiLinksToggleDiv.className = "wiki-links";
+    wikiLinksToggleDiv.appendChild(wikiLinksCheckbox);
+    wikiLinksToggleDiv.appendChild(wikiLinksLabel);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     buildPage();
 });
