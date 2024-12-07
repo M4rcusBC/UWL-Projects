@@ -14,7 +14,7 @@ function addCountry() {
     let countries = document.getElementById('country-container').children;
     for (let i = 0; i < countries.length; i++) {
         if (countries[i].id === query) {
-            alert('This country already exists on the page. Please add another country or search for a new set.');
+            alert('This country already exists on the page. Please choose another country from the list or search for a new set.');
             return; // Returns without making any API calls
         }
     }
@@ -142,6 +142,8 @@ function addCountry() {
                     }
                 }
             });
+            list.innerHTML = "";
+            updateFormVisibility();
             // Check the state of the checkbox and display the wiki links accordingly
             if (!document.getElementById('wiki-links-checkbox').checked) {
                 wikiLinksContainer.style.display = "none";
