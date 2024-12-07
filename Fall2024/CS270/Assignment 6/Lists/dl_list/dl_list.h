@@ -1,6 +1,6 @@
 /*
- * Author: [Your Name]
- * Date:   [Date]
+ * Author: Marcus Clements
+ * Date:   12/04/2024
  *
  * Description: A doubly-linked list of integers using sentinel nodes.
  */
