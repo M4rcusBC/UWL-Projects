@@ -1,4 +1,10 @@
-function toggleLinks() {
+/*
+* Marcus B Clements
+* CS202 Homework 6
+* 12/7/2024
+*/
+
+function updateWikiLinksVisibility() {
     let links = document.getElementsByClassName("wiki-links-container");
     for (let i = 0; i < links.length; i++) {
         links[i].style.display = this.checked ? "inline-block" : "none";
@@ -64,12 +70,12 @@ function addCountry() {
             topDiv.appendChild(officialName);
 
             let deleteButton = document.createElement("button");
-            deleteButton.innerHTML = '\u2716';
+            deleteButton.innerHTML = '\u2716'; // unicode 'X' symbol
             deleteButton.onclick = () => {
                 countryDiv.remove();
             }
             topDiv.appendChild(deleteButton);
-            
+
             countryDiv.appendChild(topDiv);
 
             let flag = document.createElement("img");
@@ -77,7 +83,7 @@ function addCountry() {
             flag.alt = result['flags']['alt'];
             flag.className = 'flag';
             countryDiv.appendChild(flag);
-            
+
             let listDiv = document.createElement("div");
             listDiv.className = 'country-card-stats-list';
 
@@ -100,7 +106,6 @@ function addCountry() {
             listDiv.appendChild(valueList);
 
             countryDiv.appendChild(listDiv);
-
             container.appendChild(countryDiv);
 
             let wikiLinksContainer = document.createElement("div");
@@ -174,7 +179,6 @@ function buildPage() {
     searchCountryForm.appendChild(nameInput);
     searchCountryForm.appendChild(searchButton);
     searchCountryForm.onsubmit = (e) => {
-        // Prevent the form from submitting and refreshing the page
         e.preventDefault();
         let query = nameInput.value;
         let urlString = `https://restcountries.com/v3.1/name/${query}?fields=name,cca3`;
@@ -227,7 +231,7 @@ function buildPage() {
     wikiLinksCheckbox.type = "checkbox";
     wikiLinksCheckbox.id = "wiki-links-checkbox";
     wikiLinksCheckbox.checked = true;
-    wikiLinksCheckbox.addEventListener('change', toggleLinks);
+    wikiLinksCheckbox.addEventListener('change', updateWikiLinksVisibility);
 
     let wikiLinksLabel = document.createElement("label");
     wikiLinksLabel.innerHTML = "show wiki links";

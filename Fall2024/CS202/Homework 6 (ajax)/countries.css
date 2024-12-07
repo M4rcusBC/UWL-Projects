@@ -1,3 +1,9 @@
+/*
+    Marcus B Clements
+    CS202: Homework 6
+    12/7/2024
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -75,7 +81,7 @@ header h5 {
 }
 
 #global-wiki-links-toggle-container {
-    margin-bottom:0.2em;
+    margin-bottom: 0.2em;
 }
 
 #wiki-links-checkbox {
@@ -133,7 +139,7 @@ header h5 {
     font-family: "Righteous", sans-serif;
     margin-left: 1em;
     background-color: #fff2cc;
-    font-weight: bold;
+    font-weight: bolder;
     color: grey;
     border: 0;
 }
