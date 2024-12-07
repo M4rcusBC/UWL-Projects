@@ -38,13 +38,13 @@ void append(ar_list * the_list, int val){
  * writes val into the first position.
  */
 void prepend(ar_list * the_list, int val){
-  int i;
   the_list->data = (int *)realloc(the_list->data, (the_list->size + 1) * sizeof(int));
   if (the_list->data == NULL) {
     // Handle memory allocation failure
     fprintf(stderr, "Memory allocation failed\n");
     exit(1);
   }
+  int i;
   for(i = the_list->size - 1; i > 0; i--){
     the_list->data[i] = the_list->data[i - 1];
   }

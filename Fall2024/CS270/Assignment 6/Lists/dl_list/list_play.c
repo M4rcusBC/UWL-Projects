@@ -4,7 +4,7 @@
  * Description: Program to play with lists.
  */
 
-#include "dl_list.h"
+#include "dl_list.c"
 
 int main(int argc, char** argv){
   // Initialize the doubly linked list
