@@ -45,7 +45,7 @@ void prepend(ar_list * the_list, int val){
     exit(1);
   }
   int i;
-  for(i = the_list->size - 1; i > 0; i--){
+  for(i = the_list->size; i > 0; i--){
     the_list->data[i] = the_list->data[i - 1];
   }
   the_list->data[0] = val;
