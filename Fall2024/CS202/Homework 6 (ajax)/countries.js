@@ -1,7 +1,7 @@
 function toggleLinks() {
-    let links = document.getElementsByClassName("wiki-link");
+    let links = document.getElementsByClassName("wiki-links-container");
     for (let i = 0; i < links.length; i++) {
-        links[i].style.display = links[i].style.display === "none" ? "block" : "none";
+        links[i].style.display = this.checked ? "inline-block" : "none";
     }
 }
 
@@ -19,6 +19,7 @@ function addCountry() {
         }
     }
 
+    let countryDiv;
     let urlString = `https://restcountries.com/v3.1/alpha/${query}`;
 
     /*
@@ -37,12 +38,12 @@ function addCountry() {
         success: (result) => {
             // Given: only one country object will ever be returned by this API call
             let container = document.getElementById("country-container");
-            let countryDiv = document.createElement("div");
+            countryDiv = document.createElement("div");
             result = result[0]; // Extract the country object from the array
             let cca3 = result['cca3'];
 
             countryDiv.id = cca3;
-            countryDiv.className = "country";
+            countryDiv.className = "country-card";
 
             let stats = {
                 "Population": result['population'].toLocaleString(), // Add commas to the population number
@@ -54,44 +55,97 @@ function addCountry() {
                 "Capital": result['capital']
             };
 
+            let topDiv = document.createElement("div");
+            topDiv.className = "country-card-top";
+
             let officialName = document.createElement("h2");
             officialName.innerHTML = result['name']['official'];
-            countryDiv.appendChild(officialName);
+            officialName.className = 'country-card-official-name';
+            topDiv.appendChild(officialName);
 
             let deleteButton = document.createElement("button");
-            deleteButton.innerHTML = "x";
+            deleteButton.innerHTML = '\u2716';
             deleteButton.onclick = () => {
                 countryDiv.remove();
             }
-            countryDiv.appendChild(deleteButton);
+            topDiv.appendChild(deleteButton);
+            
+            countryDiv.appendChild(topDiv);
 
             let flag = document.createElement("img");
             flag.src = result['flags']['svg'];
             flag.alt = result['flags']['alt'];
             flag.className = 'flag';
             countryDiv.appendChild(flag);
+            
+            let listDiv = document.createElement("div");
+            listDiv.className = 'country-card-stats-list';
 
             let statsKeys = Object.keys(stats);
-            console.log(statsKeys);
             let keyList = document.createElement("ul");
             for (let i = 0; i < statsKeys.length; i++) {
                 let stat = document.createElement("li");
                 stat.innerHTML = statsKeys[i];
                 keyList.appendChild(stat);
             }
-            countryDiv.appendChild(keyList);
+            listDiv.appendChild(keyList);
 
             let statsValues = Object.values(stats);
-            console.log(statsValues);
             let valueList = document.createElement("ul");
             for (let i = 0; i < statsValues.length; i++) {
                 let stat = document.createElement("li");
                 stat.innerHTML = statsValues[i].toString();
                 valueList.appendChild(stat);
             }
-            countryDiv.appendChild(valueList);
+            listDiv.appendChild(valueList);
+
+            countryDiv.appendChild(listDiv);
 
             container.appendChild(countryDiv);
+
+            let wikiLinksContainer = document.createElement("div");
+            wikiLinksContainer.className = "wiki-links-container";
+            countryDiv.appendChild(wikiLinksContainer);
+
+            let title = document.createElement("h2");
+            title.innerHTML = 'Wikipedia Articles';
+            wikiLinksContainer.appendChild(title);
+
+            // Transform query into a string of comma-separated values containing each word in the country's official name
+            query = officialName.innerHTML.replace(' ', ',');
+
+            urlString = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=search&prop=links&srsearch=${query}`;
+            console.log(urlString);
+            $.ajax(urlString, {
+                method: 'GET',
+                accepts: 'application/json',
+                success: (result) => {
+                    let searchResults = result['query']['search'];
+                    for (let i = 0; i < searchResults.length; i++) {
+
+                        let article = document.createElement("div");
+                        article.className = "wiki-article";
+
+                        let link = document.createElement("a");
+                        link.href = `https://en.wikipedia.org/wiki/${searchResults[i]['title'].replace(' ', '_')}`;
+                        link.className = "wiki-article-link";
+                        link.target = "_blank";
+                        link.innerHTML = searchResults[i]['title'];
+                        article.appendChild(link);
+
+                        let snippet = document.createElement("p");
+                        snippet.innerHTML = searchResults[i]['snippet'];
+                        snippet.className = "wiki-article-snippet";
+                        article.appendChild(snippet);
+
+                        wikiLinksContainer.appendChild(article);
+                    }
+                }
+            });
+            // Check the state of the checkbox and display the wiki links accordingly
+            if (!document.getElementById('wiki-links-checkbox').checked) {
+                wikiLinksContainer.style.display = "none";
+            }
         },
         error: () => {
             alert('There was an error adding the country to the page.');
@@ -169,17 +223,16 @@ function buildPage() {
 
     let wikiLinksCheckbox = document.createElement("input");
     wikiLinksCheckbox.type = "checkbox";
-    wikiLinksCheckbox.name = "links";
-    wikiLinksCheckbox.id = "links";
+    wikiLinksCheckbox.id = "wiki-links-checkbox";
     wikiLinksCheckbox.checked = true;
-    wikiLinksCheckbox.addEventListener('toggle', toggleLinks);
+    wikiLinksCheckbox.addEventListener('change', toggleLinks);
 
     let wikiLinksLabel = document.createElement("label");
     wikiLinksLabel.innerHTML = "show wiki links";
     // Associate the label with the checkbox
-    wikiLinksLabel.htmlFor = "links";
+    wikiLinksLabel.htmlFor = "wiki-links-checkbox";
 
-    let wikiLinksToggleDiv = document.getElementById('wiki-links-toggle');
+    let wikiLinksToggleDiv = document.getElementById('global-wiki-links-toggle-container');
     wikiLinksToggleDiv.appendChild(wikiLinksCheckbox);
     wikiLinksToggleDiv.appendChild(wikiLinksLabel);
 }
