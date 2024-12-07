@@ -58,6 +58,13 @@ function addCountry() {
             officialName.innerHTML = result['name']['official'];
             countryDiv.appendChild(officialName);
 
+            let deleteButton = document.createElement("button");
+            deleteButton.innerHTML = "x";
+            deleteButton.onclick = () => {
+                countryDiv.remove();
+            }
+            countryDiv.appendChild(deleteButton);
+
             let flag = document.createElement("img");
             flag.src = result['flags']['svg'];
             flag.alt = result['flags']['alt'];
@@ -114,26 +121,29 @@ function buildPage() {
         // Prevent the form from submitting and refreshing the page
         e.preventDefault();
         let query = nameInput.value;
-
         let urlString = `https://restcountries.com/v3.1/name/${query}?fields=name,cca3`;
+        let list = document.getElementById("country-list");
 
         $.ajax(urlString, {
             method: 'GET',
             accepts: 'application/json',
             success: (result) => {
-                console.log(result);
-                let list = document.getElementById("country-list");
                 list.innerHTML = "";
+                updateFormVisibility();
 
                 for (let i = 0; i < result.length; i++) {
                     let option = document.createElement("option");
-                    option.value = result[i].cca3;
+                    option.value = result[i]['cca3'];
                     option.innerHTML = result[i].name["official"];
                     list.appendChild(option);
                 }
+                updateFormVisibility();
             },
             error: () => {
                 alert('Your search did not return any results.');
+                // Clear the list of results in the event of an error
+                list.innerHTML = "";
+                updateFormVisibility();
             }
         });
     }
@@ -166,12 +176,19 @@ function buildPage() {
 
     let wikiLinksLabel = document.createElement("label");
     wikiLinksLabel.innerHTML = "show wiki links";
+    // Associate the label with the checkbox
     wikiLinksLabel.htmlFor = "links";
 
     let wikiLinksToggleDiv = document.getElementById('wiki-links-toggle');
-    wikiLinksToggleDiv.className = "wiki-links";
     wikiLinksToggleDiv.appendChild(wikiLinksCheckbox);
     wikiLinksToggleDiv.appendChild(wikiLinksLabel);
+}
+
+function updateFormVisibility() {
+    let form = document.getElementById('add-country-form');
+    let list = document.getElementById('country-list');
+    // The below line is more port
+    form.style.display = list.children.length > 0 ? "flex" : "none";
 }
 
 document.addEventListener("DOMContentLoaded", function () {

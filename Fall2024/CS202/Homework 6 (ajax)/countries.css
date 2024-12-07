@@ -51,6 +51,13 @@ header h5 {
     align-items: center;
 }
 
+#country-forms form * {
+    margin-right: 0.5em;
+}
+
+#add-country-form {
+    display: none;
+}
 
 footer {
     position: fixed;
