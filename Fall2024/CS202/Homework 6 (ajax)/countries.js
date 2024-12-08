@@ -1,258 +1,237 @@
 /*
- * Marcus B Clements
- * CS202 Homework 6
- * 12/7/2024
- */
+* Marcus Clements
+* CS202, Fall 2024
+* Homework 6 (ajax)
+* 12/7/2024
+* */
 
-document.addEventListener("DOMContentLoaded", () => {
-
+$(document).ready(function () {
     function buildPage() {
         // Configure form elements
-        let searchCountryForm = document.getElementById("search-country-form");
+        let $searchCountryForm = $('#search-country-form');
 
-        let nameInput = document.createElement("input");
-        nameInput.type = "text";
-        nameInput.name = "name";
-        nameInput.id = "search-country-form-name";
-        nameInput.placeholder = "Country name (or partial name)";
-        nameInput.required = true;
+        let $nameInput = $('<input>', {
+            type: 'text',
+            name: 'name',
+            id: 'search-country-form-name',
+            placeholder: 'Country name (or partial name)',
+            required: true
+        });
 
-        let searchButton = document.createElement("button");
-        searchButton.type = "submit";
-        searchButton.innerHTML = "Search";
+        let $searchButton = $('<button>', {
+            type: 'submit',
+            text: 'Search'
+        });
 
-        searchCountryForm.appendChild(nameInput);
-        searchCountryForm.appendChild(searchButton);
-        searchCountryForm.onsubmit = (e) => {
+        $searchCountryForm.append($nameInput, $searchButton).on('submit', function (e) {
             e.preventDefault();
-            let query = nameInput.value;
+            let query = $nameInput.val();
             let urlString = `https://restcountries.com/v3.1/name/${query}?fields=name,cca3`;
-            let list = document.getElementById("country-list");
+            let $list = $('#country-list');
 
             $.ajax(urlString, {
-                method: "GET",
-                accepts: "application/json",
-                success: (result) => {
-                    list.innerHTML = "";
+                method: 'GET',
+                accepts: 'application/json',
+                success: function (result) {
+                    $list.empty();
                     updateFormVisibility();
 
-                    for (let i = 0; i < result.length; i++) {
-                        let option = document.createElement("option");
-                        option.value = result[i]["cca3"];
-                        option.innerHTML = result[i].name["official"];
-                        list.appendChild(option);
-                    }
+                    result.forEach(function (country) {
+                        let $option = $('<option>', {
+                            value: country.cca3,
+                            text: country.name.official
+                        });
+                        $list.append($option);
+                    });
                     updateFormVisibility();
                 },
-                error: () => {
-                    alert("Your search did not return any results.");
-                    // Clear the list of results in the event of an error
-                    list.innerHTML = "";
+                error: function () {
+                    alert('Your search did not return any results.');
+                    $list.empty();
                     updateFormVisibility();
-                },
+                }
             });
-        };
+        });
 
-        let addCountryForm = document.getElementById("add-country-form");
+        // Find the form outline and add its elements
+        let $addCountryForm = $('#add-country-form');
 
-        let countryList = document.createElement("select");
-        countryList.name = "country-list";
-        countryList.id = "country-list";
-        countryList.required = true;
+        let $countryList = $('<select>', {
+            name: 'country-list',
+            id: 'country-list',
+            required: true
+        });
 
-        let addCountryButton = document.createElement("button");
-        addCountryButton.type = "submit";
-        addCountryButton.innerHTML = "Add";
+        let $addCountryButton = $('<button>', {
+            type: 'submit',
+            text: 'Add'
+        });
 
-        addCountryForm.appendChild(countryList);
-        addCountryForm.appendChild(addCountryButton);
-        addCountryForm.onsubmit = (e) => {
+        $addCountryForm.append($countryList, $addCountryButton).on('submit', function (e) {
             e.preventDefault();
-            // No args required here; addCountry finds selected country from list
             addCountry();
-        };
+        });
 
-        let wikiLinksCheckbox = document.createElement("input");
-        wikiLinksCheckbox.type = "checkbox";
-        wikiLinksCheckbox.id = "wiki-links-checkbox";
-        wikiLinksCheckbox.checked = true;
-        wikiLinksCheckbox.addEventListener("change", updateWikiLinksVisibility);
+        // Add the global wiki links toggle checkbox
+        let $wikiLinksCheckbox = $('<input>', {
+            type: 'checkbox',
+            id: 'wiki-links-checkbox',
+            checked: true
+        }).on('change', updateWikiLinksVisibility);
 
-        let wikiLinksLabel = document.createElement("label");
-        wikiLinksLabel.innerHTML = "show wiki links";
-        // Associate the label with the checkbox
-        wikiLinksLabel.htmlFor = "wiki-links-checkbox";
+        let $wikiLinksLabel = $('<label>', {
+            text: 'show wiki links',
+            for: 'wiki-links-checkbox'
+        });
 
-        let wikiLinksToggleDiv = document.getElementById(
-            "global-wiki-links-toggle-container"
-        );
-        wikiLinksToggleDiv.appendChild(wikiLinksCheckbox);
-        wikiLinksToggleDiv.appendChild(wikiLinksLabel);
+        let $wikiLinksToggleDiv = $('#global-wiki-links-toggle-container');
+        $wikiLinksToggleDiv.append($wikiLinksCheckbox, $wikiLinksLabel);
+        
+        $('<div id="footer-spacer">').insertAfter($('#country-container'));
+        
     }
 
     function addCountry() {
-        let list = document.getElementById("country-list");
-        // Retrieve the value of the selected option. This was set to be the country code, so it can be used to query the API
-        let query = list.options[list.selectedIndex].value;
+        let list = $('#country-list');
+        let query = list.val();
 
-        // 10 extra credit points implementation below:
-        let countries = document.getElementById("country-container").children;
-        for (let i = 0; i < countries.length; i++) {
-            if (countries[i].id === query) {
+        let $countries = $('#country-container').children();
+        for (let i = 0; i < $countries.length; i++) {
+            if ($countries.eq(i).attr('id') === query) { // If the id of an existing country div matches the query
                 alert(
-                    "This country already exists on the page. Please choose another country from the list or search for a new set."
+                    'This country already exists on the page. Please choose another country from the list or search for a new set.'
                 );
-                return; // Returns without making any API calls
+                return;
             }
         }
 
-        let countryDiv;
+        let $countryDiv;
         let urlString = `https://restcountries.com/v3.1/alpha/${query}`;
 
-        /*
-         * The following AJAX function is equivalent to past one-parameter $.ajax calls, e.g.,
-         * $.ajax({
-         *   url: urlString,
-         *   method: 'GET',
-         *   // etc.
-         * });
-         * The only difference is that the first parameter is the url and the second is an object containing the rest of the settings for the AJAX call.
-         *
-         * */
         $.ajax(urlString, {
-            method: "GET",
-            accepts: "application/json",
-            success: (result) => {
-                // Given: only one country object will ever be returned by this API call
-                let container = document.getElementById("country-container");
-                countryDiv = document.createElement("div");
-                result = result[0]; // Extract the country object from the array
-                let cca3 = result["cca3"];
-
-                countryDiv.id = cca3;
-                countryDiv.className = "country-card";
+            method: 'GET',
+            accepts: 'application/json',
+            success: function (result) {
+                result = result[0];
+                let $container = $('#country-container');
+                $countryDiv = $('<div>', {
+                    id: result['cca3'],
+                    class: 'country-card'
+                });
 
                 let stats = {
-                    Population: result["population"].toLocaleString(), // Add commas to the population number
-                    "Common Name": result["name"]["common"],
-                    "Country Code": cca3,
-                    Continents: result["continents"],
-                    Region: result["region"],
-                    Subregion: result["subregion"],
-                    Capital: result["capital"],
+                    Population: result['population'].toLocaleString(),
+                    'Common Name': result['name']['common'],
+                    'Country Code': result['cca3'],
+                    Continents: result['continents'],
+                    Region: result['region'],
+                    Subregion: result['subregion'],
+                    Capital: result['capital']
                 };
 
-                let topDiv = document.createElement("div");
-                topDiv.className = "country-card-top";
+                let $topDiv = $('<div>', {class: 'country-card-top'});
 
-                let officialName = document.createElement("h2");
-                officialName.innerHTML = result["name"]["official"];
-                officialName.className = "country-card-official-name";
-                topDiv.appendChild(officialName);
-
-                let deleteButton = document.createElement("button");
-                deleteButton.innerHTML = "\u2716"; // unicode 'X' symbol
-                deleteButton.onclick = () => {
-                    countryDiv.remove();
-                };
-                topDiv.appendChild(deleteButton);
-
-                countryDiv.appendChild(topDiv);
-
-                let flag = document.createElement("img");
-                flag.src = result["flags"]["svg"];
-                flag.alt = result["flags"]["alt"];
-                flag.className = "flag";
-                countryDiv.appendChild(flag);
-
-                let listDiv = document.createElement("div");
-                listDiv.className = "country-card-stats-list";
-
-                let statsKeys = Object.keys(stats);
-                let keyList = document.createElement("ul");
-                for (let i = 0; i < statsKeys.length; i++) {
-                    let stat = document.createElement("li");
-                    stat.innerHTML = statsKeys[i];
-                    keyList.appendChild(stat);
-                }
-                listDiv.appendChild(keyList);
-
-                let statsValues = Object.values(stats);
-                let valueList = document.createElement("ul");
-                for (let i = 0; i < statsValues.length; i++) {
-                    let stat = document.createElement("li");
-                    stat.innerHTML = statsValues[i].toString();
-                    valueList.appendChild(stat);
-                }
-                listDiv.appendChild(valueList);
-
-                countryDiv.appendChild(listDiv);
-                container.appendChild(countryDiv);
-
-                let wikiLinksContainer = document.createElement("div");
-                wikiLinksContainer.className = "wiki-links-container";
-                countryDiv.appendChild(wikiLinksContainer);
-
-                let title = document.createElement("h2");
-                title.innerHTML = "Wikipedia Articles";
-                wikiLinksContainer.appendChild(title);
-
-                // Transform query into a string of comma-separated values containing each word in the country's official name
-                query = officialName.innerHTML.replace(" ", ",");
-
-                urlString = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=search&prop=links&srsearch=${query}`;
-                console.log(urlString);
-                $.ajax(urlString, {
-                    method: "GET",
-                    accepts: "application/json",
-                    success: (result) => {
-                        let searchResults = result["query"]["search"];
-                        for (let i = 0; i < searchResults.length; i++) {
-                            let article = document.createElement("div");
-                            article.className = "wiki-article";
-
-                            let link = document.createElement("a");
-                            link.href = `https://en.wikipedia.org/wiki/${searchResults[i][
-                                "title"
-                            ].replace(" ", "_")}`;
-                            link.className = "wiki-article-link";
-                            link.target = "_blank";
-                            link.innerHTML = searchResults[i]["title"];
-                            article.appendChild(link);
-
-                            let snippet = document.createElement("p");
-                            snippet.innerHTML = searchResults[i]["snippet"];
-                            snippet.className = "wiki-article-snippet";
-                            article.appendChild(snippet);
-
-                            wikiLinksContainer.appendChild(article);
-                        }
-                    },
+                let $officialName = $('<h2>', {
+                    text: result['name']['official'],
+                    class: 'country-card-official-name'
                 });
-                list.innerHTML = "";
+                $topDiv.append($officialName);
+
+                let $deleteButton = $('<button>', {
+                    text: '\u2716'
+                }).on('click', function () {
+                    $countryDiv.remove();
+                });
+                $topDiv.append($deleteButton);
+
+                $countryDiv.append($topDiv);
+
+                let $flag = $('<img>', {
+                    src: result['flags']['svg'],
+                    alt: result['flags']['alt'],
+                    class: 'flag'
+                });
+                $countryDiv.append($flag);
+
+                let $listDiv = $('<div>', {class: 'country-card-stats-list'});
+
+                let $keyList = $('<ul>');
+                $.each(stats, function (key, value) {
+                    $('<li>', {text: key}).appendTo($keyList);
+                });
+                $listDiv.append($keyList);
+
+                let $valueList = $('<ul>');
+                $.each(stats, function (key, value) {
+                    $('<li>', {text: value.toString()}).appendTo($valueList);
+                });
+                $listDiv.append($valueList);
+
+                $countryDiv.append($listDiv);
+                $container.append($countryDiv);
+
+                // Add the Wikipedia links container and title to div
+
+                let $wikiLinksContainer = $('<div>', {
+                    class: 'wiki-links-container'
+                });
+
+                let $title = $('<h2>', {text: 'Wikipedia Articles'});
+                $wikiLinksContainer.append($title);
+
+                let formattedName = $officialName.text().replace(' ', ',');
+                let wikiUrlString = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=search&prop=links&srsearch=${formattedName}`;
+
+                $.ajax(wikiUrlString, {
+                    method: 'GET',
+                    accepts: 'application/json',
+                    success: function (result) {
+                        let searchResults = result['query']['search'];
+                        searchResults.forEach(function (article) {
+                            let articleDiv = $('<div>', {class: 'wiki-article'});
+
+                            let link = $('<a>', {
+                                // Replace spaces with underscores in the title for the URL
+                                href: `https://en.wikipedia.org/wiki/${article['title'].replace(' ', '_')}`,
+                                class: 'wiki-article-link',
+                                target: '_blank',
+                                text: article['title']
+                            });
+                            articleDiv.append(link);
+
+                            let snippet = $('<p>', {
+                                html: article['snippet'],
+                                class: 'wiki-article-snippet'
+                            });
+                            articleDiv.append(snippet);
+
+                            $wikiLinksContainer.append(articleDiv);
+                        });
+                    }
+                });
+                list.empty();
                 updateFormVisibility();
-                // Check the state of the checkbox and display the wiki links accordingly
-                if (!document.getElementById("wiki-links-checkbox").checked) {
-                    wikiLinksContainer.style.display = "none";
+                $countryDiv.append($wikiLinksContainer);
+                // Hide the wiki links container as it's added if the global checkbox is not checked
+                if (!$('#wiki-links-checkbox').is(':checked')) {
+                    $wikiLinksContainer.hide();
                 }
             },
-            error: () => {
-                alert("There was an error adding the country to the page.");
-            },
+            error: function () {
+                alert('There was an error adding the country to the page.');
+            }
         });
     }
 
     function updateFormVisibility() {
-        let form = document.getElementById("add-country-form");
-        let list = document.getElementById("country-list");
-        form.style.display = list.children.length > 0 ? "flex" : "none";
+        let $form = $('#add-country-form');
+        let $list = $('#country-list');
+        $form.css('display', $list.children().length > 0 ? 'flex' : 'none');
     }
 
     function updateWikiLinksVisibility() {
-        let links = document.getElementsByClassName("wiki-links-container");
-        for (let i = 0; i < links.length; i++) {
-            links[i].style.display = this.checked ? "inline-block" : "none";
-        }
+        let $links = $('.wiki-links-container');
+        $links.css('display', this.checked ? 'inline-block' : 'none');
     }
 
     buildPage();
