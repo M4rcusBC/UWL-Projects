@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             text: 'show wiki links',
             for: 'wiki-links-checkbox'
         });
-        let $wikiLinksToggleDiv = $('#global-wiki-links-toggle-container');
+        let $wikiLinksToggleDiv = $('#wiki-links-toggle-container');
         $wikiLinksToggleDiv.append($wikiLinksCheckbox, $wikiLinksLabel);
 
         /*
