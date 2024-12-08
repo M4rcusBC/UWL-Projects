@@ -32,6 +32,8 @@ header {
 #title {
     display: flex;
     align-items: center;
+    cursor: default;
+
 }
 
 #title img {

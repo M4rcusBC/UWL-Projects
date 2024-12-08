@@ -86,6 +86,9 @@ $(document).ready(function () {
 
         let $wikiLinksToggleDiv = $('#global-wiki-links-toggle-container');
         $wikiLinksToggleDiv.append($wikiLinksCheckbox, $wikiLinksLabel);
+        
+        $('<div id="footer-spacer">').insertAfter($('#country-container'));
+        
     }
 
     function addCountry() {
