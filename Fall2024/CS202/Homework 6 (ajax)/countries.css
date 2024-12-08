@@ -131,7 +131,25 @@ header h5 {
     position: relative;
 }
 
+.country-card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.country-card-details img.flag {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
 .country-card-top {
+    min-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,18 +170,15 @@ header h5 {
     cursor: pointer;
 }
 
-.country-card img {
-    border: 2px solid black;
-}
-
 .country-card-stats-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1em 0;
 }
 
 .country-card-stats-list ul {
     list-style-type: none;
+    text-wrap: wrap;
 }
 
 .country-card-stats-list ul:first-of-type {

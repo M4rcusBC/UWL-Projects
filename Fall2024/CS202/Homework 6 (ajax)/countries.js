@@ -5,11 +5,15 @@
 * 12/7/2024
 * */
 
-$(document).ready(function () {
+/*
+* I did my best to be consistent with using jQuery for element selection and creation below,
+* besides the instruction to wrap all the code in a DOMContentLoaded event listener.
+*/
+document.addEventListener('DOMContentLoaded', () => {
     function buildPage() {
-        // Configure form elements
-        let $searchCountryForm = $('#search-country-form');
 
+        // Find the search form and configure its elements
+        let $searchCountryForm = $('#search-country-form');
         let $nameInput = $('<input>', {
             type: 'text',
             name: 'name',
@@ -17,12 +21,10 @@ $(document).ready(function () {
             placeholder: 'Country name (or partial name)',
             required: true
         });
-
         let $searchButton = $('<button>', {
             type: 'submit',
             text: 'Search'
         });
-
         $searchCountryForm.append($nameInput, $searchButton).on('submit', function (e) {
             e.preventDefault();
             let query = $nameInput.val();
@@ -32,14 +34,14 @@ $(document).ready(function () {
             $.ajax(urlString, {
                 method: 'GET',
                 accepts: 'application/json',
-                success: function (result) {
+                success: (result) => {
                     $list.empty();
                     updateFormVisibility();
 
-                    result.forEach(function (country) {
+                    result.forEach((country) => {
                         let $option = $('<option>', {
-                            value: country.cca3,
-                            text: country.name.official
+                            value: country['cca3'],
+                            text: country['name']['official']
                         });
                         $list.append($option);
                     });
@@ -55,18 +57,15 @@ $(document).ready(function () {
 
         // Find the form outline and add its elements
         let $addCountryForm = $('#add-country-form');
-
         let $countryList = $('<select>', {
             name: 'country-list',
             id: 'country-list',
             required: true
         });
-
         let $addCountryButton = $('<button>', {
             type: 'submit',
             text: 'Add'
         });
-
         $addCountryForm.append($countryList, $addCountryButton).on('submit', function (e) {
             e.preventDefault();
             addCountry();
@@ -78,17 +77,18 @@ $(document).ready(function () {
             id: 'wiki-links-checkbox',
             checked: true
         }).on('change', updateWikiLinksVisibility);
-
         let $wikiLinksLabel = $('<label>', {
             text: 'show wiki links',
             for: 'wiki-links-checkbox'
         });
-
         let $wikiLinksToggleDiv = $('#global-wiki-links-toggle-container');
         $wikiLinksToggleDiv.append($wikiLinksCheckbox, $wikiLinksLabel);
-        
+
+        /*
+        * Add the spacer for the fixed footer; enables proper styling
+        * of the grid when a positioned element exists after it - see css
+        */
         $('<div id="footer-spacer">').insertAfter($('#country-container'));
-        
     }
 
     function addCountry() {
@@ -97,7 +97,7 @@ $(document).ready(function () {
 
         let $countries = $('#country-container').children();
         for (let i = 0; i < $countries.length; i++) {
-            if ($countries.eq(i).attr('id') === query) { // If the id of an existing country div matches the query
+            if ($countries.eq(i).attr('id') === query) { // If the id of an existing country div matches the id attempting to be added,
                 alert(
                     'This country already exists on the page. Please choose another country from the list or search for a new set.'
                 );
@@ -111,13 +111,15 @@ $(document).ready(function () {
         $.ajax(urlString, {
             method: 'GET',
             accepts: 'application/json',
-            success: function (result) {
+            success: (result) => {
                 result = result[0];
                 let $container = $('#country-container');
                 $countryDiv = $('<div>', {
                     id: result['cca3'],
                     class: 'country-card'
                 });
+
+                let $detailsDiv = $('<div>', {class: 'country-card-details'});
 
                 let stats = {
                     Population: result['population'].toLocaleString(),
@@ -144,14 +146,14 @@ $(document).ready(function () {
                 });
                 $topDiv.append($deleteButton);
 
-                $countryDiv.append($topDiv);
+                $detailsDiv.append($topDiv);
 
                 let $flag = $('<img>', {
                     src: result['flags']['svg'],
                     alt: result['flags']['alt'],
                     class: 'flag'
                 });
-                $countryDiv.append($flag);
+                $detailsDiv.append($flag);
 
                 let $listDiv = $('<div>', {class: 'country-card-stats-list'});
 
@@ -167,8 +169,8 @@ $(document).ready(function () {
                 });
                 $listDiv.append($valueList);
 
-                $countryDiv.append($listDiv);
-                $container.append($countryDiv);
+                $detailsDiv.append($listDiv);
+                $countryDiv.append($detailsDiv);
 
                 // Add the Wikipedia links container and title to div
 
@@ -179,20 +181,22 @@ $(document).ready(function () {
                 let $title = $('<h2>', {text: 'Wikipedia Articles'});
                 $wikiLinksContainer.append($title);
 
-                let formattedName = $officialName.text().replace(' ', ',');
+                let formattedName = $officialName.text().replaceAll(' ', ',');
                 let wikiUrlString = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=search&prop=links&srsearch=${formattedName}`;
 
                 $.ajax(wikiUrlString, {
                     method: 'GET',
                     accepts: 'application/json',
-                    success: function (result) {
+                    success: (result) => {
                         let searchResults = result['query']['search'];
                         searchResults.forEach(function (article) {
                             let articleDiv = $('<div>', {class: 'wiki-article'});
 
+                            // Reassign query var again to represent the article's
+                            query = article['title'].replaceAll(' ', '_');
                             let link = $('<a>', {
                                 // Replace spaces with underscores in the title for the URL
-                                href: `https://en.wikipedia.org/wiki/${article['title'].replace(' ', '_')}`,
+                                href: `https://en.wikipedia.org/wiki/${query}`,
                                 class: 'wiki-article-link',
                                 target: '_blank',
                                 text: article['title']
@@ -216,6 +220,7 @@ $(document).ready(function () {
                 if (!$('#wiki-links-checkbox').is(':checked')) {
                     $wikiLinksContainer.hide();
                 }
+                $container.append($countryDiv);
             },
             error: function () {
                 alert('There was an error adding the country to the page.');
@@ -223,16 +228,23 @@ $(document).ready(function () {
         });
     }
 
+    /*
+    * Checks state of the country list's children and updates the visibility of the add country form
+    */
     function updateFormVisibility() {
         let $form = $('#add-country-form');
         let $list = $('#country-list');
         $form.css('display', $list.children().length > 0 ? 'flex' : 'none');
     }
 
+    /*
+    * Checks state of the global wiki links toggle checkbox and updates the visibility of all wiki links containers
+    */
     function updateWikiLinksVisibility() {
         let $links = $('.wiki-links-container');
         $links.css('display', this.checked ? 'inline-block' : 'none');
     }
 
+    // Build the page when the DOM is loaded
     buildPage();
 });
