@@ -102,7 +102,6 @@ int main(int argc, char **argv) {
         print_list(my_list);
     }
     free(my_list);
-    printf("-------------------------\n");
 
     return 0;
 }

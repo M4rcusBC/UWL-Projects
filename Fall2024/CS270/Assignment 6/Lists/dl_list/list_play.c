@@ -96,10 +96,11 @@ int main(int argc, char** argv){
     // Final list state
     printf("Final state of the list:\n");
     print_list(my_list);
+    printf("-------------------------\n");
 
     // Clean up memory
     printf("Cleaning up memory:\n");
-    for (int i = 0; i < my_list->size; i++) {
+    while (my_list->size > 0) {
       delete_at(my_list, 0);
       print_list(my_list);
     }
