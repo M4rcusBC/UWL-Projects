@@ -6,9 +6,9 @@
 
 #include "dl_list.c"
 
-int main(int argc, char** argv){
-  // Initialize the doubly linked list
-  dl_list *my_list = (dl_list *) malloc(sizeof(dl_list)); // Allocate space for dl_list
+int main(int argc, char **argv) {
+    // Initialize the doubly linked list
+    dl_list *my_list = (dl_list *) malloc(sizeof(dl_list)); // Allocate space for dl_list
 
     init_list(my_list);
     printf("Initialized empty list:\n");
@@ -40,11 +40,11 @@ int main(int argc, char** argv){
     // Test insert_at
     printf("Testing insert_at (val, idx)[(15, 2), (35, my_list.size - 1), (0, 0)]:\n");
     print_list(my_list);
-    insert_at(my_list, 15, 2);  // Insert 15 at index 2
+    insert_at(my_list, 15, 2); // Insert 15 at index 2
     print_list(my_list);
     insert_at(my_list, 35, my_list->size - 1); // Insert 35 at the end
     print_list(my_list);
-    insert_at(my_list, 0, 0);  // Insert 0 at the beginning
+    insert_at(my_list, 0, 0); // Insert 0 at the beginning
     print_list(my_list);
     printf("-------------------------\n");
 
@@ -83,7 +83,7 @@ int main(int argc, char** argv){
     // Test set
     printf("Testing set (idx, val)[(1, 99), (-1, 50), (3, 33), (100, 50)]:\n");
     print_list(my_list);
-    set(my_list, 1, 99);  // Update value at index 1
+    set(my_list, 1, 99); // Update value at index 1
     print_list(my_list);
     set(my_list, -1, 50); // Out-of-bounds index
     print_list(my_list);
@@ -101,10 +101,10 @@ int main(int argc, char** argv){
     // Clean up memory
     printf("Cleaning up memory:\n");
     while (my_list->size > 0) {
-      delete_at(my_list, 0);
-      print_list(my_list);
+        delete_at(my_list, 0);
+        print_list(my_list);
     }
     free(my_list);
 
-  return 0;
+    return 0;
 }

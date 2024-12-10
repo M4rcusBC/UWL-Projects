@@ -11,7 +11,7 @@
  * Initialize an empty list
  * Sets the data to NULL and size to 0.
  */
-void init_list(ar_list * the_list){
+void init_list(ar_list * the_list) {
   the_list->data = NULL;
   the_list->size = 0;
 }
@@ -20,7 +20,7 @@ void init_list(ar_list * the_list){
  * Append
  * Extends the size of the array by 1 and writes val into the last position.
  */
-void append(ar_list * the_list, int val){
+void append(ar_list * the_list, int val) {
     the_list->data = (int *)realloc(the_list->data, (the_list->size + 1) * sizeof(int));
     if (the_list->data == NULL) {
         // Handle memory allocation failure
@@ -37,7 +37,7 @@ void append(ar_list * the_list, int val){
  * Extends the size of the array by 1, moves all values down by one spot, and
  * writes val into the first position.
  */
-void prepend(ar_list * the_list, int val){
+void prepend(ar_list * the_list, int val) {
   the_list->data = (int *)realloc(the_list->data, (the_list->size + 1) * sizeof(int));
   if (the_list->data == NULL) {
     // Handle memory allocation failure
@@ -56,7 +56,7 @@ void prepend(ar_list * the_list, int val){
  * Insert a node at location i with value val.  If i >= size,
  * append to the end of the list.  If i < 0, prepend to the beginning.
  */
-void insert_at(ar_list * the_list, int val, int i){
+void insert_at(ar_list * the_list, int val, int i) {
   if(i >= the_list->size){
     append(the_list, val);
     return;
@@ -77,7 +77,7 @@ void insert_at(ar_list * the_list, int val, int i){
 /*
  *Index of - returns the index of val in the list.  If not found, -1 is returned.
  */
-int index_of(ar_list * the_list, int val){
+int index_of(ar_list * the_list, int val) {
   int i;
   for(i = 0; i < the_list->size; i++){
     if(the_list->data[i] == val){
