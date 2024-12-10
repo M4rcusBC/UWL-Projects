@@ -2,8 +2,8 @@
 * Marcus Clements
 * CS202, Fall 2024
 * Homework 6 (ajax)
-* 12/7/2024
-* */
+* 12/10/2024
+*/
 
 /*
 * I did my best to be consistent with using jQuery for element selection and creation below,
@@ -86,7 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /*
         * Add the spacer for the fixed footer; enables proper styling
-        * of the grid when a positioned element exists after it - see css
+        * of the grid when a positioned element exists after it - see css:
+        * #footer-spacer
         */
         $('<div id="footer-spacer">').insertAfter($('#country-container'));
     }
@@ -105,13 +106,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        let $countryDiv;
+        // Prepare and execute HTTP request to get country data
+        let $countryDiv; // Declare the variable here so it can be accessed in the success callback and afterward
         let urlString = `https://restcountries.com/v3.1/alpha/${query}`;
 
         $.ajax(urlString, {
             method: 'GET',
             accepts: 'application/json',
             success: (result) => {
+                // Get the first (and only) result from the array
                 result = result[0];
                 let $container = $('#country-container');
                 $countryDiv = $('<div>', {
@@ -121,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let $detailsDiv = $('<div>', {class: 'country-card-details'});
 
+                // Prepare a list of statistics to display about the country
                 let stats = {
                     Population: result['population'].toLocaleString(),
                     'Common Name': result['name']['common'],
@@ -142,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 let $deleteButton = $('<button>', {
                     text: '\u2716'
                 }).on('click', function () {
+                    // Remove the entire country div from the page when the delete button is clicked
                     $countryDiv.remove();
                 });
                 $topDiv.append($deleteButton);
@@ -169,18 +174,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 $listDiv.append($valueList);
 
+
                 $detailsDiv.append($listDiv);
                 $countryDiv.append($detailsDiv);
 
-                // Add the Wikipedia links container and title to div
-
+                // Add Wikipedia links container and title to div
                 let $wikiLinksContainer = $('<div>', {
                     class: 'wiki-links-container'
                 });
-
                 let $title = $('<h2>', {text: 'Wikipedia Articles'});
                 $wikiLinksContainer.append($title);
 
+                // Query Wikipedia API for search results related to the country
                 let formattedName = $officialName.text().replaceAll(' ', ',');
                 let wikiUrlString = `https://en.wikipedia.org/w/api.php?origin=*&action=query&format=json&list=search&prop=links&srsearch=${formattedName}`;
 
@@ -213,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
                     }
                 });
-                list.empty();
+                list.empty(); // Clear the country list after a country is added
                 updateFormVisibility();
                 $countryDiv.append($wikiLinksContainer);
                 // Hide the wiki links container as it's added if the global checkbox is not checked
