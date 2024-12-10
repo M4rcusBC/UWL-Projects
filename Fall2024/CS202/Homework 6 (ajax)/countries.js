@@ -220,6 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 list.empty(); // Clear the country list after a country is added
                 updateFormVisibility();
+                let searchValue = $('#search-country-form-name');
+                searchValue.val(''); // Clear the search input after a country is added
                 $countryDiv.append($wikiLinksContainer);
                 // Hide the wiki links container as it's added if the global checkbox is not checked
                 if (!$('#wiki-links-checkbox').is(':checked')) {
