@@ -57,7 +57,6 @@ void prepend(ar_list * the_list, int val){
  * append to the end of the list.  If i < 0, prepend to the beginning.
  */
 void insert_at(ar_list * the_list, int val, int i){
-  int j;
   if(i >= the_list->size){
     append(the_list, val);
     return;
@@ -66,6 +65,7 @@ void insert_at(ar_list * the_list, int val, int i){
     prepend(the_list, val);
     return;
   }
+  int j;
   the_list->size++;
   the_list->data = (int *)realloc(the_list->data, the_list->size * sizeof(int));
   for(j = the_list->size - 1; j > i; j--){

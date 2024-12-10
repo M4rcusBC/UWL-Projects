@@ -155,6 +155,7 @@ int delete_from_list(dl_list *the_list, int val)
     // move on to the next element
     cur_pos = cur_pos->next;
   }
+  // If the above while-loop is skipped, we know the list is empty, so we can return -1 anyways.
   return -1; // value not found
 }
 
