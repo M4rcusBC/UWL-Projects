@@ -91,6 +91,10 @@ header h5 {
     margin-right: 0.33em;
 }
 
+#wiki-links-checkbox:checked {
+    accent-color: green;
+}
+
 #country-container {
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);

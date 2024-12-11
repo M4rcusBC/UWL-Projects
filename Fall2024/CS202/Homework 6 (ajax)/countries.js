@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     Population: result['population'].toLocaleString(),
                     'Common Name': result['name']['common'],
                     'Country Code': result['cca3'],
-                    Continents: result['continents'],
+                    Continents: result['continents'].join(', '),
                     Region: result['region'],
                     Subregion: result['subregion'],
                     Capital: result['capital']
