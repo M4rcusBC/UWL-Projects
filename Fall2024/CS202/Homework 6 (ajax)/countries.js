@@ -160,22 +160,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 $detailsDiv.append($flag);
 
-                let $listDiv = $('<div>', {class: 'country-card-stats-list'});
-
-                let $keyList = $('<ul>');
-                $.each(stats, function (key, value) {
-                    $('<li>', {text: key}).appendTo($keyList);
+                let $tableDiv = $('<div>', {class: 'country-card-stats-table'});
+                let $table = $('<table>');
+                
+                $.each(stats, function(key, value) {
+                    let $row = $('<tr>');
+                    $row.append($('<td>', {text: key}));
+                    $row.append($('<td>', {text: value.toString()}));
+                    $table.append($row);
                 });
-                $listDiv.append($keyList);
-
-                let $valueList = $('<ul>');
-                $.each(stats, function (key, value) {
-                    $('<li>', {text: value.toString()}).appendTo($valueList);
-                });
-                $listDiv.append($valueList);
-
-
-                $detailsDiv.append($listDiv);
+                
+                $tableDiv.append($table);
+                $detailsDiv.append($tableDiv);
                 $countryDiv.append($detailsDiv);
 
                 // Add Wikipedia links container and title to div

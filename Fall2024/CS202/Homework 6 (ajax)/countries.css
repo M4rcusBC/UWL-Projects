@@ -174,23 +174,14 @@ header h5 {
     cursor: pointer;
 }
 
-.country-card-stats-list {
+.country-card-stats-table {
     display: flex;
     justify-content: space-between;
     padding: 1em 0;
 }
 
-.country-card-stats-list ul {
-    list-style-type: none;
-    text-wrap: wrap;
-}
-
-.country-card-stats-list ul:first-of-type {
-    margin-right: 0.5em;
-}
-
-.country-card-stats-list li {
-    margin-bottom: 0.5em;
+.country-card-stats-table td:first-of-type {
+    padding-right: 0.5em;
 }
 
 .wiki-links-container {
